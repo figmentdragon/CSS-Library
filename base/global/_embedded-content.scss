@@ -1,0 +1,60 @@
+/* Embedded content */
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  border: 0;
+  max-width: 100%;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  height: auto;
+	max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+// Figures
+
+// scss-docs-start figure-variables
+$figure-caption-font-size:          $sm-font-size !default;
+$figure-caption-color:              $gray-600 !default;
+// scss-docs-end figure-variables
+
+figure {
+	border: 1px solid darken($accent, 10%);
+	display: inline-block;
+	padding: 1rem;
+	width: 100%;
+  margin: 1em 40px;
+}
+
+figure img {
+	margin: 0 auto;
+}
+
+figure figcaption {
+	font-size: $sm-font-size;
+	margin-top: 0.5rem;
+	text-align: center;
+}

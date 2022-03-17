@@ -1,0 +1,87 @@
+/**
+ * Required Variables
+ */
+$default-width: 610px;
+$max-content-width: screen - ($grid-gutter * 2);
+
+$mobile_width: 480px;
+$mobile_portrait: 568px; // 35.5em;
+$mobile_horizontal: 667px; //41.688em;
+$tablet: 768px; //48.000em;
+$tablet_width: 783px; // 48.937em;
+$tablet_horizontal: 992px; //62em;
+$desktop_width: 1024px; //64.000em;
+$large_screen: 1200px; //75.000em;
+$wide_width: 1366px; //85.375em;
+$diagonal_screen: 1660px; //103.750em;
+$ultra_wide_screen: 1920px; //120em;
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Responsive breakpoints mixin
+@mixin media($res) {
+
+	@if mobile-only == $res {
+		@media only screen and (max-width: $breakpoint-sm - 1) {
+			@content;
+		}
+	}
+
+	@if mobile == $res {
+		@media only screen and (min-width: $breakpoint-sm) {
+			@content;
+		}
+	}
+
+	@if tablet-only == $res {
+		@media only screen and (max-width: $breakpoint-md - 1) {
+			@content;
+		}
+	}
+
+	@if tablet == $res {
+		@media only screen and (min-width: $breakpoint-md) {
+			@content;
+		}
+	}
+
+	@if laptop-only == $res {
+		@media only screen and (max-width: $breakpoint-lg - 1) {
+			@content;
+		}
+	}
+
+	@if laptop == $res {
+		@media only screen and (min-width: $breakpoint-lg) {
+			@content;
+		}
+	}
+
+	@if desktop-only == $res {
+		@media only screen and (max-width: $breakpoint-xl - 1) {
+			@content;
+		}
+	}
+
+	@if desktop == $res {
+		@media only screen and (min-width: $breakpoint-xl) {
+			@content;
+		}
+	}
+
+	@if wide-only == $res {
+		@media only screen and (max-width: $breakpoint-xxl - 1) {
+			@content;
+		}
+	}
+
+	@if wide == $res {
+		@media only screen and (min-width: $breakpoint-xxl) {
+			@content;
+		}
+	}
+}

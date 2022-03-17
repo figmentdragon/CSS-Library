@@ -1,0 +1,15 @@
+#site-branding {
+	color: $primary;
+	margin-right: calc($vertical-spacer * 4);
+
+	&:last-child {
+		margin-right: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	@include media(mobile) {
+		margin-right: initial;
+		margin-top: 4px; // Align the baseline of the site title with the primary menu
+	}
+}

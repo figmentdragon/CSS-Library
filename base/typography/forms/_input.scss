@@ -1,0 +1,60 @@
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner  {
+  border: 0;
+  padding: 0;
+}
+
+input[type=checkbox],
+input[type=radio],
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type=search],
+[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+	outline-offset: -2px;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-moz-selection {
+  color: #f7f7f7;
+  background-color: #222222;
+}
+::selection {
+  color: #f7f7f7;
+  background-color: #222222;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #ababab;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #ababab;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font-family: inherit;
+}

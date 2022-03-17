@@ -1,0 +1,51 @@
+.tag-header {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  height: 3vh;
+  min-width: 75vw;
+  max-width: 100vw;
+
+  > p {
+    font-family: $accent-font;
+    font-size: $base-font-size * 1.7;
+    color: white;
+    line-height: .9em;
+    text-transform: capitalize;
+    text-shadow: .25px .25px .25px black, .75px .5px .5px $brown, .75px .75px .75px $chocolate;
+
+    position: absolute;
+    top: 1vh;
+    left: 0;
+    z-index: $z-index-tag-header;
+
+    padding-left: 25vw;
+  }
+}
+
+.the-content {
+  margin-top: 20px;
+}
+.the-content p:last-child {
+  margin-bottom: 0;
+}
+.the-content ul,
+.the-content ol {
+  font-size: 13px;
+  font-style: italic;
+  padding-left: 20px;
+}
+.the-content ul li,
+.the-content ol li {
+  margin-bottom: 5px;
+}
+.the-content ul > li:last-child,
+.the-content ol > li:last-child {
+  margin-bottom: 0;
+}

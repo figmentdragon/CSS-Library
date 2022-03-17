@@ -1,0 +1,13 @@
+@import "build/wordpress/wp-body-class";
+@import "build/wordpress/wp-caption";
+@import "build/wordpress/wp-comment-form-styles";
+@import "build/wordpress/wp-generated-css";
+@import "build/wordpress/wp-menu-styles";
+@import "build/wordpress/wp-post-formats";
+@import "build/wordpress/wp-post-styles";
+@import "build/wordpress/wp-widget-styles";
+@import "build/wordpress/wp-wysiwyg-classes";
+
+.custom-background {
+  filter: grayscale(100%);
+}

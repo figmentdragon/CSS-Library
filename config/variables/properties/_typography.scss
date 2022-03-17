@@ -1,0 +1,93 @@
+$font-size-root:              null;
+
+$sm-font-size:                $base-font-size * $sm;
+$normal-font-size:            $base-font-size;
+$lg-font-size:                $base-font-size * $lg;
+
+$lighter-font-weight:         $base-font-weight - 400;
+$light-font-weight:           $base-font-weight - 200;
+$normal-font-weight:          $base-font-weight;
+$bold-font-weight:            $base-font-weight + 200;
+$bolder-font-weight:          $base-font-weight + 400;
+
+
+$sm-line-height:              $base-line-height - .75;
+$normal-line-height:          $base-line-height;
+$lg-line-height:              $base-line-height + .75;
+
+$h1-font-size:                $base-font-size * $xxl;
+$h2-font-size:                $base-font-size * $xl;
+$h3-font-size:                $base-font-size * $lg;
+$h4-font-size:                $base-font-size * $md;
+$h5-font-size:                $base-font-size * $sm;
+$h6-font-size:                $base-font-size & $xs;
+
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      $spacer * .5;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        bolder;
+$headings-line-height:        $lg-line-height;
+$headings-color:              null;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-size-1: 5.75rem;
+$display-font-size-2: 5rem;
+$display-font-size-3: 4.25rem;
+$display-font-size-4: 3.5rem;
+$display-font-size-5: $base-font-size * $xxl;
+$display-font-size-6: $base-font-size * $xl;
+
+// scss-docs-start display-headings
+$display-font-weight-1: $base-font-weight + 400;
+$display-font-weight-2: $base-font-weight + 200;
+$display-font-weight-3: $base-font-weight + 100;
+$display-font-weight-4: $base-font-weight - 200;
+$display-line-height: $headings-line-height;
+// scss-docs-end display-headings
+
+$emphasis-font-weight:        $base-font-weight + 150;
+
+// scss-docs-start type-variables
+$lead-font-size:              $base-font-size * $md;
+$lead-font-weight:            $base-font-weight - 200;
+
+$small-font-size:             $sm-font-size;
+
+$sub-sup-font-size:          $base-font-size * $xs;
+$big-font-size:              $base-font-size * $lg;
+
+$initialism-font-size:        $small-font-size;
+
+$blockquote-margin-y:         $vertical-spacer;
+$blockquote-font-size:        $base-font-size * $md;
+$blockquote-footer-font-size: $sm-font-size;
+
+$hr-margin-y:                 $vertical-spacer;
+$hr-color:                    inherit;
+
+// fusv-disable
+$hr-bg-color:                 currentColor;// Deprecated in v5.2.0
+$hr-height:                   null;// Deprecated in v5.2.0
+// fusv-enable
+
+$hr-border-color:             null;// Allows for inherited colors
+
+$hr-opacity:                  .25;
+
+$legend-margin-bottom:        calc($horizontal-spacer * .5rem);
+$legend-font-size:            $base-font-size * $md;
+$legend-font-weight:          null;
+
+$mark-padding:                calc(($offset * .5) * .2em);
+
+$dt-font-weight:              $bold-font-weight;
+
+$nested-kbd-font-weight:      $bold-font-weight;
+
+$list-inline-padding:         $offset * .5rem;
+
+$mark-bg:                     #fcf8e3;
+// scss-docs-end type-variables

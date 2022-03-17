@@ -1,0 +1,47 @@
+/**blue //input
+indigo
+purple
+pink
+red
+orange // button
+yellow //secondary
+green // link
+teal
+cyan //primary
+gray
+brown // border
+chocolate
+silver // accent
+*/
+
+
+$inactve: tint($accent, $inactive-percentage);
+$active:  shade($accent, $active-percentage);
+$hover:   tint($primary, $hover-percentage);
+$focus:   tint($primary, $focus-percentage);
+
+
+$hr-bg: #ccc;
+$ins-bg: #fff9c0;
+
+$body-text: shade($primary, $text-percentage);
+$body-bg: tint($primary, $background-percentage);
+
+$pre-bg: tint($code, $background-percentage);
+
+$link-visited: shade($link, $visited-percentage);
+$link-hover: shade($link, $hover-percentage);
+
+$input-bg: tint($input, $background-percentage);
+$input-bg-focus: tint($input-bg, $focus-percentage);
+$input-text: shade($input, $text-percentage);
+$input-text-focus: shade($input-text, $focus-percentage);
+$input-border: shade($input, $border-percentage);
+$input-border-focus: shade($input-border, $focus-percentage);
+
+$color__background-screen: #f1f1f1;
+$abbr-border: #666;
+$color__text-screen: #21759b;
+
+@import "patterns/text";
+@import "patterns/button";

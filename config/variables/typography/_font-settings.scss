@@ -1,0 +1,34 @@
+
+// font stacks
+$sans-serif:        system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$monospace:         monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+/* Enable keyword, short hand for callig font Stack. */
+$font-family-base:               sans-serif;
+$font-code:               monospace;
+$font-pre:                "Courier 10 Pitch", courier, monospace;
+
+$page-title-font          : $primary-font;
+$post-title-font          : $secondary-font;
+$sub-title-font           : $lead-font;
+$heading-text-font        : tertiary-font;
+$quote-text-font          : $accent-font;
+$body-text-font           : $main-font;
+
+$body-text-align:           null !default;
+$paragraph-margin-bottom:   $offset;
+
+$quotation:               oblique;
+$citation:                italic;
+$link:                    underline;
+
+@media (max-width:500px) {
+  body                   {
+    font-size:80%;
+  }
+  img                    {
+    max-width:100% !important;
+    height:auto !important;
+    float:none !important;
+  }
+}

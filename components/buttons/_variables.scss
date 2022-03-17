@@ -12,15 +12,15 @@ $button-white-space:             null !default; // Set to `nowrap` to prevent te
 
 $button-padding-y-sm:            $input-button-padding-y-sm !default;
 $button-padding-x-sm:            $input-button-padding-x-sm !default;
-$button-font-size-sm:            $input-button-font-size-sm !default;
+$button-sm-font-size:            $input-button-sm-font-size !default;
 
 $button-padding-y-lg:            $input-button-padding-y-lg !default;
 $button-padding-x-lg:            $input-button-padding-x-lg !default;
-$button-font-size-lg:            $input-button-font-size-lg !default;
+$button-lg-font-size:            $input-button-lg-font-size !default;
 
 $button-border-width:            $input-button-border-width !default;
 
-$button-font-weight:             $font-weight-normal !default;
+$button-font-weight:             $normal-font-weight !default;
 $button-box-shadow:              inset 0 1px 0 rgba($shadow-button-inset, .15), 0 1px 1px rgba($shadow-button-inset, .075) !default;
 $button-focus-width:             $input-button-focus-width !default;
 $button-focus-box-shadow:        $input-button-focus-box-shadow !default;

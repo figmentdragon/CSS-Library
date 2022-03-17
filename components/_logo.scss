@@ -1,0 +1,44 @@
+// logo
+
+.logo {
+  position: fixed;
+  top: 1vh;
+  left: 0vw;
+
+  z-index: $z-index-logo;
+  overflow: visible;
+  filter: blur(1px);
+  transform: scale( 1.5 );
+  .logo-img {
+    overflow: visible;
+  }
+}
+
+.custom-logo-link {
+  position: absolute;
+  top: -5vh;
+  left:  0;
+
+  z-index: $z-index-logo;
+  overflow: visible;
+}
+
+.custom-logo {
+	display: block;
+	width: 120px;
+
+  .custom-logo-link {
+	   display: block;
+   }
+
+   .site-identity {
+    display: none;
+   }
+}
+
+
+.slider-logo,
+.site-header-logo {
+	margin: 21px 0;
+    max-width: 270px;
+}

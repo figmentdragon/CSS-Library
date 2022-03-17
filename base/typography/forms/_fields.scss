@@ -1,0 +1,31 @@
+input[type="text"],
+input[type="file"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  height: 36px;
+  width: 100%;
+  color: $input-text;
+	border: 1px solid $input-border;
+	border-radius: 3px;
+	padding: 3px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+
+  &:focus {
+		color: $input-text-focus;
+  }
+}

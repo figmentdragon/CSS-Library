@@ -1,0 +1,8 @@
+.menu {
+  font-family: $accent-font;
+  font-size: $base-font-size * 1.05;
+  color: shade($primary, $link-percentage);
+  font-weight: $bold-font-weight;
+}
+
+.menu-item {}

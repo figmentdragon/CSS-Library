@@ -2,7 +2,7 @@
 
 // scss-docs-start badge-variables
 $badge-font-size:                   .75em !default;
-$badge-font-weight:                 $font-weight-bold !default;
+$badge-font-weight:                 $bold-font-weight !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .35em !default;
 $badge-padding-x:                   .65em !default;
@@ -12,7 +12,7 @@ $badge-border-radius:               $border-radius !default;
 
 .badge {
   padding: ($offset * 6) ($offset * 8);
-  font-size: $font-size-base * 14;
+  font-size: $base-font-size * 14;
   background: ($dark, "200");
   border-radius: $border-radius * 4;
   user-select: none;

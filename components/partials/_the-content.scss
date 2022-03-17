@@ -1,0 +1,20 @@
+.the-content {
+  margin-top: 20px;
+}
+.the-content p:last-child {
+  margin-bottom: 0;
+}
+.the-content ul,
+.the-content ol {
+  font-size: 13px;
+  font-style: italic;
+  padding-left: 20px;
+}
+.the-content ul li,
+.the-content ol li {
+  margin-bottom: 5px;
+}
+.the-content ul > li:last-child,
+.the-content ol > li:last-child {
+  margin-bottom: 0;
+}

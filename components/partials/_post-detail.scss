@@ -1,0 +1,15 @@
+.post-details {
+  font-style: italic;
+  font-size: 12px;
+}
+.post-details span {
+  display: inline-block;
+}
+.post-details span:after {
+  content: '//';
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.post-details span:last-child:after {
+  content: normal;
+}

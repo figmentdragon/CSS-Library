@@ -1,0 +1,56 @@
+.single .post .post-content p a,
+.single .post .post-content h1 a,
+.single .post .post-content h2 a,
+.single .post .post-content h3 a,
+.single .post .post-content h4 a,
+.single .post .post-content h5 a,
+.single .post .post-content h6 a,
+.single .post .post-content .the-content ul li a,
+.single .post .post-content .the-content ol li a{
+  text-decoration: underline;
+}
+.post-footer {
+  margin-top: 30px;
+}
+
+.post-tags a {
+  opacity: 1;
+  display: inline-block;
+  color: #000000;
+}
+.post-tags a:before {
+  margin-left: 5px;
+  content: '#';
+}
+.post-tags a:first-child:before {
+  margin-left: 0;
+}
+.post-tags a:hover {
+  opacity: 0.8;
+}
+.post-share {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.post-share a {
+  color: #000000;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.the-excerpt {
+  margin: 20px 0;
+}
+.post-navigation {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ababab;
+}
+.post-navigation a{
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.post-navigation span.nav-subtitle{
+  display: block;
+}

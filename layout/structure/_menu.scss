@@ -1,0 +1,160 @@
+/* =Menu
+----------------------------------------------- */
+
+/* Style your navigation menu, which is inside .site-header. A basic drop-down menu structure is provided. */
+
+.main-navigation { /* wraps the entire navigation menu */
+  display: block;
+  width: 100%;
+  font-family: $accent-font;
+  letter-spacing: 1px;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
+  .active a {
+    color: #000000;
+  }
+  .menu-list > li > a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: block;
+  }
+}
+
+.main-navigation:after { /* Clears the floats after the menu */
+	clear: both;
+	content: "";
+	display: block;
+}
+.main-navigation ul { /* The menu is an unordered list */
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.main-navigation li { /* Makes the menu "list" items horizontal */
+  position: relative;
+	float: left;
+	margin: 0.5em 0;
+	position: relative;
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  &:hover > a,
+  &.focus > a {
+  }
+  :focus-within > ul,
+  :focus > ul,
+  :hover > ul {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  :focus-within > ul {
+    display: block;
+  }
+
+  >ul {
+    display: none;
+  }
+  .current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+.main-navigation a { /* The individual list item links */
+    display: block;
+    text-decoration: none;
+}
+.main-navigation ul ul { /* Submenu drop-down "box" */
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+  float: left;
+  position: absolute;
+		top: 1.2em;
+		left: -999em;
+	z-index: 99999;
+}
+.main-navigation ul ul ul { /* 3rd+ level drop-down "box" */
+  left: -999em;
+  top: 0;
+}
+.main-navigation ul ul li { /* List items inside the drop-down box */
+	&:hover > ul,
+	&.focus > ul {
+		display: block;
+		left: auto;
+    a {
+      width: 200px;
+    }
+
+    :hover > a,
+    .focus > a {
+    }
+
+    a:hover,
+    a.focus {
+    }
+	}
+}
+.main-navigation ul ul a { /* Menu links inside the drop-down "box" */
+	padding: 0 1.5em;
+	width: 200px;
+}
+.main-navigation li:hover > a,
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a,
+.main-navigation ul ul a:hover { /* Hover styles for menu items */
+
+}
+.main-navigation ul ul :hover > a {
+
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+
+.main-navigation .sub-menu li {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  :first-child {
+    padding-top: 10px;
+  }
+
+  :last-child {
+    padding-bottom: 10px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  .dropdown-plus {
+    top: 7px;
+  }
+}
+
+/* Small menu toggle area for screens < 600 pixels wide. The small menu requires some simple JavaScript in order to take affect. See http://themeshaper.com/2012/10/31/the-wordpress-theme-header-template/ for instructions on setting up this script. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  cursor: pointer;
+	display: block;
+}
+.main-small-navigation .menu {
+	display: none;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}

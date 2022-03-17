@@ -1,0 +1,53 @@
+
+
+$button-bg:           tint($button, $background-percentage);
+
+$button-text:         tint($button, $text-percentage);
+$button-text-link:    tint($button-text, $link-percentage);
+$button-link-active:  tint($button-text-link, $active-percentage);
+$button-link-hover:   tint($button-link-active, $hover-percentage);
+
+$button-border:       shade($button, $border-percentage);
+$button-border-hover: shade($button-border, $hover-percentage);
+$button-border-focus: shade($button-border, $focus-percentage);
+
+@mixin button($color) {
+  a,
+  a:link {
+    $button-link-color: shade($color, $link-percentage);
+    font-family: $accent-font;
+    font-size: $base-font-size;
+    font-weight: $bold-font-weight;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $button-link-color;
+    border: shade($button-link-color, $border-percentage);
+    background: tint($button-link-color, $background-percentage);
+
+    &:active,
+    &.active {
+      $button-active-color: shade($color, $active-percentage);
+      color: $button-active-color;
+      border: shade($button-active-color, $border-percentage);
+      background: tint($button-active-color, $background-percentage);
+
+      &:hover,
+      &:focus {
+        $button-hover-color: shade($button-active-color, $hover-percentage);
+        color: $button-hover-color;
+        border: shade($button-hover-color, $border-percentage);
+        background: tint($button-hover-color, $background-percentage);
+      }
+      &:visited {
+        $button-visited-color: tint($button-link-color, $visited-percentage);
+        color: $button-visited-color;
+        border: shade($button-visited-color, $border-percentage);
+        background: tint($button-visited-color, $background-percentage);
+      }
+    }
+    &:disabled,
+    &.inactive {
+      &:hover{}
+    }
+  }
+}

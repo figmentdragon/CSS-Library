@@ -1,0 +1,62 @@
+/* = Containers
+----------------------------------------------- */
+
+.site { /* The the outer-most container, wraps the entire site */
+  margin-top: 3vh;
+  margin-right: .75vw;
+  margin-bottom: 3vh;
+  margin-left: 3vw;
+}
+
+.site-header { /* The container for the entire header area */
+  width: 4vw;
+  bottom: 0;
+  top: 0;
+  text-align: left;
+  z-index: 9;
+  overflow: visible;
+}
+
+.page-header {
+  padding-bottom: calc(2 * $horizontal-offset);
+  border-bottom: 3px solid $border-color;
+}
+
+#main { /* The container for #primary, #secondary, and #tertiary */
+
+}
+#primary { /* The container for your primary content.*/
+
+}
+#content { /* The container for your post and page content. */
+
+}
+#secondary { /* Container for your first widget area */
+
+}
+#tertiary { /* Container for your second widget area */
+
+}
+.site-footer { /* Container for the entire site footer area */
+  border-top: 2px solid $primary;
+  padding-right: 10vw;
+
+  height: 2.75vh;
+
+  justify-content: flex-end;
+  align-items: baseline;
+
+
+  :hover {
+    @include elevation(5);
+  }
+}
+
+@import "build/structure/article";
+@import "build/structure/aside";
+@import "build/structure/container";
+@import "build/structure/page-navigation";
+@import "build/structure/site-footer";
+@import "build/structure/site-header";
+@import "build/structure/the-content";
+@import "build/structure/responsive-structure";

@@ -70,7 +70,7 @@
   }
 
   & .mdi {
-    font-size: $font-size-base * 20;
+    font-size: $base-font-size * 20;
     color: $dark;
   }
 
@@ -90,7 +90,7 @@
       left: 0%;
       user-select: none;
       transform: translateY(-50%);
-      font-size: $font-size-base * 1.2;
+      font-size: $base-font-size * 1.2;
       transition: all 0.2s ease-in-out;
       pointer-events: none;
       color: ($dark, "800");
@@ -115,7 +115,7 @@
   &.floating .label {
     left: 0%;
     top: 0%;
-    font-size: $font-size-base * 12;
+    font-size: $base-font-size * 12;
     transform: translateY(50%) translateX(2px);
   }
 

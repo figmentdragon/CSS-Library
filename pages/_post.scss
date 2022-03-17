@@ -1,0 +1,29 @@
+.post {
+  margin-bottom: 40px;
+}
+.post:last-child {
+  margin-bottom: 0;
+}
+.post .post-content {
+  background-color: #fafafa;
+  padding: 50px 50px 40px;
+}
+
+.post-footer {
+  margin-top: 30px;
+}
+
+.post-share {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.post-share a {
+  color: #000000;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.post_404_not_found {
+  margin-top: 20px;
+}

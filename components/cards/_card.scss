@@ -51,15 +51,15 @@ $card-badge-height                    : 22px;
 $card-badge-offset-horizontal        : 10px;
 $card-badge-background                : $secondary;
 $card-badge-color                     : $text;
-$card-badge-font-size                 : $font-size-base * $md;
+$card-badge-font-size                 : $base-font-size * $md;
 
-$card-font-size                       : $font-size-base;
-$card-title-font-size                 : font-size-lg;
+$card-font-size                       : $base-font-size;
+$card-title-font-size                 : lg-font-size;
 $card-title-text-font-weight          : 300;
-$card-title-line-height               : $line-height-base;
+$card-title-line-height               : $base-line-height;
 $card-title-color                     : $post-title-color;
 
-$card-subtitle-font-size              : $font-size-base * $md;
+$card-subtitle-font-size              : $base-font-size * $md;
 $card-subtitle-color                  : $lead-text-color;
 
 $card-title-perspective-origin-x      : 165px;
@@ -71,10 +71,10 @@ $card-title-transform-origin-y        : 56px;
 $card-title-text-transform-origin-x   : 149px;
 $card-title-text-transform-origin-y   : 48px;
 
-$card-lead-text-font-size             : $font-size-base;
-$card-lead-text-line-height           : $line-height-base;
+$card-lead-text-font-size             : $base-font-size;
+$card-lead-text-line-height           : $base-line-height;
 $card-lead-text-text-color            : $lead-text-color;
-$card-actions-font-size               : $font-size-sm;
+$card-actions-font-size               : $sm-font-size;
 
 /* Cover image */
 $card-cover-image-height              : 186px;

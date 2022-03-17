@@ -17,7 +17,7 @@ $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
 
-$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-offset-y * 2 !default;
+$nav-link-height:                   $base-font-size * $base-line-height + $nav-link-offset-y * 2 !default;
 
 .nav {
   display: flex;

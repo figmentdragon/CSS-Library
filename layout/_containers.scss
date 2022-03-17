@@ -1,0 +1,46 @@
+/**
+ * partials/containers
+ * ---
+ */
+
+
+ .site { /* The the outer-most container, wraps the entire site */
+
+ }
+ .site-header { /* The container for the entire header area */
+   overflow: visible;
+   @include global-gradient($deg: 180deg, $color1: rgba($primary, 1), $color2: transparent);
+ }
+ #main { /* The container for #primary, #secondary, and #tertiary */
+
+ }
+ #primary { /* The container for your primary content.*/
+
+ }
+ #content { /* The container for your post and page content. */
+
+ }
+ #secondary { /* Container for your first widget area */
+
+ }
+ #tertiary { /* Container for your second widget area */
+
+ }
+
+.site-footer { /* Container for the entire site footer area */
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  padding-left: 10vw;
+
+  float: right;
+  display: inline-flex;
+  align-self: end;
+  justify-content: flex-end;
+
+  @include border-box;
+  :hover {
+    @include elevation(5);
+  }
+}

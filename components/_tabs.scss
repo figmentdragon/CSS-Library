@@ -1,4 +1,4 @@
-$font-size-tab: $font-size-base * 14;
+$font-size-tab: $base-font-size * 14;
 $padding-tab-x: $offset * 14;
 $padding-tab-y: $offset * 20;
 
@@ -16,7 +16,7 @@ $padding-tab-y: $offset * 20;
       padding: $padding-tab-x $padding-tab-y;
       color: ($dark, "600");
       font-size: $font-size-tab;
-      font-weight: $font-weight-normal;
+      font-weight: $normal-font-weight;
       border-bottom: 2px solid transparent;
       cursor: pointer;
       transition: border-bottom-color 0.2s ease;

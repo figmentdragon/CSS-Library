@@ -1,25 +1,24 @@
 .page-title
 {
-  font-size: 30px;
-  font-size: 1.875rem;
+    font-size: $page-title-font-size;
 }
 
 h1.page-title,
 h2.page-title
 {
-    font-weight: $font-weight-bold;
+    font-weight: $page-title-font-weight;
 }
 
 h1.page-title
 {
-    line-height: $line-height-lg;
+    line-height: $page-title-line-height;
 }
 
 .page-header
 {
-    padding-bottom: calc(2 * $vertical-spacer);
+    padding-bottom: calc(2 * $spacing-vertical);
 
-    border-bottom: 3px solid $border;
+    border-bottom: 3px solid $color-border;
 }
 
 .archive,
@@ -34,7 +33,7 @@ h1.page-title
         {
             .entry-content
             {
-                font-size: $lead-font-size;
+                font-size: $entry-content-font-size;
             }
         }
     }
@@ -45,7 +44,7 @@ h1.page-title
     {
         .entry-content
         {
-            margin-top: calc(2 * $vertical-spacer);
+            margin-top: calc(2 * $spacing-vertical);
         }
     }
 
@@ -64,7 +63,7 @@ h1.page-title
         {
             .posted-on
             {
-                margin-right: calc(.5 * $base-value);
+                margin-right: calc(.5 * $base-unit);
             }
         }
     }
@@ -72,8 +71,8 @@ h1.page-title
 
 .archive-description
 {
-    font-size: $tertiary-font;
-    line-height: $line-height-base;
+    font-size: $archive-description-font-size;
+    line-height: $archive-description-line-height;
 
-    margin-top: $vertical-spacer;
+    margin-top: $spacing-vertical;
 }

@@ -1,0 +1,45 @@
+.logo {
+  position: fixed;
+  top: 0;
+  left: -.25vh;
+  padding-bottom: 30px;
+  z-index: 50;
+  opacity: .5;
+
+  a {
+   font-size: 40px;
+   color: #000000;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   line-height: 40px;
+ }
+ p,
+ h1,
+ h2 {
+   margin: 0;
+   line-height: normal;
+ }
+ .site-description {
+   font-size: 12px;
+ }
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+.logo-img,
+.custom-logo {
+	display: block;
+}
+
+.slider-logo,
+.site-header-logo {
+	margin: 21px 0;
+    max-width: 270px;
+}
+
+.site-header-logo ~ .section-title-wrapper {
+    margin-top: 21px;
+}

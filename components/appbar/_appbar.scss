@@ -33,7 +33,7 @@ $appbar-padding-y: calc($offset * 16);
   }
 
   & .title {
-    font-size: $font-size-base * 20;
+    font-size: $base-font-size * 20;
     font-weight: 500;
     margin: 0 ($offset * 8);
   }
