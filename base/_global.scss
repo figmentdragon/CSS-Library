@@ -1,4 +1,4 @@
-build/* =Global
+/* =Global
 ----------------------------------------------- */
 article,
 aside,
@@ -32,7 +32,7 @@ summary {
 
 html {
   @include make-container($type: border-box, $display: inline, $overflow: hidden);
-  position: relative;
+
 
   background-image: linear-gradient( 290deg, $brown, $chocolate, white, transparent);
   margin: 0;
@@ -68,19 +68,17 @@ textarea {
 }
 
 body {
+  @include border-start-radius($sm-border-radius);
   text-align: left;
   font-family: $main-font;
-  color: $text-color;
+  color: $body-text;
   font-size: $base-font-size;
   line-height: $base-line-height;
 
   position: relative;
   z-index: $z-index-body;
-  margin: 0 auto;
-  padding: .5vh .5vw;
+  margin: 0;
   background-color: white(.6);
-  @include border-start-radius($border-radius-lg);
-  @include elevation(15);
 }
 
 /* Sections */
@@ -97,42 +95,42 @@ html {
 
 main {
   @include elevation(20);
-  @include border-start-radius($border-radius-sm);
+  @include border-start-radius($sm-border-radius);
 	display: block;
+
   margin: 0;
 
   padding-top: .75vh;
   padding-right: .02vw;
-  padding-bottom: .75vh;
+  padding-bottom: .05vh;
   padding-left: 9.75vw;
 
-  width: 100%;
-  max-height: 100%;
 }
 
 header{
+  @include gradient-primary;
   @include elevation(24);
 
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
-  left: 2.75vw;
+  left: .5vw;
   z-index: $z-index-header;
 
   margin-top: 0;
   margin-bottom: 0;
   margin-left: .75vw;
+
+  width: 3vh;
+
 }
 
 footer {
   @include links;
 
-  position: fixed;
-  right: 1vw;
-  bottom: .75vh;
-  left: 10vw;
-
-  height: 1.75vh;
+  position: absolute;
+  right: .0;
+  bottom: .5vh;
 
   display: inline-flex;
   flex-direction: row;
@@ -141,51 +139,41 @@ footer {
   text-align: right;
 }
 
-main {
-  article {
-    @include box-sizing($type: border-box);
-    @include elevation(24);
+article {
+  @include box-sizing($type: border-box);
+  @include elevation(24);
 
-    margin-top: .5vh;
-    margin-right: .5vw;
-    margin-bottom: .5vh;
-    margin-left: .5vw;
+  margin-top: 5vh;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 5vw;
 
-	  padding-top: .5vh;
-	  padding-right: .5vw;
-	  padding-bottom: .5vh;
-	  padding-left: .5vw;
-  }
+	padding-top: .5vh;
+	padding-right: .5vw;
+	padding-bottom: .5vh;
+	padding-left: 1.5vw;
+
+  height: 100%;
+  width: 100%;
 }
 
 aside {
+  outline: 2px solid purple;
   @include elevation(24);
-  position: absolute;
-  top: .75vh;
-  right: 10vw;
-  left: 1vw;
   border-left: 4px solid #000;
 	padding-left: 1em;
-
-  height: 3.25vh;
 }
 
 nav {
-  position: fixed;
-  top: 15vh;
-  bottom: 3vh;
-  left: 6vw;
+  @include gradient-accent;
   @include elevation(20);
   margin-bottom: $horizontal-spacer;
 }
 
-@import "build/global/article";
-@import "build/global/body";
-@import "build/global/embedded-content";
-@import "build/global/footer";
-@import "build/global/header";
-@import "build/global/interactive";
-@import "build/global/loop";
-@import "build/global/nav";
-@import "build/global/wordpress";
-@import "build/global/wrapper";
+@import "global/article";
+@import "global/body";
+@import "global/embedded-content";
+@import "global/footer";
+@import "global/header";
+@import "global/interactive";
+@import "global/loop";

@@ -53,7 +53,7 @@ h1.entry-title {
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 
-		margin: $spacing-vertical 0 !important;
+		margin: $vertical-offset 0 !important;
 		max-width: 100% !important;
 	}
 
@@ -68,7 +68,7 @@ h1.entry-title {
 	color: $primary-color;
 	clear: both;
 	float: none;
-	font-size: $xs;
+	font-size: $size-xs;
 	display: block;
 
 	> span {
@@ -91,9 +91,9 @@ h1.entry-title {
 
 // Extra specificity to override rules in _vertical-margins.scss
 .site-main > article > .entry-footer {
-	margin-top: $spacing-vertical;
+	margin-top: $vertical-offset;
 	padding-top: $spacing-unit;
-	padding-bottom: calc(3 * $spacing-vertical);
+	padding-bottom: calc(3 * $vertical-offset);
 	border-bottom: $separator-height solid $separator-border-color;
 }
 
@@ -102,15 +102,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .single .site-main > article > .entry-footer {
-	margin-top: calc(3.4 * $spacing-vertical);
-	margin-bottom: calc(3.4 * $spacing-vertical);
+	margin-top: calc(3.4 * $vertical-offset);
+	margin-bottom: calc(3.4 * $vertical-offset);
 	padding-bottom: 0;
-	padding-top: calc(0.8 * $spacing-vertical);
+	padding-top: calc(0.8 * $vertical-offset);
 	border-top: 3px solid $separator-border-color;
 	border-bottom: $separator-height solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	column-gap: calc(2 * $spacing-horizontal);
+	column-gap: calc(2 * $horizontal-offset);
 
 	.post-taxonomies,
 	.full-size-link {
@@ -162,7 +162,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: calc(2 * $spacing-vertical);
+		margin-top: calc(2 * $vertical-offset);
 	}
 }
 
@@ -172,11 +172,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .author-bio {
 	position: relative;
-	font-size: $xs;
+	font-size: $size-xs;
 	max-width: $responsive-aligndefault-width;
 
 	.site-main > article > & {
-		margin-top: calc(2 * $spacing-vertical);
+		margin-top: calc(2 * $vertical-offset);
 	}
 
 	// Avatars are optional and can be turned off.
@@ -190,7 +190,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 		.author-bio-content {
 			display: inline-block;
-			padding-left: $spacing-horizontal;
+			padding-left: $horizontal-offset;
 			max-width: calc($responsive-aligndefault-width - 90px);
 		}
 	}
@@ -204,9 +204,9 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		}
 
 		.author-description {
-			font-size: $xs;
-			margin-top: calc(0.5 * $spacing-vertical);
-			margin-bottom: calc(0.5 * $spacing-vertical);
+			font-size: $size-xs;
+			margin-top: calc(0.5 * $vertical-offset);
+			margin-bottom: calc(0.5 * $vertical-offset);
 		}
 	}
 }

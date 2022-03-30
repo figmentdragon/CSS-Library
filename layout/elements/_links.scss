@@ -1,48 +1,66 @@
-/* Links */
-$link-decoration: underline;
-$hover-decoration: underline bold;
-$visited-decoration: strike-through;
+/* ______________________________________________________ LINK */
+$active-color                 : $active-color;
 
-$stretched-link-pseudo-element:           after !default;
-$stretched-link-z-index:                  1 !default;
 
-$link-text-family: $accent-font;
+/* Style anchor elements. */
+$link-color                   : $active-color;
+$link-text-decoration         : $link-decoration;
 
-a {
-  outline: none !important;
-  color: $link-text-active;
-  background-color: transparent;
-  font-family: $link-text-family;
-  font-weight: $bold-font-weight;
+$link-hover                   : $hover-color;
+$link-hover-decoration        : $hover-decoration;
 
-  &:active {
-    color: $link-text-active;
-    text-decoration: $link-decoration;
-    outline:none;
+$link-visited                 : $visited-color;
+$link-visited-decoration      : $visited-decoration;
+$visited-color-hover      : $visited-hover-color;
 
-    &:hover {
-      color: shift($link-text-active, $hover-percentage);
-      text-decoration: $hover-decoration;
-      outline: 0;
-    }
-    &:focus {
-      color: shift($link-text-active, $focus-percentage);
-      text-decoration: $hover-decoration;
-      outline: thin dotted;
-    }
-    &:visited {
-      color: tint($link-text-active, $visited-percentage);
-      text-decoration: $visited-decoration;
-    }
-  }
-  &:disabled{
-    color: shade($link-text, $inactive-percentage);
-    text-decoration: none;
-    outline: 0;
+$stretched-link-pseudo-element: after;
+$stretched-link-z-index       : 1;
+
+//
+// Stretched link
+//
+
+.stretched-link {
+  &::#{$stretched-link-pseudo-element} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $stretched-link-z-index;
+    content: "";
   }
 }
 
-p a,
-p a:visited {
-  line-height: inherit;
+
+/* Links */
+a {
+  outline: none !important;
+  font-family: $nav-text-font;
+  font-weight: bold;
+
+  :active {
+    text-decoration: underline;
+    color: $link-color;
+
+    & :hover {
+      text-decoration: underline, bold;
+      color: $hover-color;
+    }
+  }
+
+  :hover {
+    text-decoration: underline, bold;
+    color: $hover-color;
+  }
+
+  :disabled {
+    color: $disabled-color;
+    text-decoration: none;
+
+  }
+}
+
+a:focus {
+
 }

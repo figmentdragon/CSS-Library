@@ -1,0 +1,31 @@
+.site { /* The the outer-most container, wraps the entire site */
+}
+
+.site-header { /* The container for the entire header area */
+  width: 3vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 2vw;
+
+  z-index: $z-index-header;
+}
+
+#main { /* The container for #primary, #secondary, and #tertiary */
+
+}
+#primary { /* The container for your primary content.*/
+
+}
+#content { /* The container for your post and page content. */
+
+}
+#secondary { /* Container for your first widget area */
+
+}
+#tertiary { /* Container for your second widget area */
+
+}
+.site-footer { /* Container for the entire site footer area */
+
+}

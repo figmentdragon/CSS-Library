@@ -1,45 +1,90 @@
-/**
- * 13.0 - Media
- */
+@if $enable-flex {
+  .media {
+    display: flex;
+    margin-bottom: $spacer;
+  }
+  .media-body {
+    flex: 1;
+  }
+  .media-middle {
+    align-self: center;
+  }
+  .media-bottom {
+    align-self: flex-end;
+  }
+} @else {
+  .media {
+    margin-top: 15px;
 
-.site .avatar {
-	border-radius: 50%;
-}
-
-.entry-content .smiley,
-.entry-summary .smiley,
-.comment-content .smiley,
-.textwidget .smiley {
-	border: none;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0;
-}
-
-.entry-content a img,
-.entry-summary a img,
-.comment-content a img,
-.textwidget a img {
-	display: block;
-}
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object,
-video {
-    max-width: 100%;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .media,
+  .media-body {
+    overflow: hidden;
+    zoom: 1;
+  }
+  .media-body {
+    width: 10000px;
+  }
+  .media-left,
+  .media-right,
+  .media-body {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .media-middle {
     vertical-align: middle;
+  }
+  .media-bottom {
+    vertical-align: bottom;
+  }
 }
 
-p > embed,
-p > iframe,
-p > object,
-p > video {
-    margin-bottom: 0;
+
+//
+// Images/elements as the media anchor
+//
+
+.media-object {
+  display: block;
+
+  // Fix collapse in webkit from max-width: 100% and display: table-cell.
+  &.img-thumbnail {
+    max-width: none;
+  }
 }
 
-.audio-shortcode,
-.video {
-	margin: 1.625em 0;
+
+//
+// Alignment
+//
+
+.media-right {
+  padding-left: 10px;
+}
+
+.media-left {
+  padding-right: 10px;
+}
+
+
+//
+// Headings
+//
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+
+//
+// Media list variation
+//
+
+.media-list {
+  padding-left: 0;
+  list-style: none;
 }

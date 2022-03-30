@@ -1,75 +1,32 @@
-/* 2 */
-$list-inline-padding:         .5rem !default;
-
-nav ul,
-nav ol {
-    list-style: none;
-    list-style-image: none;
+ul, ol {
+	margin: 0 0 1.5em 3em;
 }
-
-ul, ol, dl {
-  text-align:left;
-}
-
-
-ol,
 ul {
-  list-style: none;
-  margin: 0 0 ($spacer & $xxl) ($vertical-spacer * $xl);
-  padding: 0;
-	li {
-		line-height: $base-line-height * $xl;
-		list-style: none;
-		display: inline;
-	}
+	list-style: disc;
 }
-
-ul {
-    list-style: disc;
-}
-
 ol {
-    list-style: decimal;
+	list-style: decimal;
 }
-
-li {
-  > ol,
-  > ul {
-    margin-bottom: 0;
-  }
-}
-
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-	margin: $horizontal-offset $vertical-offset;
-}
-
-ul li >  ul,
-ol li >  ol,
-ul li >  ol,
-ol li >  ul{
-	margin-top: 0;
+ul ul, ol ol, ul ol, ol ul {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
 
+li {
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
 dt {
-    font-weight: bold;
+	font-weight: bold;
 }
-
 dd {
-    margin: 0 ($vertical-spacer * $xl) ($horizontal-spacer * $xxl);
+	margin: 0 1.5em 1.5em;
 }
 
-dl {
-  margin: 0 0 ($spacer * $xxl);
-  dd {
-  	padding-left: $offset * 2;
-  }
-}
-
-menu {
-    padding: 0 0 0 40px;
+.list--unstyled {
+    margin-left: 0;
+    list-style: none;
 }

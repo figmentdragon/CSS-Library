@@ -1,60 +1,52 @@
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
+// scss-docs-start form-input-variables
+$input-offset-y:                       $input-btn-padding-y;
+$input-offset-x:                       $input-btn-padding-x;
+$input-font-family:                    $input-btn-font-family;
+$input-font-size:                      $input-btn-font-size;
+$input-font-weight:                     $base-font-weight;
+$input-line-height:                     $input-btn-line-height;
 
-button::-moz-focus-inner,
-input::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner  {
-  border: 0;
-  padding: 0;
-}
+$input-offset-y-sm:                    $input-btn-padding-y-sm;
+$input-offset-x-sm:                    $input-btn-padding-x-sm;
+$input-sm-font-size:                    $input-btn-sm-font-size;
 
-input[type=checkbox],
-input[type=radio],
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-input[type=search],
-[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-	outline-offset: -2px;
-}
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+$input-offset-y-lg:                    $input-btn-padding-y-lg;
+$input-offset-x-lg:                    $input-btn-padding-x-lg;
+$input-lg-font-size:                    $input-btn-lg-font-size;
 
-::-moz-selection {
-  color: #f7f7f7;
-  background-color: #222222;
-}
-::selection {
-  color: #f7f7f7;
-  background-color: #222222;
-}
+$input-color:                           $input-text-color;
+$input-border-color:                    $input-border-color;
+$input-border-width:                    $input-btn-border-width;
+$input-box-shadow:                      $box-shadow-inset;
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #ababab;
-}
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #ababab;
-}
+$input-bg:                              $input-bg-color;
+$input-disabled-bg:                     $input-disabled-bg-color;
+$input-disabled-border:                 $input-disabled-border-color;
 
-::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	font-family: inherit;
-}
+$input-border-radius:                   $border-radius;
+$input-border-radius-sm:                $border-radius-sm;
+$input-border-radius-lg:                $border-radius-lg;
+
+$input-focus-bg:                        $input-focus-bg-color;
+$input-focus-border:                    $input-focus-border-color;
+$input-focus-color:                     $input-text-color;
+$input-focus-width:                     $border-width-focus;
+$input-focus-box-shadow:                $input-btn-focus-box-shadow;
+
+$input-placeholder-color:               $input-placeholder-text-color;
+$input-plaintext-color:                 $input-plaintext-text-color;
+
+$input-height-border:                   $input-border-width * 2;
+
+$input-height-inner:                    add($input-line-height * 1em, $input-offset-y * 2);
+$input-height-inner-half:               add($input-line-height * .5em, $input-offset-y);
+$input-height-inner-quarter:            add($input-line-height * .25em, $input-offset-y * .5);
+
+$input-height:                          add($input-line-height * 1em, add($input-offset-y * 2, $input-height-border, false));
+$input-height-sm:                       add($input-line-height * 1em, add($input-offset-y-sm * 2, $input-height-border, false));
+$input-height-lg:                       add($input-line-height * 1em, add($input-offset-y-lg * 2, $input-height-border, false));
+
+$input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+$form-color-width:                      3rem;
+// scss-docs-end form-input-variables

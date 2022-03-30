@@ -1,0 +1,14 @@
+textarea {
+  padding: 6px 10px;
+  width: 100%;
+  min-height: $md-spacer * 4;
+  height: auto;
+  overflow: auto;
+  white-space: revert;
+  resize: vertical;
+  vertical-align: top;
+  border-radius: 1px;
+  font-size: 14px;
+  color: #404040;
+  border: 1px solid #CCC;
+}

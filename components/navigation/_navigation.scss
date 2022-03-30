@@ -1,109 +1,29 @@
-.main-navigation {
-	display: block;
-	width: 100%;
+/*--------------------------------------------------------------
+## menus 6.1
+--------------------------------------------------------------*/
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+@import 'menus';
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+/*--------------------------------------------------------------
+## social-menu-navigation 6.2
+--------------------------------------------------------------*/
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
+@import 'social-menu-navigation';
 
-			li {
+/*--------------------------------------------------------------
+## menus 6.1
+--------------------------------------------------------------*/
 
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
+@import 'posts-and-pages';
 
-			a {
-				width: 200px;
-			}
+/*--------------------------------------------------------------
+## next-previous 6.3
+--------------------------------------------------------------*/
 
-			:hover > a,
-			.focus > a {
-			}
+@import 'next-previous';
 
-			a:hover,
-			a.focus {
-			}
-		}
+/*--------------------------------------------------------------
+## menus 6.1
+--------------------------------------------------------------*/
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
-
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
-}
+@import 'header';

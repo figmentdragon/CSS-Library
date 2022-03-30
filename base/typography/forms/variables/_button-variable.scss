@@ -1,0 +1,23 @@
+$button-font-family: $accent-font;
+$button-font-weight: $base-font-weight;
+$button-font-size: $sm-font-size;
+$button-large-font-size: $lg-font-size;
+$button-line-height: $sm-line-height;
+
+$button-white-space: null; // Set to `nowrap` to prevent text wrapping
+
+$button-offset-y: $offset-y;
+$button-offset-x: $offset-x;
+$button-offset-y-sm: $offset-sm;
+$button-offset-x-sm: $offset-sm;
+$button-offset-y-lg: $offset-y-lg;
+$button-offset-y-lg: $offset-y-lg;
+
+$button-focus-width: $focus-border-width;
+$button-border-width: $border-width;
+
+$button-border-radius: $border-radi;
+$button-border-radius-sm: $sm-border-radius;
+$button-border-radius-lg: $lg-border-radius;
+
+$button-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

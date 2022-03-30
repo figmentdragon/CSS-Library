@@ -1,205 +1,315 @@
-/* Button Border */
-$button-border-radius       : $border-radius * 4;
-$button-focus-width         : $border-width-focus;
-
-
-%button,
-.button {
-  display: inline-block;
-  position: relative;
-
-  font-family: $accent-font;
-  text-decoration: none;
-  color: $white;
-  font-size: $base-font-size * 14;
-  line-height: $lg-line-height;
+.btn {
+  border: none;
+  border-radius: $border-radius * 4px;
+  background: material-color($dk, "200");
+  font-size: $font-size * 14px;
   font-weight: 500;
+  padding: #{$padding * 10px} #{$padding * 16px};
+  color: material-color($dk, "800");
   text-transform: uppercase;
-  padding: ($offset * 10) ($offset * 16);
-  border-radius: $button-border-radius;
-  border: 0;
+  cursor: pointer;
   outline: none;
-
+  display: inline-flex;
   user-select: none;
   align-items: center;
   justify-content: center;
+  @include elevation(2);
+  transition: all 0.2s ease;
 
-  cursor: pointer;
-  @include transition(background-color 0.24s ease-in-out);
-
-  // clicking on the button
-  &:active {
-    top: 1px; // adds a tiny hop to the click
+  &:hover {
+    background: material-color($dk, "300");
     @include elevation(4);
-    // hovering on the button
-    &:hover,
-    &:focus {
-      color: $white;
-      text-decoration: none;
-      outline: none;
-      @include elevation(8);
-    } // end hover
-    &:focus-visible {
-      border-width: $border-width-focus;
+  }
+
+  &:focus-visible {
+    background: material-color($dk, "400");
+  }
+
+  &:active {
+    @include elevation(8);
+  }
+
+  &.primary {
+    background: material-color($p, "500");
+    color: #fff;
+
+    &:hover {
+      background: material-color($p, "600");
     }
-  } // end active
 
-  &:disabled,
-  &.inactive {
-    background: transparent;
-    color: ($dark, "800");
-    cursor: not-allowed;
-    @include elevation(0);
+    &:focus-visible {
+      background: material-color($p, "700");
+    }
   }
-}
 
-.button.unelevated {
-  @extend %button; // here we load the button
-  box-shadow: none !important;
+  &.secondary {
+    background: material-color($s, "500");
+    color: #fff;
 
-  &:active {
-    background-color: darken($blue, 5%);
+    &:hover {
+      background: material-color($s, "600");
+    }
 
-    &:hover,
-    &:focus {
-      background-color: darken($blue, 4%);
-
-      &:focus-visible {
-        border-width: $border-width-focus;
-      }
-    } // end hover
-  } // end active
-  &:disabled,
-  &.inactive {
-    background: transparent;
-    color: ($dark, "800");
-    cursor: not-allowed;
+    &:focus-visible {
+      background: material-color($s, "700");
+    }
   }
-}
 
-.button.text {
-  @extend %button; // here we load the button
-  background: transparent;
-  box-shadow: none;
-  &:active {
-    background-color: darken($blue, 5%);
+  &.danger {
+    background: material-color($d, "500");
+    color: #fff;
 
-    &:hover,
-    &:focus {
-      background-color: darken($blue, 4%);
+    &:hover {
+      background: material-color($d, "600");
+    }
 
-      &:focus-visible {
-        border-width: $border-width-focus;
-      }
-    } // end hover
-  } // end active
-  &:disabled,
-  &.inactive {
-    background: transparent;
-    color: ($dark, "800");
-    cursor: not-allowed;
+    &:focus-visible {
+      background: material-color($d, "700");
+    }
   }
-}
 
+  &.valid {
+    background: material-color($g, "500");
+    color: #fff;
 
-.button.small{
-  @extend %button; // here we load the button
-  &:active {
-    background-color: darken($blue, 5%);
+    &:hover {
+      background: material-color($g, "600");
+    }
 
-    &:hover,
-    &:focus {
-      background-color: darken($blue, 4%);
-
-      &:focus-visible {
-        border-width: $border-width-focus;
-      }
-    } // end hover
-  } // end active
-  &:disabled,
-  &.inactive {
-    background: transparent;
-    color: ($dark, "800");
-    cursor: not-allowed;
+    &:focus-visible {
+      background: material-color($g, "700");
+    }
   }
-}
 
-.button.large {
-  @extend %button; // here we load the button
-  &:active {
-    background-color: darken($blue, 5%);
+  &.warning {
+    background: material-color($w, "500");
+    color: #000;
 
-    &:hover,
-    &:focus {
-      background-color: darken($blue, 4%);
+    &:hover {
+      background: material-color($w, "600");
+    }
 
-      &:focus-visible {
-        border-width: $border-width-focus;
-      }
-    } // end hover
-  } // end active
-  &:disabled,
-  &.inactive {
-    background: transparent;
-    color: ($dark, "800");
-    cursor: not-allowed;
+    &:focus-visible {
+      background: material-color($w, "700");
+    }
   }
-}
 
-/*@mixin button() {
-  %color {
-    @extend %button; // here we load the button defaults
-    $background: tint($color, $background-percentage)%color, ;
-    $text: shade()%color, $text-percentage;
+  &.inactive,
+  &:inactive {
+    background: material-color($dk, "200");
+    color: material-color($dk, "800");
+    cursor: not-allowed;
 
-    &:active {
-      @include elevation(4);
-      background-color: $background;
-      color: $text;
+    & .ripple {
+      display: none !important;
+    }
+  }
 
-      &:hover,
-      &:focus {
-        @include elevation(8);
-        $background-hover: tint($background, $hover-percentage);
-        $text-hover: shade($text, $hover-percentage);
-        background-color: $background-hover;
-        color: $text-hover;
-      } // end hover
-    } // end active
-    &:disabled,
-    &.inactive {
+
+
+  //
+  // Outlined
+  //
+
+  &.outlined {
+    background: transparent;
+    outline: 1px solid material-color($dk, "300");
+    outline-offset: -1px;
+    color: material-color($dk, "800");
+    box-shadow: none;
+
+    &:hover {
       background: transparent;
-      color: ($dark, "800");
+      outline: 1px solid material-color($dk, "400");
+    }
+
+    &:focus-visible {
+      background: material-color($dk, "200");
+      outline: 1px solid material-color($dk, "500");
+    }
+
+    &.primary {
+      outline-color: material-color($p, "300");
+      color: material-color($p, "500");
+
+      &:hover {
+        outline-color: material-color($p, "600");
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($p, "500"), 0.12);
+        outline-color: 1px solid material-color($p, "800");
+      }
+    }
+
+    &.secondary {
+      outline-color: material-color($s, "300");
+      color: material-color($s, "500");
+
+      &:hover {
+        outline-color: material-color($s, "600");
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($s, "500"), 0.12);
+        outline-color: 1px solid material-color($s, "800");
+      }
+    }
+
+    &.danger {
+      outline-color: material-color($d, "300");
+      color: material-color($d, "500");
+
+      &:hover {
+        outline-color: material-color($d, "600");
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($d, "500"), 0.12);
+        outline-color: 1px solid material-color($d, "800");
+      }
+    }
+
+    &.valid {
+      outline-color: material-color($g, "300");
+      color: material-color($g, "500");
+
+      &:hover {
+        outline-color: material-color($g, "600");
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($g, "500"), 0.12);
+        outline-color: 1px solid material-color($g, "800");
+      }
+    }
+
+    &.warning {
+      outline-color: material-color($w, "300");
+      color: material-color($w, "500");
+
+      &:hover {
+        outline-color: material-color($w, "600");
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($w, "500"), 0.12);
+        outline-color: 1px solid material-color($w, "800");
+      }
+    }
+
+    &.inactive,
+    &:inactive {
+      background: transparent;
+      outline-color: material-color($dk, "300");
+      color: material-color($dk, "800");
       cursor: not-allowed;
     }
   }
-} // end mixin button
 
-.button.outlined {
-  @extend %button; // here we load the button
-  @include button();
-  background: transparent;
-  outline: 1px solid ($dark, "300");
-  outline-offset: -1px;
-  color: ($dark, "800");
-  box-shadow: none;
-  &:active {
-    background-color: darken($blue, 5%);
+  //
+  // Text Button
+  //
 
-    &:hover,
-    &:focus {
-      background-color: darken($blue, 4%);
+  &.text {
+    background: transparent;
+    box-shadow: none;
+
+    &:hover {
+      background: rgba(material-color($dk, "500"), 0.1);
+    }
+
+    &:focus-visible {
+      background: rgba(material-color($dk, "500"), 0.2);
+    }
+
+    &.primary {
+      color: material-color($p, "500");
+
+      &:hover {
+        background: rgba(material-color($p, "500"), 0.1);
+      }
 
       &:focus-visible {
-        border-width: $border-width-focus;
+        background: rgba(material-color($p, "500"), 0.2);
       }
-    } // end hover
-  } // end active
-  &:disabled,
-  &.inactive {
-    background: transparent;
-    color: ($dark, "800");
-    cursor: not-allowed;
+    }
+
+    &.secondary {
+      color: material-color($s, "500");
+
+      &:hover {
+        background: rgba(material-color($s, "500"), 0.1);
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($s, "500"), 0.2);
+      }
+    }
+
+    &.danger {
+      color: material-color($d, "500");
+
+      &:hover {
+        background: rgba(material-color($d, "500"), 0.1);
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($d, "500"), 0.2);
+      }
+    }
+
+    &.valid {
+      color: material-color($g, "500");
+
+      &:hover {
+        background: rgba(material-color($g, "500"), 0.1);
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($g, "500"), 0.2);
+      }
+    }
+
+    &.warning {
+      color: material-color($w, "500");
+
+      &:hover {
+        background: rgba(material-color($w, "500"), 0.1);
+      }
+
+      &:focus-visible {
+        background: rgba(material-color($w, "500"), 0.2);
+      }
+    }
+
+    &.inactive,
+    &:inactive {
+      background: transparent;
+      color: material-color($dk, "800");
+      cursor: not-allowed;
+    }
+  }
+
+  //
+  // Unelevated
+  //
+
+  &.unelevated {
+    box-shadow: none !important;
+  }
+
+  //
+  // Size
+  //
+
+  &.small {
+    font-size: $font-size * 14px;
+    padding: $padding * 8px #{$padding * 10px};
+  }
+
+  &.large {
+    font-size: $font-size * 20px;
+    padding: $padding * 14px #{$padding * 25px};
   }
 }
-*/

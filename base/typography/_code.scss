@@ -1,8 +1,21 @@
+
 pre {
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  overflow: auto;
+  font-family: $font-pre;
+  line-height: 1.8em;
+	font-size: 15px;
+	font-size: 1.5rem;
+
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+
+	overflow: auto;
+  word-wrap: break-word;
   max-width: 100%;
+  border: 1px solid #E4E4E4;
+  font-style: italic;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+	background: $color__background-pre;
 }
 
 code,
@@ -11,10 +24,18 @@ pre,
 samp,
 tt,
 var {
-  font-family: "Courier 10 Pitch", Courier, monospace;
+	font-family: $font-code;
   font-size: 15px;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
+  border-radius: 0;
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
 code,
@@ -22,46 +43,10 @@ pre {
   background: $accent;
   overflow: auto;
   padding: 0.5rem 1rem;
+  letter-spacing: 0.015em;
 }
 
 code pre,
 pre code {
   padding: 0;
-}
-
-abbr,
-acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help;
-}
-
-ins,
-mark {
-  background: #fff9c0;
-  text-decoration: none;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  height: 0;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  bottom: 1ex;
-}
-
-sub {
-  top: 0.5ex;
-}
-
-small {
-  font-size: 75%;
-}
-
-big {
-  font-size: 125%;
 }

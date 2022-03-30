@@ -7,7 +7,7 @@
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
-  color: var(--#{$variable-prefix}navbar-color);
+  color: var(--#{$prefix}navbar-color);
   @include border-radius($navbar-toggler-border-radius);
   @include transition($navbar-toggler-transition);
 
@@ -29,7 +29,7 @@
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  background-image: var(--#{$variable-prefix}navbar-toggler-icon-bg);
+  background-image: var(--#{$prefix}navbar-toggler-icon-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;

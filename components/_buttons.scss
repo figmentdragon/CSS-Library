@@ -1,15 +1,6 @@
-.btn {
-    background-color: $brand-colour;
-    color: $base-background-colour;
-    border: 1px solid transparent;
-    display: inline-block;
-    padding: #{$spacer / 4} $spacer;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    user-select: none;
+
+
+
     width: auto;
     transition: all .5s;
 
@@ -30,30 +21,4 @@
         pointer-events: none;
         opacity: .65;
     }
-}
-
-.btn--inverse {
-    background-color: $base-background-colour;
-    color: $brand-colour;
-    border: 1px solid $brand-colour;
-
-    &:hover {
-        background-color: $brand-colour;
-        color: $base-background-colour;
-        border-color: transparent;
-    }
-}
-
-.btn--block {
-    display: block;
-    width: 100%;
-
-    + .btn--block {
-        margin-top: $spacer / 4;
-    }
-}
-
-.btn--link {
-    background-color: transparent;
-    color: $brand-colour;
 }

@@ -15,13 +15,13 @@ $navbar-brand-spacer-end:           1rem !default;
   padding-bottom: $navbar-brand-offset-y;
   margin-right: $navbar-brand-spacer-end;
   @include font-size($navbar-brand-font-size);
-  color: var(--#{$variable-prefix}navbar-brand-color);
+  color: var(--#{$prefix}navbar-brand-color);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
 
   &:hover,
   &:focus {
-    color: var(--#{$variable-prefix}navbar-brand-hover-color);
+    color: var(--#{$prefix}navbar-brand-hover-color);
     text-decoration: if($hover-decoration == underline, none, null);
   }
 }

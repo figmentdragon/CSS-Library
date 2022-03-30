@@ -1,5 +1,5 @@
 .icon {
-  $temp: $offset * 45;
+  $temp: $padding * 45px;
   max-width: $temp;
   max-height: $temp;
   min-width: $temp;
@@ -13,28 +13,28 @@
   background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
-  color: ($dark, "700");
+  color: material-color($dk, "700");
   position: relative;
 
   & .mdi {
-    font-size: $base-font-size * 20;
+    font-size: $font-size * 20px;
     pointer-events: none;
   }
 
   &:hover {
-    background: ($dark, "300");
-    color: ($dark, "900");
+    background: material-color($dk, "300");
+    color: material-color($dk, "900");
   }
 
   &:focus-visible {
-    background: ($dark, "400");
-    color: ($dark, "900");
+    background: material-color($dk, "400");
+    color: material-color($dk, "900");
   }
 
   &.inactive,
   &:inactive {
-    background: ($dark, "200");
-    color: ($dark, "500");
+    background: material-color($dk, "200");
+    color: material-color($dk, "500");
     cursor: not-allowed;
   }
 }

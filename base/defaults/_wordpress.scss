@@ -1,0 +1,666 @@
+/**
+ * WordPress adds dynamic classes to the post elements as well. Here is a list of some of the most popular ones:
+ */
+
+.post {
+
+  &-id {
+
+  }
+}
+
+body,
+.page {
+  @include elevation(10);
+  @include border-radius($sm-border-radius);
+  height: 100%;
+  width: 100%;
+}
+
+.attachment {}
+
+.sticky {}
+
+.hentry {}
+
+.category {
+
+  &-misc {}
+
+  &-example {}
+
+}
+
+.tag {
+
+  &-news {}
+
+  &-wordpress {}
+
+  &-markup {}
+}
+
+@import "wordpress/wp-post-styles";
+
+/**
+ * WordPress adds dynamic classes to your post using the post_class () function that will allow you to create your own styles for each format. The post_class () function will add a class in the form of “.format-foo” where foo is whatever post format you have chosen ie. gallery, image, etc.
+ */
+
+.format {
+
+  &-image {}
+
+  &-gallery {}
+
+  &-chat {}
+
+  &-link {}
+
+  &-quote {}
+
+  &-status {}
+
+  &-video {}
+}
+@import "wordpress/wp-post-formats";
+
+// * Default Menu Styles
+
+.current {
+
+  &_page_item {}         // Class for Current Page
+
+  &-cat {}               // Class for Current Category
+
+  &-menu-item {}         // Class for any other current Menu Item
+}
+
+.menu-item {
+
+  &-type-taxonomy {}   // Class for a Category
+
+  &-type-post_type {}  // Class for Pages
+
+  &-type-custom {}     // Class for any custom item that you added
+
+  &-home {}            // Class for the Home Link
+}
+
+@import "wordpress/wp-menu-styles";
+/**
+ * The WISWYG editor is one of the most popular and most used aspects of WordPress. For this reason it is a good idea to have styles ready for anything that the user might add to their blog, like images or blockquotes. The following CSS shows you what classes WordPress automatically adds to these elements:
+ */
+
+
+.entry-content {
+  margin: 1.5em 0 0;
+  img{}
+}
+
+.alignleft, img.alignleft,
+.float-left  {
+  display: inline;
+
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+  img & {
+		margin-right: $base-unit;
+  }
+}
+
+.alignright, img.alignright,
+.float-right {
+  display: inline;
+  /*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+  img & {
+    margin-left: $size-md;
+  }
+}
+
+.aligncenter, img.aligncenter {
+  @include center-block;
+  clear: both;
+	display: block;
+  margin: {
+    top: 1.5em;
+		right: auto;
+		bottom: 1.5em;
+		left: auto;
+  }
+  img & {
+		margin-bottom: $base-unit;
+	}
+}
+.center {
+  text-align: center;
+}
+
+.alignnone, img.alignnone {
+  margin: $spacer $lg-spacer $lg-spacer 0;
+}
+
+@import "wordpress/wp-wysiwyg-classes";
+
+@import "wordpress/wp-caption";
+
+.wp-smiley {}
+
+blockquote {
+
+  &.left {}
+
+  &.right {}
+}
+
+.gallery {
+
+  dl {
+
+    a {}
+
+    img {}
+  }
+
+  dt {}
+
+  dd {}
+
+  &-caption {}
+}
+
+.size {
+
+  &-full {}
+
+  &-large {}
+
+  &-medium {}
+
+  &-thumbnail {}
+}
+
+
+/**
+ * When styling widgets you will probably end up using the same styles over and over again. For this reason it is a good idea to combine classes on your style sheet using commas. For example, you could combine .widget_pages ul and .widget_archive ul by doing something like this:
+ *  ".widget_pages ul, .widget_archive ul {}"
+ */
+
+.widget {
+  margin: 0 0 25px;
+  p {
+    a {
+
+    }
+  }
+  select {
+    max-width: 100%;
+  }
+  &_search {
+    #s {}
+    .search-submit {
+      display: block;
+    }
+  }
+
+  &_meta {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+  }
+
+  &_links {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+  }
+
+  &_archive {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+
+    select {
+
+    }
+
+    option {}
+  }
+
+  &_pages {
+
+    ul {
+
+      li {
+
+        a {
+
+        }
+      }
+    }
+  }
+
+  &_links {
+
+    li {
+
+      &:after {}
+
+      &:before {}
+    }
+  }
+
+  &_tag_cloud {
+    div {
+      line-height: 1.5;
+      padding: 0.231em 0;
+    }
+
+    a {
+
+      &:after {}
+
+      &:before {}
+    }
+  }
+
+  &_categories {
+
+    ul {
+
+      li {}
+
+      &.children {}
+    }
+
+    a {}
+
+    select {
+
+      &#cat {}
+
+      .postform {}
+    }
+
+    option {}
+
+    .level-0 {}
+
+    .level-1 {}
+
+    .level-2 {}
+
+    .level-3 {}
+  }
+
+  &_recent_comments {}
+
+  &_recent_entries {
+
+    ul {
+
+      li {
+
+        a {}
+      }
+    }
+  }
+
+  &_text {}
+
+}
+
+@import "wordpress/wp-widget-styles";
+
+@import "wordpress/wp-a11y";
+
+#searchform {}
+
+#calendar_wrap {
+
+  caption {}
+
+  th {}
+
+  tr {
+
+    td {
+
+    }
+  }
+
+  td {
+
+  }
+
+  a {}
+
+  #today {}
+
+  #prev {
+
+    a {}
+  }
+
+  #next {
+
+    a {}
+  }
+}
+
+.recentcomments {}
+
+#recentcomments {
+
+  li {
+
+    a {}
+  }
+}
+
+.textwidget {
+
+  p {}
+
+  a {}
+}
+
+
+// * Default Comment Form Styles
+.commentlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    :before {
+      display: none;
+    }
+    :last-of-type { /* Do you want to style the last comment differently, such as remove borders? */
+    }
+    .comment {  /* Individual top-level comments */ }
+    .pingback {  /* Individual top-level pingbacks */}
+    .children li { /* Contains individual nested comments */}
+    .comment-respond {
+      margin-bottom: 50px;
+    }
+    p {}
+
+    ul {
+
+      &.children {
+
+        li {
+
+          &.alt {}
+
+          &.byuser {}
+
+          &.comment {}
+
+          &.bypostauthor {}
+
+          &.comment-author-admin {}
+        }
+
+        .alt {}
+
+        .odd {}
+
+        .even {}
+      }
+    }
+  }
+
+  .reply {
+
+    a {}
+  }
+
+  .alt {}
+
+  .odd {}
+
+  .even {}
+
+  .thread {
+
+    &-alt {}
+
+    &-odd {}
+
+    &-even {}
+  }
+
+  .vcard {
+
+    cite.fn {
+
+      a.url {}
+    }
+
+    span.says {}
+
+    img {
+
+      &.photo {}
+
+      &.avatar {}
+    }
+  }
+
+  .comment-meta {
+
+    a {}
+  }
+
+  .commentmetadata {
+
+    a {}
+  }
+
+  .parent {}
+
+  .comment  {
+    border-top: 1px solid #e9e9e9;
+    margin: 0 0 40px 50px;
+    padding: 20px;
+    position: relative;
+    list-style: none;
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+    .children {
+      margin-top: 40px;
+    }
+  }
+
+  .children { /* Nested comments */
+      list-style: none;
+      margin: 0 0 0 6%;
+      padding: 0;
+  }
+
+  .pingback {}
+
+  .bypostauthor {}
+
+  .comment-author {
+    float: left;
+    margin-right: 10px;
+    img {
+      position: absolute;
+      left: -50px;
+      top: 5px;
+      -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+    .says {
+      display: none;
+    }
+  }
+
+  .comment-author-admin {}
+
+}
+
+#cancel-comment-reply {
+  a {}
+}
+
+// Comment Form
+
+#respond { /* Container for the comments section */
+	clear: both;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #ababab;
+  margin-bottom: 80px;
+  > h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  form label {
+    color: #888888;
+  }
+}
+
+.comments-title,
+#reply-title {
+  margin-bottom: 0px;
+}
+
+#cancel-comment-reply-link {}
+
+#commentform {
+  /* Message displayed when there are no comments */
+  color: #5b5b5b;
+  font-size: 14px;
+  margin-top: 5px;
+
+  .form-allowed-tags,
+  label {
+    margin-bottom: 20px;
+  }
+  label { /* The text next to each comment form field */
+    padding: 1em 0;
+  }
+  .form-allowed-tags,
+  .form-allowed-tags code {
+
+  }
+
+  input[type="text"] {
+    padding-top: 5px;
+    height: 100px;
+    resize: vertical;
+  }
+  #comment { /* The comment form textarea */
+
+  }
+}
+
+#author {}
+
+#email {}
+
+#url {}
+
+#comment {}
+
+#submit {}
+
+.comment-notes {
+  margin-bottom: 20px;
+}
+
+.required {}
+
+.comment-form {
+  margin-top: 20px;
+  label {
+    display: none;
+  }
+  .submit {
+    display: inline-block;
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    height: 36px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    :hover {
+      opacity: 0.5;
+    }
+  }
+  .comment-form-comment {
+    margin-bottom: 30px;
+  }
+  .comment-form-url {
+    margin-bottom: 35px;
+  }
+  #wp-comment-cookies-consent {
+    margin: 0 10px 0 0;
+  }
+  .comment-form-cookies-consent {
+    padding: 0 15px;
+    display: none;
+
+    label {
+      margin-left: 5px;
+      display: inline;
+    }
+  }
+
+  &-author {}
+
+  &-email {}
+
+  &-url {}
+
+  &-comment {}
+}
+
+.form-allowed-tags {}
+
+.form-submit {}
+@import "wordpress/wp-comment-form-styles";
+@import "wordpress/wp-body-class";
+@import "wordpress/wp-custom-logo";
+@import "wordpress/wp-image";

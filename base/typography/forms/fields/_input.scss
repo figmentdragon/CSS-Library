@@ -1,0 +1,19 @@
+
+input {
+  border-radius: 0;
+  line-height: $base-line-height;
+  overflow: visible;
+}
+
+input,
+textarea,
+button,
+select {
+  outline: none;
+  :focus {
+    outline-style: dotted;
+    outline-color: lighten($border, $muted-percentage);
+    outline-width: 1px;
+    text-decoration: none;
+  }
+}

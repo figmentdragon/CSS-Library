@@ -1,0 +1,61 @@
+/* Styles for posts and pages */
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.page-title { /* Page titles */
+
+}
+
+body.search .page-title,
+body.archive .page-title { /* Optional, if you want your page titles to look different on search and archive pages */
+}
+
+.sticky { /* Style your sticky posts. This class is applied to the same element as .hentry below. */
+  display: block;
+}
+
+.hentry { /* The wrapper for individual posts */
+	margin: 0 0 1.5em;
+	padding-bottom: 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.entry-summary,
+.lead,
+.the-excerpt { /* Container for the post body/excerpt text */
+	margin: 1.5em 0 0;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-header { /* Container for the entry title, byline and post date */
+  margin: 20px 0
+}
+<!--entrytitle-->
+<!--entrydate-->
+<!--byline-->
+<!--entrymeta-->
+<!--cat-links-->
+<!--taglinksposttags-->
+<!--sep-->
+<!--commentslink-->
+<!--editlink-->
+
+.page-links { /* Style the page numbers for multi-page posts (posts that have been split with <!--next-page -->. */
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}

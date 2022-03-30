@@ -1,52 +1,38 @@
-$chip-percentage: 4%;
-
-$chip-color: tint($button, $chip-percentage);
-$chip-text-color: shade($chip-color, $text-percentage);
-$chip-active-color: shade($chip-color, $active-percentage);
-$chip-border-color: shade($chip-color, $border-percentage);
-$chip-focus-color: shade($chip-color, $focus-percentage);
-$chip-hover-color: shade($chip-color, $hover-percentage);
-$chip-background-color: tint($chip-color, $background-percentage);
-$chip-border-radius: $border-radius * 50;
-
-$chip-offset-y: $offset * 10;
-$chip-offset-x: $offset * 8;
-
 .chip {
-  padding: $chip-offset-x $chip-offset-y;
+  padding: $padding * 8px #{$padding * 10px};
   user-select: none;
-  background: $chip-background-color;
-  border-radius: $chip-border-radius;
+  background: material-color($dk, "300");
+  border-radius: $border-radius * 50px;
   transition: all 0.2s ease;
   cursor: pointer;
 
   &:hover {
-    background: tint($chip-hover-color, $background-percentage);
+    background: material-color($dk, "400");
   }
 
   &:active,
   &:focus-visible {
-    background: tint($chip-focus-color, $background-percentage);
+    background: material-color($dk, "500");
   }
 
   &.active {
-    background: tint($chip-active-color, $background-percentage);
-    color: tint($chip-active-color, $text-percentage);
+    background: rgba(material-color($p, "100"), 0.4);
+    color: material-color($p, "500");
 
     &:hover {
-      background: tint($chip-hover-color, $background-percentage);
+      background: rgba(material-color($p, "100"), 0.8);
     }
 
     &:active,
     &:focus-visible {
-      background: tint($chip-active-color, $focus-percentage);
+      background: material-color($p, "200");
     }
   }
 
   &.inactive,
   &:inactive {
-    background: tint($chip-background-color, $inactive-percentage);
-    color: tint($chip-text-color, $inactive-percentage);
+    background: material-color($dk, "200");
+    color: material-color($dk, "800");
     cursor: default;
   }
 }

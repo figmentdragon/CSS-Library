@@ -31,7 +31,7 @@ $entry-header-color: shade-color($primary-color, 10%);
 }
 
 h1.entry-title {
-	line-height: $lg;
+	line-height: $size-lg;
 	font-weight: bold;
 }
 
@@ -68,7 +68,7 @@ h1.entry-title {
 	color: $primary-color;
 	clear: both;
 	float: none;
-	font-size: $xs;
+	font-size: $size-xs;
 	display: block;
 
 	> span {
@@ -172,7 +172,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .author-bio {
 	position: relative;
-	font-size: $xs;
+	font-size: $size-xs;
 	max-width: $responsive-aligndefault-width;
 
 	.site-main > article > & {
@@ -204,7 +204,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		}
 
 		.author-description {
-			font-size: $xs;
+			font-size: $size-xs;
 			margin-top: calc(0.5 * $vertical-offset);
 			margin-bottom: calc(0.5 * $vertical-offset);
 		}

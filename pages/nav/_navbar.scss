@@ -1,50 +1,38 @@
+/* #NAVBAR# */
 
-// Navbar
-//
-// Provide a static navbar from which we expand to create full-width, fixed, and
-// other navbar variations.
+/*  *TOC*
+ *  () Navbar
+ *  () Navbar brand
+ *  () Navbar nav
+ *  () Responsive navbar
+ *  () Navbar position
+ */
+
+ /* NAVBAR */
+/*
+/* Provide a static navbar from which we expand to create full-width, fixed, and other navbar variations. */
 
 .navbar {
-  --#{$variable-prefix}navbar-padding-x: #{if($navbar-offset-x == null, 0, $navbar-offset-x)};
-  --#{$variable-prefix}navbar-padding-y: #{$navbar-offset-y};
-  --#{$variable-prefix}navbar-color: #{$navbar-light-color};
-  --#{$variable-prefix}navbar-hover-color: #{$navbar-light-hover-color};
-  --#{$variable-prefix}navbar-inactive-color: #{$navbar-light-inactive-color};
-  --#{$variable-prefix}navbar-active-color: #{$navbar-light-active-color};
-  --#{$variable-prefix}navbar-brand-padding-y: #{$navbar-brand-offset-y};
-  --#{$variable-prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
-  --#{$variable-prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
-  --#{$variable-prefix}navbar-brand-color: #{$navbar-light-brand-color};
-  --#{$variable-prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
-  --#{$variable-prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-offset-x};
-  --#{$variable-prefix}navbar-toggler-padding-y: #{$navbar-toggler-offset-y};
-  --#{$variable-prefix}navbar-toggler-padding-x: #{$navbar-toggler-offset-x};
-  --#{$variable-prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
-  --#{$variable-prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
-  --#{$variable-prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
-  --#{$variable-prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
-  --#{$variable-prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
-  --#{$variable-prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
-
   position: relative;
   display: flex;
-  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  flex-wrap: wrap; /* allow us to do the line break for collapsing content */
   align-items: center;
-  justify-content: space-between; // space out brand from logo
-  padding: var(--#{$variable-prefix}navbar-offset-y) var(--#{$variable-prefix}navbar-offset-x);
+  justify-content: space-between; /* space out brand from logo */
+  padding-top: $navbar-padding-y;
+  padding-right: $navbar-padding-x; /* default: null
+  padding-bottom: $navbar-padding-y; */
+  padding-left: $navbar-padding-x; /* default: null */
   @include gradient-bg();
 
-  // Because flex properties aren't inherited, we need to redeclare these first
-  // few properties so that content nested within behave properly.
-  // The `flex-wrap` property is inherited to simplify the expanded navbars
-  // Because flex properties aren't inherited, we need to redeclare these first
-  // few properties so that content nested within behave properly.
-  // The `flex-wrap` property is inherited to simplify the expanded navbars
-  %container-flex-properties {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-between;
+  /* Because flex properties aren't inherited, we need to redeclare these first few properties so that content nested within behave properly. */
+  /* The `flex-wrap` property is inherited to simplify the expanded navbars */
+  justify-self: stretch;
+  %container-flex-properties
+  {
+      display: flex;
+      align-items: center;
+      flex-wrap: inherit;
+      justify-content: space-between;
   }
 
   > .container,
@@ -53,17 +41,90 @@
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
-    > .container#{breakpoint-infix($breakpoint, $container-max-width)} {
+    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
       @extend %container-flex-properties;
     }
   }
 }
+/* scss-docs-start navbar-expand-loop */
+/* Generate series of `.navbar-expand-*` responsive classes for configuring where your navbar collapses. */
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
 
-// Navbar themes
-//
-// Styles for switching between navbars with light or dark background.
+    /* stylelint-disable-next-line scss/selector-no-union-class-name */
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
 
-// Dark links against a light background
+        .navbar-nav {
+          flex-direction: row;
+
+          .dropdown-menu {
+            position: absolute;
+          }
+
+          .nav-link {
+            padding-right: $navbar-nav-link-padding-x;
+            padding-left: $navbar-nav-link-padding-x;
+          }
+        }
+
+        .navbar-nav-scroll {
+          overflow: visible;
+        }
+
+        .navbar-collapse {
+          display: flex !important; /* stylelint-disable-line declaration-no-important */
+          flex-basis: auto;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+
+        .offcanvas-header {
+          display: none;
+        }
+
+        .offcanvas {
+          position: inherit;
+          bottom: 0;
+          z-index: auto;
+          flex-grow: 1;
+          visibility: visible !important; /* stylelint-disable-line declaration-no-important */
+          background-color: transparent;
+          border-right: 0;
+          border-left: 0;
+          @include box-shadow(none);
+          @include transition(none);
+          transform: none;
+        }
+        .offcanvas-top,
+        .offcanvas-bottom {
+          height: auto;
+          border-top: 0;
+          border-bottom: 0;
+        }
+
+        .offcanvas-body {
+          display: flex;
+          flex-grow: 0;
+          padding: 0;
+          overflow-y: visible;
+        }
+      }
+    }
+  }
+}
+/* scss-docs-end navbar-expand-loop */
+
+/* Navbar themes */
+/* Styles for switching between navbars with light or dark background. */
+
+/* Dark links against a light background */
 .navbar-light {
   .navbar-brand {
     color: $navbar-light-brand-color;
@@ -83,8 +144,8 @@
         color: $navbar-light-hover-color;
       }
 
-      &.inactive {
-        color: $navbar-light-inactive-color;
+      &.disabled {
+        color: $navbar-light-disabled-color;
       }
     }
 
@@ -114,14 +175,52 @@
   }
 }
 
-// secondary links against a dark background
+/* White links against a dark background */
 .navbar-dark {
-  --#{$variable-prefix}navbar-color: #{$navbar-dark-color};
-  --#{$variable-prefix}navbar-hover-color: #{$navbar-dark-hover-color};
-  --#{$variable-prefix}navbar-inactive-color: #{$navbar-dark-inactive-color};
-  --#{$variable-prefix}navbar-active-color: #{$navbar-dark-active-color};
-  --#{$variable-prefix}navbar-brand-color: #{$navbar-dark-brand-color};
-  --#{$variable-prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
-  --#{$variable-prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-  --#{$variable-prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
+  .navbar-brand {
+    color: $navbar-dark-brand-color;
+
+    &:hover,
+    &:focus {
+      color: $navbar-dark-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-dark-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-dark-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-dark-color;
+    a,
+    a:hover,
+    a:focus {
+      color: $navbar-dark-active-color;
+    }
+  }
 }

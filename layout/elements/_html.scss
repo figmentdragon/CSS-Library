@@ -1,4 +1,8 @@
 /*1 */
+html,
+body,
+div,
+span,
 applet,
 object,
 iframe,
@@ -98,4 +102,14 @@ nav,
 section,
 summary {
     display: block;
+}
+
+html {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  @include border-box;
 }

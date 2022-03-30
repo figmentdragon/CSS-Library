@@ -1,0 +1,24 @@
+// HR
+//The <hr> HTML element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
+
+$hr-margin-y:                 $spacer;
+$hr-bg:                 mix(white, $hr, $background-percentage);
+$hr-border: mix(black, $hr, $border-percentage);
+$hr-border-width:             $border-width;
+$hr-height:                   1px;
+$hr-opacity:                  .25;
+
+hr {
+  @include box-sizing($type: content-box);
+  overflow: visible;
+  background-color: $hr-bg;
+  color: $hr;
+  opacity: $hr-opacity;
+  border-top:  $hr-border-width solid $hr-border;
+  height: $hr-height;
+  margin-top: calc(1.05 * 4);
+  margin-bottom: calc(1.05 * 5);
+  :not([size]) {
+    height: $hr-height; // 2
+  }
+}

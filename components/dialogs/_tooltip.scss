@@ -1,9 +1,9 @@
 .tooltip {
-  background: ($dark, "900");
-  font-size: $base-font-size * 11;
+  background: material-color($dk, "900");
+  font-size: $font-size * 11px;
   color: #fff;
-  padding: $offset * 6;
-  border-radius: $border-radius * 4;
+  padding: $padding * 6px;
+  border-radius: $border-radius * 4px;
   width: max-content;
   user-select: none;
   transition: opacity 0.2s ease;

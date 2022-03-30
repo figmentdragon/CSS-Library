@@ -1,0 +1,44 @@
+$input-offset: $input-button-offset;
+$input-font-family: $accent-font;
+$input-font-size: $input-button-font-size;
+$input-font-weight: $normal-font-weight;
+$input-line-height: $input-button-line-height;
+
+$input-offset-sm: $input-button-offset-sm;
+$input-offset-sm: $input-button-offset-sm;
+$input-sm-font-size: $sm-font-size;
+
+$input-offset-lg: $input-button-offset-lg;
+$input-offset-lg: $input-button-offset-lg;
+$input-large-font-size: $lg-font-size;
+
+$input-color: $input;
+$input-border-color: $input;
+$input-border-width: $input-button-border-width;
+$input-box-shadow: $box-shadow-hover;
+$input-border-radius: $border-radi;
+$input-border-radius-sm: $sm-border-radius;
+$input-border-radius-lg: $lg-border-radius;
+
+$input-focus-bg: $input-bg-focus;
+$input-focus-border: $input-border-focus;
+$input-focus-color: $input-text-focus;
+$input-focus-width: $input-button-focus-width;
+$input-focus-box-shadow: $box-shadow;
+
+$input-placeholder-color: $primary;
+$input-plaintext: $body-bg;
+
+$input-height-border: $input-border-width * 2;
+
+$input-height-inner: divide(calc($input-line-height * 1), calc($input-offset * 2));
+$input-height-inner-half: divide(calc($input-line-height * .5), $input-offset);
+$input-height-inner-quarter: divide(calc($input-line-height * .25), calc($input-offset * .5));
+
+$input-height: calc(divide($input-line-height, $input-offset) * divide(2, $input-height-border));
+$input-height-sm: calc(divide($input-line-height, $input-offset-sm) * divide(2, $input-height-border));
+$input-height-lg: divide($input-line-height, $input-offset-lg * 2), $input-height-border, false;
+
+$input-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+$form-color-width: 3rem;

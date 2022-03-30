@@ -1,0 +1,113 @@
+// Select
+//
+// Replaces the browser default select with a custom one, mostly pulled from
+// https://primer.github.io/.
+// scss-docs-start form-select-variables
+$form-select-offset: $input-offset;
+$form-select-offset: $input-offset;
+$form-select-font-family: $input-font-family;
+$form-select-font-size: $input-font-size;
+$form-select-sm-font-size: calc($input-font-size * $size-sm);
+$form-select-indicator-offset: $form-select-offset * 3; // Extra offset for background-image
+$form-select-font-weight: $input-font-weight;
+$form-select-line-height: $input-line-height;
+$form-select-color: $input;
+$form-select-bg: $input-bg;
+$form-select-inactive-color: null;
+$form-select-inactive-bg: $primary;
+$form-select-inactive-color: $inactive;
+$form-select-bg-position: right $form-select-offset center;
+$form-select-bg-size: 16px 12px; // In pixels because image dimensions
+$form-select-indicator-color: $primary;
+$form-select-indicator: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'><path fill=\'none\' stroke=\'#{$form-select-indicator-color}\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M2 5l6 6 6-6\'/></svg>');
+
+$form-select-feedback-icon-offset-end: $form-select-offset * 2.5 + $form-select-indicator-offset;
+$form-select-feedback-icon-position: center right $form-select-indicator-offset;
+$form-select-feedback-icon-size: $input-height-inner-half $input-height-inner-half;
+
+$form-select-border-width: $input-border-width;
+$form-select-border-color: $input;
+$form-select-border-radius: $input-border-radius;
+$form-select-box-shadow: $box-shadow-active;
+
+$form-select-focus-border-color: $input-focus-border;
+$form-select-focus-width: $input-focus-width;
+$form-select-focus-box-shadow: 0 0 0 $form-select-focus-width $input-button-focus-color;
+
+$form-select-border-radius-sm: $input-border-radius-sm;
+
+$form-select-offset-x-lg: $input-offset-lg;
+$form-select-offset-lg: $input-offset-lg;
+$form-select-large-font-size: $input-large-font-size;
+$form-select-border-radius-lg: $input-border-radius-lg;
+
+$form-select-transition: $input-transition;
+// scss-docs-end form-select-variables
+
+.form-select {
+  display: block;
+  width: 100%;
+  padding: $form-select-offset $form-select-indicator-offset $form-select-offset form-select-offset;
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -moz-padding-start: subtract(form-select-offset, 3px); // See https://github.com/twbs/bootstrap/issues/32636
+  font-family: $accent-font;
+  @include font-size($form-select-font-size);
+  font-weight: $form-select-font-weight;
+  line-height: $form-select-line-height;
+  color: $form-select-color;
+  background-color: $form-select-bg;
+  background-image: escape-svg($form-select-indicator);
+  background-repeat: no-repeat;
+  background-position: $form-select-bg-position;
+  background-size: $form-select-bg-size;
+  border: $form-select-border-width solid $form-select-border-color;
+  @include border-radius($form-select-border-radius, 0);
+  @include box-shadow($form-select-box-shadow);
+  @include transition($form-select-transition);
+  appearance: none;
+
+  &:focus {
+    border-color: $form-select-focus-border-color;
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $form-select-focus-box-shadow;
+    }
+  }
+
+  &[multiple],
+  &[size]:not([size="1"]) {
+    padding-right: form-select-offset;
+    background-image: none;
+  }
+
+  &:inactive {
+    color: $form-select-inactive-color;
+    background-color: $form-select-inactive-bg;
+    border-color: $form-select-inactive-color;
+  }
+
+  // Remove outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $form-select-color;
+  }
+}
+
+.form-select-sm {
+  padding-top: $form-select-offset;
+  padding-bottom: $form-select-offset;
+  padding-left: $form-select-offset;
+  @include font-size($form-select-sm-font-size);
+  @include border-radius($form-select-border-radius-sm);
+}
+
+.form-select-lg {
+  padding-top: $form-select-offset-lg;
+  padding-bottom: $form-select-offset-lg;
+  padding-left: $form-select-offset-x-lg;
+  @include font-size($form-select-large-font-size);
+  @include border-radius($form-select-border-radius-lg);
+}

@@ -1,0 +1,25 @@
+// Navbar brand
+//
+// Used for brand, project, or site names.
+
+$navbar-brand-font-size:            $lg-font-size;
+$nav-link-height:                   $base-font-size * $base-line-height + $nav-link-offset-y * 2;
+$navbar-brand-height:               $navbar-brand-font-size * $base-line-height;
+$navbar-brand-offset-y:            ($nav-link-height - $navbar-brand-height) * .5;
+$navbar-brand-spacer-end:           1rem;
+
+.navbar-brand {
+  padding-top: $navbar-brand-offset-y;
+  padding-bottom: $navbar-brand-offset-y;
+  margin-right: $navbar-brand-spacer-end;
+  @include font-size($navbar-brand-font-size);
+  color: var(--#{$prefix}navbar-brand-color);
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: var(--#{$prefix}navbar-brand-hover-color);
+    text-decoration: if($hover-decoration == underline, none, null);
+  }
+}

@@ -1,0 +1,30 @@
+/**
+ * Comment Title
+ */
+
+.comments-title,
+.comment-reply-title {
+	font-size: $heading--font-size-h2;
+	letter-spacing: $heading--letter-spacing-h2;
+}
+
+.comment-reply-title {
+	display: flex;
+	justify-content: space-between;
+
+	small {
+
+		a {
+			font-family: $font-secondary;
+			font-size: var(--sm);
+			font-style: normal;
+			font-weight: normal;
+			letter-spacing: normal;
+		}
+	}
+}
+
+/* Nested comment reply title*/
+.comment .comment-respond .comment-reply-title {
+	font-size: font-lg;
+}

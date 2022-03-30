@@ -1,44 +1,48 @@
-// logo
 
-.logo {
-  position: fixed;
-  top: 1vh;
-  left: 0vw;
+// Logo
+.logo {}
 
-  z-index: $z-index-logo;
-  overflow: visible;
-  filter: blur(1px);
-  transform: scale( 1.5 );
-  .logo-img {
-    overflow: visible;
-  }
+.logo-img {}
+
+#logo-slider-section .owl-nav {
+  z-index: 199;
 }
 
-.custom-logo-link {
-  position: absolute;
-  top: -5vh;
-  left:  0;
-
-  z-index: $z-index-logo;
-  overflow: visible;
+#logo-slider-section .owl-prev,
+#logo-slider-section .owl-next {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    outline: none;
+    padding: 7px;
+    position: absolute;
+    top: 35%;
+    -webkit-transform: translateY(-45%);
+    -moz-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    -o-transform: translateY(-45%);
+    transform: translateY(-45%);
 }
 
-.custom-logo {
-	display: block;
-	width: 120px;
-
-  .custom-logo-link {
-	   display: block;
-   }
-
-   .site-identity {
-    display: none;
-   }
+#logo-slider-section .owl-prev {
+    left: 0;
 }
 
+#logo-slider-section .owl-next  {
+    right: 0;
+}
 
-.slider-logo,
-.site-header-logo {
-	margin: 21px 0;
-    max-width: 270px;
+#logo-slider-section .owl-prev .icon,
+#logo-slider-section .owl-next .icon {
+    width: 49px;
+    height: 49px;
+}
+
+#logo-slider-section .section-content-wrapper .post-thumbnail {
+    margin: 0;
+    opacity: 0.4;
+}
+#logo-slider-section .section-content-wrapper .post-thumbnail {
+    margin: 0;
+    opacity: 0.4;
 }

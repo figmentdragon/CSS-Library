@@ -14,21 +14,21 @@ $navbar-nav-link-padding-x:         .5rem !default;
   .nav-link {
     padding-right: 0;
     padding-left: 0;
-    color: var(--#{$variable-prefix}navbar-color);
+    color: var(--#{$prefix}navbar-color);
 
     &:hover,
     &:focus {
-      color: var(--#{$variable-prefix}navbar-hover-color);
+      color: var(--#{$prefix}navbar-hover-color);
     }
 
     &.disabled {
-      color: var(--#{$variable-prefix}navbar-disabled-color);
+      color: var(--#{$prefix}navbar-disabled-color);
     }
   }
 
   .show > .nav-link,
   .nav-link.active {
-    color: var(--#{$variable-prefix}navbar-active-color);
+    color: var(--#{$prefix}navbar-active-color);
   }
 
   .dropdown-menu {

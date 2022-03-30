@@ -1,3 +1,140 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.header {
+  width: 220px;
+  bottom: 0;
+  top: 0;
+  text-align: right;
+  z-index: 9;
+}
+.affix{
+  position: fixed;
+}
+.header-text {
+  margin-bottom: 50px;
+}
+.header-text blockquote {
+  font-size: 16px;
+  padding-left: 50px;
+}
+.header-text blockquote:before {
+  font-size: 30px;
+}
+.menu-left .header {
+  text-align: left;
+}
+.menu-left .main-menu .sub-menu {
+  padding-left: 0;
+  padding-right: 20px;
+  right: 100%;
+  left: auto;
+  text-align: right;
+}
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.main-menu {
+  font-family: 'Roboto', serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.main-menu ul,
+.main-menu li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-menu .menu-list > li > a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: block;
+}
+.main-menu .active a {
+  color: #000000;
+}
+.main-menu li {
+  position: relative;
+}
+
+.main-menu .sub-menu li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.main-menu .sub-menu li:first-child {
+  padding-top: 10px;
+}
+.main-menu .sub-menu li:last-child {
+  padding-bottom: 10px;
+}
+.main-menu .sub-menu a {
+    font-size: 14px;
+}
+
+.dropdown-plus {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 9px;
+}
+.main-menu .sub-menu .dropdown-plus{
+  top: 7px;
+}
+.dropdown-plus:before,
+.dropdown-plus:after {
+  position: absolute;
+  content: '';
+  width: 11px;
+  height: 1px;
+  background-color: #8a8a8a;
+  left: 2px;
+  top: 7px;
+}
+
+.dropdown-plus:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.main-menu li>ul{
+    display: none;
+}
+.main-menu li:focus-within > ul,
+.main-menu li:focus > ul,
+.main-menu li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+.main-menu li:focus-within > ul{
+    display: block;
+}
+.dropdown-plus.dropdown-open:after{
+  opacity: 0;
+}
+.logo{
+  padding-bottom: 30px;
+}
+.logo a {
+  font-size: 40px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+.logo p,
+.logo h1,
+.logo h2{
+  margin: 0;
+  line-height: normal;
+}
+.logo .site-description{
+  font-size: 12px;
+}

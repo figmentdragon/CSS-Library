@@ -1,0 +1,36 @@
+$entry-header-color: shade-color($primary-color, 10%);
+
+.entry-title { /* Post titles */
+
+	color: $entry-header-color;
+	font-size: $entry-header-font-size;
+	letter-spacing: $letter-spacing-lg;;
+	line-height: $line-height-md;
+	overflow-wrap: break-word;
+
+	a {
+		color: $link-color;
+		text-underline-offset: 0.15em;
+
+		&:hover {
+			color: $hover-color;
+		}
+
+		&:focus {
+			color: $focus-color;
+		}
+
+		&:active {
+			color: $link-color;
+		}
+	}
+}
+
+.singular .entry-title {
+	font-size: h3;
+}
+
+h1.entry-title {
+	line-height: $size-lg;
+	font-weight: bold;
+}

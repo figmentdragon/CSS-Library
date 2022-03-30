@@ -1,0 +1,28 @@
+/* =Navigation
+----------------------------------------------- */
+
+/* Older/Newer Post Navigation */
+
+.site-content .site-navigation,
+.post-navigation {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ababab;
+  a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  span.nav-subtitle {
+    display: block;    
+  }
+}
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}

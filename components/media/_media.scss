@@ -1,32 +1,86 @@
-/* =Media
------------------------------------------------ */
-/* Styling for images and videos */
-.site-header img,
-.entry-content img,
-.comment-content img,
-.widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+
+/**
+ * 15.0 - Media Queries
+ */
+
+/**
+ * Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+
+@-ms-viewport {
+	width: device-width;
 }
-.site-header img,
-.entry-content img,
-.widget-img,
-img[class*="align"],
-img[class*="wp-image-"],
-.wp-caption img {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+
+@viewport {
+	width: device-width;
 }
-.site-header img,
-.entry-content img,
-.widget img,
-img.size-full {
-	max-width: 100%;
-	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
-}
-.page-content .wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley { /* Remove borders and backgrounds from WP smileys */
-  border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
+
+
+/*--------------------------------------------------------------
+## mobile-horizontal 10.1
+--------------------------------------------------------------*/
+
+@import 'mobile';
+
+/*--------------------------------------------------------------
+## mobile-portrait 10.2
+--------------------------------------------------------------*/
+
+@import 'mobile-portrait';
+
+/*--------------------------------------------------------------
+## mobile-horizontal 10.3
+--------------------------------------------------------------*/
+
+@import 'mobile-horizontal';
+
+/*--------------------------------------------------------------
+## tablet 10.4
+--------------------------------------------------------------*/
+
+@import 'tablet';
+
+/*--------------------------------------------------------------
+## tablet 10.5
+--------------------------------------------------------------*/
+
+@import 'tablet-width';
+
+/*--------------------------------------------------------------
+## desktop 10.6
+--------------------------------------------------------------*/
+
+@import 'tablet-horizontal';
+
+/*--------------------------------------------------------------
+## desktop 10.7
+--------------------------------------------------------------*/
+
+@import 'desktop';
+
+/*--------------------------------------------------------------
+## desktop 10.8
+--------------------------------------------------------------*/
+
+@import 'large';
+
+/*--------------------------------------------------------------
+## wide-width 10.9
+--------------------------------------------------------------*/
+
+@import 'wide-width';
+
+/*--------------------------------------------------------------
+## Ultra Wide 10.10
+--------------------------------------------------------------*/
+
+@import 'diagonal';
+
+/*--------------------------------------------------------------
+## Ultra Wide 10.11
+--------------------------------------------------------------*/
+
+@import 'ultra-wide';

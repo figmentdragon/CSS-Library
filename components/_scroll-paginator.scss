@@ -1,0 +1,26 @@
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev {
+    position: absolute;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    margin-top: -25px;
+}
+.fp-section.active:hover .fp-controlArrow.fp-prev,
+.fp-section.active:hover .fp-controlArrow.fp-next {
+    opacity: 1;
+    visibility: visible;
+}
+.fp-controlArrow.fp-prev {
+    left: 20px;
+}
+.fp-controlArrow.fp-next {
+    right: 20px;
+}

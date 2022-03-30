@@ -1,25 +1,21 @@
 /* = Containers
 ----------------------------------------------- */
 
-.site-wrapper { /* The the outer-most container, wraps the entire site */
-  margin-top: 1.75vh;
-  margin-right: $vertical-spacer;
-  margin-bottom: 1.75vh;
+.site { /* The the outer-most container, wraps the entire site */
+  margin-top: 3vh;
+  margin-right: .75vw;
+  margin-bottom: 3vh;
   margin-left: 3vw;
-  width: $max-content-width;
-  height: 100%;
+  @include elevation(15);
 }
 
 .site-header { /* The container for the entire header area */
-  position: fixed;
-  max-width: 4vw;
-  margin-top: 0;
-  margin-right: 98vw;
-  margin-bottom: 0;
-  margin-left: 0;
-  text-align: center;
-  background-image: linear-gradient( to bottom, $chocolate 1%, $secondary, white, transparent);
-  @include elevation(20);
+  width: 4vw;
+  bottom: 0;
+  top: 0;
+  text-align: left;
+  z-index: 9;
+  overflow: visible;
 }
 
 .page-header {
@@ -27,13 +23,8 @@
   border-bottom: 3px solid $border-color;
 }
 
-.main { /* The container for #primary, #secondary, and #tertiary */
-  position: relative;
+#main { /* The container for #primary, #secondary, and #tertiary */
 
-  margin-top: 1.75vh;
-  margin-right: .5vw;
-  margin-bottom: 1.75vh;
-  margin-left: 2vw;
 }
 #primary { /* The container for your primary content.*/
 
@@ -48,14 +39,7 @@
 
 }
 .site-footer { /* Container for the entire site footer area */
-  border-top-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(
-    to left,
-    black,
-    $chocolate,
-    transparent );
-  background-image: linear-gradient( to left, transparent 1%, $primary, white, transparent );
+
   padding-right: 10vw;
 
   height: 2.75vh;
@@ -63,20 +47,18 @@
   justify-content: flex-end;
   align-items: baseline;
 
-
+  @include gradient-global ( $deg: 90deg, $color: $primary );
   :hover {
     @include elevation(5);
   }
 }
 
-@import "structure/aside-format";
-@import "structure/comments";
-@import "structure/content";
-@import "structure/gallery";
-@import "structure/media";
-@import "structure/menu";
-@import "structure/navigation";
+@import "structure/article";
+@import "structure/aside";
+@import "structure/container";
+@import "structure/nav";
+@import "structure/page-navigation";
 @import "structure/site-footer";
 @import "structure/site-header";
-@import "structure/widgets";
+@import "structure/the-content";
 @import "structure/responsive-structure";

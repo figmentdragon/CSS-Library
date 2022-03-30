@@ -121,7 +121,7 @@
     {
         font-family: $post-title-font-family;
         font-size: $h3-font-size;
-        font-weight: $bold-font-weight;
+        font-weight: $font-weight-bold;
         line-height: $large-line-height;
 
         display: inline-block;
@@ -235,7 +235,7 @@
     {
         font-family: 'Wanda';
         font-size: $base-unit;
-        font-weight: $bold-font-weight;
+        font-weight: $font-weight-bold;
 
         margin-top: $spacer;
         margin-right: .66 * $base-unit;

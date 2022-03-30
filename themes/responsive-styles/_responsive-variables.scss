@@ -1,0 +1,45 @@
+/**
+ * Required Variables
+ */
+ $default-width: 38.125rem;
+ $default-width: 610px;
+ $max-content-width: screen - ($grid-gutter * 2);
+ $max-content-width: 1240px;
+
+$mobile-breakpoint: calc($tablet - 1px);
+$tablet-breakpoint: calc($desktop_width - 1px);
+
+$laptop-breakpoint: calc($wide_width - 1px);
+$desktop-breakpoint: calc($diagonal_screen - 1px);
+
+$breakpoint-small: $mobile-breakpoint;
+$breakpoint-medium: $tablet;
+$breakpoint-large: $laptop-breakpoint;
+$breakpoint-xl: $desktop-breakpoint;
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$media-breakpoints: (
+small: $mobile-breakpoint,
+medium: $tablet,
+large: $laptop-breakpoint,
+xl: $desktop
+);
+
+$device-breakpoint: (
+  'xl' '(min-width: ' + ($laptop-breakpoint + 1 ) + ') and (max width: ' + $desktop-breakpoint + ')',
+  'large' '(min-width: ' + ($tablet-breakpoint + 1 ) + ') and (max width: ' + $laptop-breakpoint + ')',
+  'medium' '(min-width: ' + ($mobile-breakpoint + 1 ) + ') and (max width: ' + $tablet-breakpoint + ')',
+  'small' '(max width: ' + $mobile-breakpoint + ')',
+);
+
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;

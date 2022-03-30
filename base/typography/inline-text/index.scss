@@ -1,0 +1,41 @@
+// #Inline text semantics
+// Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
+
+@import "code";
+@import "emphasis";
+@import "kbd";
+@import "mark";
+@import "span";
+
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+code,
+pre {
+  background: $accent;
+  overflow: auto;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.015em;
+}
+
+code pre,
+pre code {
+  padding: 0;
+}

@@ -1,0 +1,29 @@
+.search-field {
+  display: inline-block;
+  float: none;
+  position: relative;
+  z-index: 30;
+  height: 2vh !important;
+  width: 0 !important;
+  max-width: 20vw;
+  padding: 3px!important;
+  margin: 0;
+  color: $input-text;
+  background-color: $input-bg;
+  border: none !important;
+  outline: 0;
+  cursor: pointer;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition-duration: .4s;
+  transition-property: width,background;
+  transition-timing-function: ease;
+}
+.search-field:focus {
+    z-index: 10;
+    color: $input-text-focus;
+    width: 200px!important;
+    background-color: rgba(255,255,255,.9);
+    cursor: text;
+    border: 0;
+}

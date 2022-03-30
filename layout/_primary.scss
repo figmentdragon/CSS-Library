@@ -11,7 +11,7 @@
     width: $col14;
     height: $row15;
     margin: $spacer;
-    padding: $padding-x $padding-y;
+    padding: $offset-x $offset-y;
 
     word-wrap: break-word;
 
@@ -35,7 +35,7 @@
 
     padding: $card-spacer-y $card-spacer-x;
 
-    color: $card-color;
+    color: $card-text-color;
 }
 
 #primary

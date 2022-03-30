@@ -1,0 +1,108 @@
+/**
+ * Entry Inline Styling
+ */
+
+$entry-header-color: shade-color($primary-color, 10%);
+
+
+.entry-title,
+.entry-title a { /* Post titles */
+}
+
+.entry-date {
+}
+.byline { /* By default, bylines are hidden */
+	display: none;
+}
+.single .byline,
+.group-blog .byline { /* Bylines are displayed on single posts and/or when there are multiple authors */
+	display: inline;
+}
+
+.entry-meta { /* Container for the entry metadata */
+	clear: both;
+}
+
+
+
+.cat,
+.cat-links {  /* Styles category links inside the entry meta */
+  strong {
+    margin-right: 5px;
+  }
+  a {
+    color: #000000;
+    :after {
+      content: ',';
+      margin-right: 5px;
+    }
+    :last-child:after {
+      content: normal;
+    }
+  }
+}
+
+.tag-links,
+.post-tags  { /* Styles links to tags inside the entry-meta */
+  a {
+    opacity: 1;
+    display: inline-block;
+    color: #000000;
+
+    :before{
+      margin-left: 5px;
+      content: '#';
+    }
+    :first-child {
+      :before {
+        margin-left: 0;
+      }
+    }
+    :hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.sep {  /* Separator between category links, cat links, comments links, etc */
+ width: 1px;
+ color: black;
+}
+.comments-link {  /* Link to leave a comment */
+
+}
+.edit-link { /* Link to Edit the post (only shows up for admins) */
+
+}
+
+
+.singular .entry-title {
+	font-size: h3;
+}
+
+h1.entry-title {
+	line-height: $size-lg;
+	font-weight: bold;
+}
+
+/**
+ * Post Thumbnails
+ */
+.post-thumbnail {
+	@extend %responsive-aligndefault-width;
+	text-align: center;
+
+	.entry-header &,
+	.singular & {
+		@extend %responsive-alignwide-width-nested;
+	}
+
+	.wp-post-image {
+		display: block;
+		width: auto;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: calc(2 * $vertical-offset);
+	}
+}
