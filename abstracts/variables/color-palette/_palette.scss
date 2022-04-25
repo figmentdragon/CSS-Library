@@ -1,0 +1,83 @@
+$primary:    $black !default;
+$secondary:  $white !default;
+$accent:     $light !default;
+$tertiary:   $dark !default;
+
+$primary:    $gray-100 !default;
+$secondary:  $gray-300 !default;
+$accent:     $gray-500 !default;
+$tertiary:   $gray-700 !default;
+
+$success:    $gray-200 !default;
+$info:       $gray-400 !default;
+$warning:    $gray-600 !default;
+$danger:     $gray-800 !default;
+$alert:      $gray-900 !default;
+
+$valid:      $gray-100 !default;
+$attention:  $gray-300 !default;
+$invalid:    $gray-500 !default;
+
+$text:       $primary !default;
+$border:     $tertiary !default;
+$code:       $red !default;
+
+$heading:    $primary;
+$links:      $secondary;
+$border:     $tertiary;
+$shadow:     $tertiary;
+$hover:      $warning;
+$focus:      $danger;
+$active:     $dark;
+$inactive:   $light;
+$valid:      $success;
+$invalid:    $danger;
+$muted:       $light;
+
+//Primary
+$text:       $primary;
+$hr:         mix( black, $primary, $hr-percentage);
+$heading:    mix( black, $text, $heading-percentage);
+$input:      $info;
+
+//Secondary
+$nav:        mix( black, $secondary, $nav-percentage);
+
+$button:     $yellow;
+$table:      $green;
+
+//Accent
+$card:       $accent;
+
+
+// Tertiary
+
+
+// Utilities
+$code:       $pink;
+$visited:    $secondary;
+
+
+$placeholder-color:        mix( white, $warning, $active-percentage);
+
+$ins-bg:      #fff9c0;
+
+$local-link:  mix( white, $secondary, $local-link-percentage);
+$target:      mix( white, $secondary, $target-percentage);
+$target-within: mix( white, $secondary, $target-within-percentage);
+$scope:       mix( white, $secondary, $scope-percentage);
+
+$hr-bg:       #ccc;
+$ins-bg:      #fff9c0;
+
+$body-bg:     mix( white, $primary, $background-percentage);
+
+$pre-bg:      mix( white, $code, $background-percentage);
+
+$link-visited:mix( black, $links, $visited-percentage);
+$link-hover:  mix( black, $links, $hover-percentage);
+
+$abbr-border: #666;
+
+$focus-visible:mix( white, $focus, $focus-visible-percentage);
+$focus-within: mix( white, $focus, $focus-within-percentage)

@@ -1,32 +1,20 @@
-/* # SITE-FOOTER
-================================================================== */
-footer {
-  background: $blue;
-  color: white;
-  padding: $pad * 2;
-
-  div {
-    @extend .container
-  }
+.footer-inner {
+  margin-top: 80px;
+  border-top: 1px solid #ababab;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-left: 80px;
+  margin-right: 2vw;
+  font-size: $sm-font-size;
 }
 
-.site-footer {
-
+.footer-inner .title {
+  font-size: 14px;
+  font-weight: 700;
 }
-.site-info {
-
-}
-
-.copyright {
-}
-
-address {}
-
-.social-media{}
-
-.credits {
-  font-size: 13px;
-  padding-top: 5px;
-  text-align: right;
-  color: #eaebf0;
+.footer-inner ul {
+  list-style: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }

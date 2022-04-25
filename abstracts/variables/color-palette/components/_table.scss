@@ -1,0 +1,28 @@
+
+$table-bg:                    transparent;
+$table-accent-bg:             mix(white, $accent, $background-percentage);
+
+$table-striped-color:         mix(black, $table, $table-percentage);
+$table-striped-bg-factor:     .05;
+$table-striped-bg:            mix(white, $table-striped-color, $background-percentage);
+
+$table-active-color:          mix(black, $table, $active-percentage);
+$table-active-bg-factor:      .1;
+$table-active-bg:             mix(white, $table-active-color, $background-percentage);
+
+$table-hover-color:           mix(black, $table-striped-color, $hover-percentage);
+$table-hover-bg-factor:       .075;
+$table-hover-bg:              mix(white, $table-hover-color, $background-percentage);
+
+$table-border-factor:         .1;
+
+$table-border-color:          mix(black, $table, $border-percentage);
+
+$table-striped-order:         odd;
+$table-striped-columns-order: even;
+
+$table-group-separator-color: currentColor;
+
+$table-caption-color:         mix(black, $table, $muted-percentage);
+
+$table-bg-scale:              -80%;

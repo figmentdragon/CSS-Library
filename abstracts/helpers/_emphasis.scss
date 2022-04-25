@@ -1,0 +1,14 @@
+//
+// Emphasis
+//
+
+.small {
+  font-size: 80%;
+  font-weight: normal;
+}
+
+.mark {
+  padding: .2em;
+  background-color: $invalid-bg-color;
+  text-decoration: none;
+}

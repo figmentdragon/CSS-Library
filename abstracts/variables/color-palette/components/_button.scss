@@ -1,0 +1,57 @@
+$button-bg:           mix(white, $button, $background-percentage);
+$button-text:         mix(white, $button, $text-percentage);
+$button-text-link:    mix(white, $button-text, $link-percentage);
+$button-link-active:  mix(white, $button-text-link, $active-percentage);
+$button-link-hover:   mix(white, $button-link-active, $hover-percentage);
+
+$button-border:       mix(black, $button, $border-percentage);
+$button-border-hover: mix(black, $button-border, $hover-percentage);
+$button-border-focus: mix(black, $button-border, $focus-percentage);
+
+$button-box-shadow: inset 0 1px 0 rgba($black, 0.5), inset 0 15px 17px rgba($shadow-inset, 0.5), inset 0 -5px 12px rgba($shadow-inset, 0.05);
+
+$button-focus-box-shadow: $box-shadow-focus;
+$button-active-box-shadow: $button-box-shadow;
+
+$button-disabled-opacity: .65;
+
+@mixin button($color) {
+  a,
+  a:link {
+    $button-text: mix(black, $color, $link-percentage);
+    font-family: $accent-font;
+    font-size: $base-font-size;
+    font-weight: $bold-font-weight;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $button-text-link;
+    border: mix(black, $button-text-link, $border-percentage);
+    background: mix(white, $button-text-link, $background-percentage);
+
+    &:active,
+    &.active {
+      $button-active-color: mix(black, $color, $active-percentage);
+      color: $button-active-color;
+      border: mix(black, $button-active-color, $border-percentage);
+      background: mix(white, $button-active-color, $background-percentage);
+
+      &:hover,
+      &:focus {
+        $button-hover-color: mix(black, $button-active-color, $hover-percentage);
+        color: $button-hover-color;
+        border: mix(black, $button-hover-color, $border-percentage);
+        background: mix(white, $button-hover-color, $background-percentage);
+      }
+      &:visited {
+        $button-visited-color: mix(white, $button-text-link, $visited-percentage);
+        color: $button-visited-color;
+        border: mix(black, $button-visited-color, $border-percentage);
+        background: mix(white, $button-visited-color, $background-percentage);
+      }
+    }
+    &:disabled,
+    &.inactive {
+      &:hover{}
+    }
+  }
+}

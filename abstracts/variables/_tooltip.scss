@@ -1,0 +1,19 @@
+// Tooltips
+
+// scss-docs-start tooltip-variables
+$tooltip-font-size:                 $sm-font-size !default;
+$tooltip-max-width:                 200px !default;
+$tooltip-color:                     $white !default;
+$tooltip-bg:                        $black !default;
+$tooltip-border-radius:             $border-radi !default;
+$tooltip-opacity:                   .9 !default;
+$tooltip-offset-y:                 $spacer * .25 !default;
+$tooltip-offset-x:                 $spacer * .5 !default;
+$tooltip-margin:                    0 !default;
+
+$tooltip-arrow-width:               .8rem !default;
+$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
+// scss-docs-end tooltip-variables
+
+// Form tooltips must come after regular tooltips

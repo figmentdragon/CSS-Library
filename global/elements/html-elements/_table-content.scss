@@ -1,0 +1,17 @@
+// Table content
+// The elements here are used to create and handle tabular data.
+
+// scss-docs-start table-variables
+$table-cell-padding-y:        $offset-y * .5;
+$table-cell-padding-x:        $offset-x * .5;
+$table-cell-padding-y-sm:     $offset-y * .75;
+$table-cell-padding-x-sm:     $offset-x * .75;
+
+$table-cell-vertical-align:   top;
+
+$table-th-font-weight:        $bold-font-weight;
+
+@import "table-content/caption";
+@import "table-content/table";
+@import "table-content/th+td";
+@import "table-content/thead";

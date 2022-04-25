@@ -14,7 +14,6 @@
   -o-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 .box-search input[type="search"] {
   height: 50px;
   font-size: 24px;
@@ -22,7 +21,6 @@
   border: none;
   border-bottom: 1px solid #000000;
 }
-
 .box-search.active {
   opacity: 1;
   visibility: visible;

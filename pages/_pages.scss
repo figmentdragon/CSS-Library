@@ -1,1 +1,19 @@
-@import "front-page";
+.post_404_not_found {
+  margin-top: 20px;
+}
+.go-to-home {
+  min-width: 100px;
+  padding: 5px 15px;
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.go-to-home a {
+  color: inherit;
+  opacity: 1;
+}
+.go-to-home a:hover {
+  color: inherit !important;
+  opacity: 0.8;
+}

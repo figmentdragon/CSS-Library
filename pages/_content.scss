@@ -1,21 +1,36 @@
 /* =Content
 ----------------------------------------------- */
-
+$entry-header-color: shade-color($primary-color, 10%);
 /* Styles for posts and pages */
-.sticky { /* Style your sticky posts. This class is applied to the same element as .hentry below. */
 
-}
-.hentry { /* The wrapper for individual posts */
-	margin: 0 0 1.5em;
-	padding-bottom: 1.5em;
-}
 .entry-header { /* Container for the entry title, byline and post date */
 
 }
-.entry-title,
-.entry-title a { /* Post titles */
+.entry-title { /* Post titles */
+	color: $entry-header-color;
+	font-size: $entry-header-font-size;
+	letter-spacing: $letter-spacing-lg;;
+	line-height: $line-height-md;
+	overflow-wrap: break-word;
 
+	a {
+		color: $link-color;
+		text-underline-offset: 0.15em;
+
+		&:hover {
+			color: $hover-color;
+		}
+
+		&:focus {
+			color: $focus-color;
+		}
+
+		&:active {
+			color: $link-color;
+		}
+	}
 }
+
 .page-title { /* Page titles */
 
 }

@@ -1,0 +1,6 @@
+
+
+// Column width with margin
+@mixin column-width($grid-columns) {
+	width: map-get($columns, $grid-columns) - ( ( $gutter * ( $grid-columns - 1 ) ) / $grid-columns );
+}

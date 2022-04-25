@@ -1,0 +1,6 @@
+@function calc-percent() {
+  @return divide($target, $container) * 100%;
+}
+@function cp() {
+  @return divide($target, $container) * 100%;
+}

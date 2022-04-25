@@ -1,0 +1,16 @@
+$input-bg:                   mix(black, $input, $background-percentage);
+$input-bg-active:            mix(white, $input-bg, $active-percentage);
+$input-bg-focus:             mix(black, $input-bg, $focus-percentage);
+$input-disabled-bg:          mix(white, $input-bg, $inactive-percentage);
+$input-disabled-color:       mix(white, $input, $inactive-percentage);
+$input-text:                 mix(black, $input, $text-percentage);
+$input-text-focus:           mix(black, $input-text, $focus-percentage);
+$input-border:               mix(black, $input, $border-percentage);
+$input-border-focus:         mix(black, $input-border, $focus-percentage);
+
+$input-button:               mix(black, $input, $button-percentage);
+$input-button-hover:         mix(black, $input-button, $hover-percentage);
+
+$input-btn-focus-box-shadow: mix(black, $input, $shadow-percentage);
+
+$form-range:                 mix(black, $input, $input-percentage);

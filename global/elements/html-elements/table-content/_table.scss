@@ -1,0 +1,36 @@
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 0 0.7777777777777778em;
+	width: 100%;
+  border: 1px 0 0 1px;
+  border-style: solid;
+  border-color: $border;
+  caption-side: bottom;
+	table-layout: fixed;
+	text-align: left;
+  a {
+    text-decoration: none;
+  }
+  caption {
+  	margin: 2rem 0;
+  }
+  tr {
+  	border-bottom: 1px solid $border;
+  }
+  th,
+  td {
+    padding: $offset;
+    text-align: left;
+  }
+}
+
+table tbody tr:nth-child(even) {
+	background: $accent-bg;
+}

@@ -1,44 +1,59 @@
-.alert {
-  padding: 15px;
-  border-radius: $border-radius * 6+"px";
-  color: ($dark, "800");
-  background: ($dark, "100");
-  border: 1px solid ($dark, "200");
-  display: flex;
+.alert
+{
+    margin-bottom: $spacer;
+    padding: $spacer;
 
-  & .alert-center {
-    flex: 1;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
+    border: 1px solid transparent;
 
-  &.primary {
-    color: ($primary "900");
-    background: ($primary "100");
-    border: 1px solid ($primary "200");
-  }
+    > p,
+    > ul
+    {
+        margin-bottom: 0;
+    }
 
-  &.secondary {
-    color: ($secondary, "900");
-    background: ($secondary, "100");
-    border: 1px solid ($secondary, "200");
-  }
+    > p + p
+    {
+        margin-top: $spacer;
+    }
 
-  &.danger {
-    color: ($alert, "900");
-    background: ($alert, "100");
-    border: 1px solid ($alert, "200");
-  }
+    &.alert-success
+    {
+        color: $success-color;
+        border-color: $success-color;
+        background: #e6efc2;
+    }
 
-  &.success {
-    color: ($valid, "900");
-    background: ($valid, "100");
-    border: 1px solid ($valid, "200");
-  }
+    &.alert-info-color
+    {
+        color: $info-color;
+        border-color: $info-color;
+        background: $info-color-background;
+    }
 
-  &.attention {
-    color: ($attention, "900");
-    background: ($attention, "100");
-    border: 1px solid ($attention, "200");
-  }
+    &.alert-warning
+    {
+        color: $warning-color;
+        border-color: $warning-color;
+        background: $warning-background;
+    }
+
+    &.alert-alert-color
+    {
+        color: $alert-color;
+        border-color: $alert-color;
+        background: $alert-background;
+    }
+
+    &.alert-help
+    {
+        color: inherit;
+        border-color: #e8dc59;
+        background: #ebe16f;
+    }
+
+    &.alert-error
+    {
+        border-color: #f8cdce;
+        background: #fbe3e4;
+    }
 }

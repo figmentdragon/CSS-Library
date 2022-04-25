@@ -1,0 +1,63 @@
+/*! _______________________________________________________ CHANGEpercentage */
+$local-link-percentage:         3%;
+
+$target-percentage:             13%;
+$target-within-percentage:      calc($target-percentage + .75%);
+$scope-percentage:              23%;
+
+// Copy
+$text-percentage:               5%;
+  $input-percentage:            calc($text-percentage + .75%);
+  $comment-percentage:          calc($text-percentage + .75%);
+  $hr-percentage:               calc($text-percentage + 1.50%);
+$emphasis-percentage:           15%;
+  $quote-percentage:            calc($emphasis-percentage + .75%);
+  $abbr-percentage:             calc($emphasis-percentage + .75%);
+$list-percentage:               25%;
+$code-percentage:               35%;
+  $pre-percentage:              calc($code-percentage + .75%);
+$muted-percentage:              45%;
+  $caption-percentage:          calc($muted-percentage + .75%);
+
+// Headings
+$lead-percentage:               calc($muted-percentage + .75%);
+$heading-percentage:            16%;
+$title-percentage:              26%;
+$page-percentage:               36%;
+$site-percentage:               46%;
+
+// Link
+$nav-percentage:                7%;
+$link-percentage:               $nav-percentage;
+$button-percentage:             $link-percentage;
+$active-percentage:             17%;
+$hover-percentage:              27%;
+$focus-percentage:              $hover-percentage;
+  $focus-visible-percentage:    calc($focus-percentage +  .75%);
+  $focus-within-percentage:     calc($focus-percentage + .75%);
+$visited-percentage:            $muted-percentage;
+$inactive-percentage:           $muted-percentage;
+$inset-percentage:              calc($muted-percentage - .75%);
+
+// Utilities
+$background-percentage:         8%;
+$info-percentage:               18%;
+$danger-percentage:             $muted-percentage;
+$success-percentage:            $active-percentage;
+$table-percentage:              28%;
+$alert-percentage:              38%;
+$warning-percentage:            48%;
+
+$input-percentage:              9%;
+$table-percentage:              calc($background-percentage + .75%);
+$card-percentage:               19%;
+$border-percentage:             29%;
+  $hr-percentage:               $border-percentage;
+$button-percentage:             39%;
+$shadow-percentage:             49%;
+
+$btn-disabled-opacity:          0.45;
+$focus-color-opacity:           0.25;
+$form-feedback-tooltip-opacity: $focus-color-opacity;
+$input-btn-focus-blur:          0;
+$link-shade-percentage:         20% !default;

@@ -1,0 +1,38 @@
+/* Grid system */
+/* Generate semantic grid columns with these mixins. */
+@mixin make-grid() {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row dense;
+    justify-content: start;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: stretch;
+
+  .site-header {
+    justify-content: center;
+    align-self: stretch;
+    height: 100%;
+  }
+}
+
+@mixin grid-col {
+  float: left;
+  padding-right: 0.75em;
+}
+
+@mixin grid-max-width {
+  @each $breakpoint in $breakpoints {
+    $size:        nth($grid-breakpoints, 1);
+    $name:        nth($grid-breakpoints, 1);
+    $declaration: nth($breakpoints, 2);
+    @media
+      only screen {
+        $max-content-width: screen ($name - ($grid-gutter * 2));
+        $grid-max-width:    $name - ($grid-gutter * .5);
+        $container-max-width: $name - calc($grid-gutter * 2);
+      }
+    }
+}

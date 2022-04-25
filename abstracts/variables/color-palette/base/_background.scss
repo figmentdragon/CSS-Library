@@ -1,0 +1,37 @@
+/* ______________________________________________________ BACKGROUNDS */
+  /* Theme BG Colors */
+  $primary-bg                : mix(white, $primary, $background-percentage);
+  $secondary-bg              : mix(white, $secondary, $background-percentage);
+  $accent-bg                 : mix(white, $accent, $background-percentage);
+  $valid-bg                  : mix(white, $valid, $background-percentage);
+  $invalid-bg                : mix(white, $invalid, $background-percentage);
+  $alert-bg                  : mix(white, $alert, $background-percentage);
+  $warning-bg                : mix(white, $warning, $background-percentage);
+  $info-bg                   : mix(white, $info, $background-percentage);
+
+  $selection-bg: #04A4CC;
+
+  /* Background */
+  $body-bg                   : mix(white, $primary, $background-percentage);
+  $page-bg                   : mix(white, $secondary, $background-percentage);
+  $main-bg                   : mix(white, $accent, $background-percentage);
+
+  /* Utilities */
+
+  $local-link    : mix(white, $secondary, $local-link-percentage);
+  $target        : mix(white, $secondary, $target-percentage);
+  $target-within : mix(white, $secondary, $target-within-percentage);
+  $scope         : mix(white, $secondary, $scope-percentage);
+  $visited       : mix(white, $secondary, $visited-percentage);
+
+  $hover         : mix(white, $primary, $hover-percentage);
+  $focus         : mix(white, $primary, $focus-percentage);
+  $focus-visible : mix(white, $primary, $focus-visible-percentage);
+  $focus-within  : mix(white, $primary, $focus-within-percentage);
+
+
+@mixin gradient-bg {
+    background-image: radial-gradient( circle in bottom left, $primary-bg, $secondary-bg, $accent-bg, transparent);
+    height: 100vh;
+    width: 3vw;
+  }

@@ -1,0 +1,22 @@
+// scss-docs-start clearfix
+@mixin grid-clearfix {
+  .row {
+    zoom: 1;
+    :before,
+    :after {
+      display: block;
+      visibility: hidden;
+      clear: both;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+      table-layout: fixed;
+      content: ' ';
+    }
+    ::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+}

@@ -2,25 +2,25 @@
  * ## Z-Index
  =========================*/
 $z-index-html: 25;
-$z-index-body: 50;
+$z-index-body: 35;
 $z-index-page: 100;
-
 $z-index-main: 300;
 
+
+$z-index-sidebar: 325;
+$z-index-content: 380;
 $z-index-article: 400;
 
-$z-index-page-title: 475;
 
 $z-index-header: 500;
-$z-index-logo: $z-index-main - 50;
-$z-index-hgroup: 550;
-$z-index-site-title: 575;
+$z-index-logo: $z-index-header + 5;
+$z-index-hgroup: $z-index-header + 10;
+$z-index-nameplate: $z-index-header + 15;;
+$z-index-site-title: $z-index-header + 25;
 
-$z-index-tag-header: 600;
-
-$z-index-footer: 900;
-$z-index-sidebar: 980;
-$z-index-nav: 1000;
+$z-index-site-description: 575;
+$z-index-footer: 600;
+$z-index-nav: 900;
 
 $z-index-dropdown: 1000;
 $z-index-sticky: 1020;

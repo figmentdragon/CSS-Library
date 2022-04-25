@@ -1,0 +1,61 @@
+$shadow-hover:        mix(black, $shadow, $hover-percentage);
+$shadow-focus:        mix(black, $shadow, $focus-percentage);
+$shadow-text:         mix(black, $shadow, $text-percentage);
+$shadow-inset:        mix(white, $shadow, $muted-percentage);
+$shadow-active:       mix(black, $shadow, $active-percentage);
+$shadow-title:        mix(black, $shadow, $heading-percentage);
+$shadow-text:         mix(black, $shadow, $text-percentage);
+
+$shadow-button:       mix(black, $shadow, $shadow-percentage);
+$shadow-button-inset: mix(white, $shadow, $muted-percentage);
+
+
+/* BOX SHADOW */
+$box-shadow: 5px 3px 2px $shadow;
+$box-shadow-active: 5px 3px 2px $shadow-active;
+$sm-box-shadow: 2px 0 .5px $shadow .5;
+$box-shadow-lg: 8px 6px 5x $shadow .75;
+$box-shadow-hover: 5px 3px 2px $shadow-hover;
+$box-shadow-focus: 5px 3px 2px $shadow-focus;
+$box-shadow-inset: inset -.25rem -.25rem -.50rem 0px $shadow-inset, .7 25%, inset .25rem .25rem .50rem 0px $shadow-inset, .35 25%;
+
+
+/* BUTTON SHADOW */
+$button-shadow: 0 2px 1px rgba($shadow, .15), 1px 3px 2px $shadow-button, .075;
+$button-shadow-focus: inset 0 -1px 1px rgba($shadow, .15), 0 -1px 2px $shadow-button, .075;
+
+/* CARD */
+$card-box-shadow: 1.5rem 1.25rem 1.25rem $shadow;
+$card-box-shadow-inset: $shadow -.25rem -.25rem -.50rem 0px inset, $shadow .25rem .25rem .50rem 0px inset;
+
+
+
+.effect8 {
+  position:relative;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
+  top:10px;
+  bottom:10px;
+  left:0;
+  right:0;
+  -moz-border-radius:100px / 10px;
+  border-radius:100px / 10px;
+}
+.effect8:after {
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+     -moz-transform:skew(8deg) rotate(3deg);
+      -ms-transform:skew(8deg) rotate(3deg);
+       -o-transform:skew(8deg) rotate(3deg);
+          transform:skew(8deg) rotate(3deg);
+}

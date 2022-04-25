@@ -1,0 +1,189 @@
+/* Styles for posts and pages */
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.page-title { /* Page titles */
+
+}
+
+body.search .page-title,
+body.archive .page-title { /* Optional, if you want your page titles to look different on search and archive pages */
+}
+
+.sticky { /* Style your sticky posts. This class is applied to the same element as .hentry below. */
+  display: block;
+}
+
+.hentry { /* The wrapper for individual posts */
+	margin: 0 0 1.5em;
+	padding-bottom: 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.entry-summary,
+.lead,
+.the-excerpt { /* Container for the post body/excerpt text */
+	margin: 1.5em 0 0;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-header { /* Container for the entry title, byline and post date */
+  margin: 20px 0
+}
+<!--entrytitle-->
+<!--entrydate-->
+<!--byline-->
+<!--entrymeta-->
+<!--cat-links-->
+<!--taglinksposttags-->
+<!--sep-->
+<!--commentslink-->
+<!--editlink-->
+
+.page-links { /* Style the page numbers for multi-page posts (posts that have been split with <!--next-page -->. */
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+.sticky {
+    display: block;
+}
+.blog .hentry,
+.archive .hentry {
+    padding: 30px;
+    background: #FFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 15px 0 0;
+}
+.page-links {
+    clear: both;
+    margin: 0 0 15px;
+}
+#content {
+    margin-bottom: 70px;
+}
+.page-template-tpl-home #content {
+    margin-bottom: 0;
+}
+#primary {
+    width: 70%;
+    padding: 30px;
+    float: left;
+    background: #FFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
+}
+.left_sidebar #primary {
+    float: right;
+}
+.no_sidebar #primary {
+    width: auto;
+    float: none;
+}
+.blog #primary,
+.archive #primary {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+#secondary {
+    width: 28%;
+    float: right;
+}
+.left_sidebar #secondary {
+    float: left;
+}
+#secondary .widget {
+    background: #FFF;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)
+}
+.widget-area .widget-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.widget-area ul,
+.widget-area ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.widget-area ul ul,
+.widget-area ol ol {
+    border-top: 1px solid #F9F9F9;
+    padding-top: 8px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.widget-area li {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #F9F9F9;
+    line-height: 1.3;
+}
+.widget-area li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.widget-area a {
+    color: inherit;
+}
+.widget-area a:hover {
+    color: #df2c45;
+}
+#secondary #search-submit {
+    display: none;
+}
+.sticky {
+	// This class is required to pass ThemeCheck.
+}
+
+.no-results.not-found > *:first-child {
+	margin-bottom: calc(3 * $spacing-vertical));
+}
+
+// Styling for wp_link_pages.
+.page-links {
+	clear: both;
+
+	.post-page-numbers {
+		display: inline-block;
+		margin-left: calc(0.66 * $spacing-unit));
+		margin-right: calc(0.66 * $spacing-unit));
+		min-width: 44px;
+		min-height: 44px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

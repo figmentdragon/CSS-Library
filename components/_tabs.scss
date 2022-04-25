@@ -1,38 +1,34 @@
-$font-size-tab: $base-font-size * 14;
-$padding-tab-x: $offset * 14;
-$padding-tab-y: $offset * 20;
-
 .tabs {
   display: flex;
   flex-direction: column;
 
   & .header {
     display: flex;
-    border-bottom: 1px solid ($dark, "200");
+    border-bottom: 1px solid material-color($dk, "200");
 
     & .item {
       flex: 1;
       text-align: center;
-      padding: $padding-tab-x $padding-tab-y;
-      color: ($dark, "600");
-      font-size: $font-size-tab;
+      padding: #{$offset * 14px} #{$offset * 20px};
+      color: material-color($dk, "600");
+      font-size: $font-size * 14px;
       font-weight: $normal-font-weight;
       border-bottom: 2px solid transparent;
       cursor: pointer;
       transition: border-bottom-color 0.2s ease;
 
       &:hover {
-        background-color: ($dark, "200");
+        background-color: material-color($dk, "200");
       }
 
       &:focus-visible {
-        box-shadow: 0 0 0 2px ($primary-100);
+        box-shadow: 0 0 0 2px material-color($p, "100");
       }
 
       &.active {
-        color: ($dark, "900");
-        background: tint($primary-200, $background-percentage);
-        border-bottom-color: shade($primary, $border-percentage);
+        color: material-color($dk, "900");
+        background: rgba(material-color($p, "200"), 0.2);
+        border-bottom-color: material-color($p);
       }
     }
   }

@@ -1,0 +1,25 @@
+/* Main Root */
+@import "elements/html";
+
+@import "elements/body";
+
+/* Content Sectioning */
+@import "elements/content-sectioning/address";
+@import "elements/content-sectioning/article";
+@import "elements/content-sectioning/aside";
+@import "elements/content-sectioning/footer";
+@import "elements/content-sectioning/header";
+@import "elements/content-sectioning/headings";
+@import "elements/content-sectioning/main";
+@import "elements/content-sectioning/nav";
+@import "elements/content-sectioning/section";
+
+@import "elements/image+multimedia";
+
+@import "elements/embedded-content";
+
+@import "elements/svg+math";
+
+@import "elements/demarcating-edits";
+
+@import "elements/table-content";

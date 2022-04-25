@@ -1,4 +1,4 @@
-.btn {
+.button {
   border: none;
   border-radius: $border-radius * 4px;
   background: material-color($dk, "200");
@@ -15,18 +15,20 @@
   justify-content: center;
   @include elevation(2);
   transition: all 0.2s ease;
-
-  &:hover {
+  &:hover , &:focus {
     background: material-color($dk, "300");
-    @include elevation(4);
-  }
-
-  &:focus-visible {
-    background: material-color($dk, "400");
+    @include elevation(8);
   }
 
   &:active {
-    @include elevation(8);
+    @include elevation(4);
+    &:hover , &:focus {
+      background: material-color($dk, "300");
+      @include elevation(8);
+    }
+    &:focus-visible {
+      background: material-color($dk, "400");
+    }
   }
 
   &.primary {

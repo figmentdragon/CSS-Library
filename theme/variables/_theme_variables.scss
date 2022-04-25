@@ -1,0 +1,101 @@
+/// Use this file to overwrite the basic Bootstrap variables and add your own variables
+/// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+/// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+// $purple: #5533ff; Thats a sample how you could change a BootStrap variable.
+// $primary: $purple;  Once we've changed the value, we'll also make it the primary brand color.
+
+
+
+@import "default/colors";
+//$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+$enable-caret :                true !default;
+$enable-rounded :              true !default;
+$enable-shadows :              true !default;
+$enable-gradients :            true !default;
+$enable-transitions :          true !default;
+$enable-reduced-motion :       true !default;
+$enable-smooth-scroll :        true !default;
+$enable-grid-classes :         true !default;
+$enable-cssgrid :              true !default;
+$enable-button-pointers :      true !default;
+$enable-rfs :                  true !default;
+$enable-validation-icons :     true !default;
+$enable-negative-margins :     true !default;
+$enable-deprecation-messages : true !default;
+$enable-important-utilities :  true !default;
+
+/* Variable Prefix  */
+/* for ':root' CSS variables */
+$prefix :             ca- !default;
+
+$base-size: 1.15 !default;
+$spacer: 1.05 !default;
+
+$offset: 16px !default;
+
+$grid-columns: 16 !default;
+$grid-row-columns: 16 !default;
+$grid-gutter: 16px !default;
+
+$border-radi: .15rem !default;
+
+$base-line-height: 1.15 !default;
+
+// Colors
+
+$primary:            #444;
+$body-bg: #fff;
+
+$primary:           #444; // Example
+$success:         #5CB85C;
+$info:            $primary;
+$warning:         #F0AD4E;
+$danger:          #D9534F;
+
+
+/**
+ * Typography
+ */
+
+$sans-serif-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif-font-family:       Georgia, "Times New Roman", Times, serif;
+$font-family-base:        $sans-serif-font-family;
+
+$base-font-size:          16;
+$base-line-height:        1.5;
+$spacer:       ($base-font-size * $base-line-height) * 1px;
+
+
+/**
+ * Breakpoints
+ */
+
+$breakpoint-lg: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 480px;
+
+$breakpoints: (
+    'lg' '(min-width: ' + ($breakpoint-md + 1) + ')',
+    'md' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
+    'sm' '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
+    'xs' '(max-width: ' + $breakpoint-xs + ')'
+);
+
+
+/**
+ * Grid
+ */
+
+$grid-max-width: 1200px;
+$grid-columns:   12;
+$grid-gutter:    $spacer;
+
+
+/**
+ * Components
+ */
+
+$border-radius: 3px;

@@ -1,0 +1,12 @@
+// Body The <body> HTML element represents the content of an HTML document. There can be only one <body> element in a document.
+
+body {
+  text-align: left;
+  color: $text;
+  font-family: $main-font;
+  text-size-adjust: none;
+  @include font-size($base-font-size);
+  line-height: $base-line-height;
+  word-spacing: 1px;
+  margin: 0;
+}

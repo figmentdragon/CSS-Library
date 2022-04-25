@@ -1,34 +1,27 @@
 /* ____________________________________ BORDERS */
-  $border-width:           1px !default;
-  $border-radius:          .15rem !default;
-  $border-color:           shade($accent, $border-percentage);
+  $border-width                    : 1px !default;
+  $border-radius                   : .95rem !default;
+  $border-color                    : null;
 
-@import "border/width";
-@import "border/radius";
+  $border-widths: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+  );
 
-/* WIDTH */
-$border-width-focus:       $border-width-lg;
-$btn-border-radius:        $border-radius-sm;
-$btn-focus-width:          $border-width-focus;
+  $xs-border-width: $border-width * $size-xs;
+  $sm-border-width: $border-width * $size-sm; /* 1.75 */
+  $md-border-width: $border-width * $size-md;
+  $lg-border-width: $border-width * $size-lg;
+  $xl-border-width: $border-width * $size-xl;
 
-/* RADIUS */
-$border-radius-pill:       50rem;
+  $focus-border-width: $border-width * $size-xxl;
 
-$thumbnail-border-radius:  calc($border-radius * divide($md, 2));
-$card-border-radius-inner: $border-radius-sm;
-$button-radius:            $border-radius-lg;
-
-.top-to-bottom {
-  border-width: 1px;
-  border-style: solid;
-  -webkit-border-image:
-    -webkit-gradient(linear, 0 0, 0 100%, from($brown), to(rgba($chocolate, 0)) to transparent) 1 100%;
-  -webkit-border-image:
-    -webkit-linear-gradient($brown, rgba($chocolate, 0), transparent) 1 100%;
-  -moz-border-image:
-    -moz-linear-gradient($brown, rgba($chocolate, 0), transparent) 1 100%;
-  -o-border-image:
-    -o-linear-gradient($brown, rgba($chocolate, 0), transparent) 1 100%;
-  border-image:
-    linear-gradient(to bottom, $brown, rgba($chocolate, 0), transparent) 1 100%;
-}
+/* Border Radius */
+$sm-border-radius:      $border-radi * $size-sm;
+$md-border-radius:      $border-radi * $size-md;
+$lg-border-radius:      $border-radi * $size-lg;
+$xl-border-radius:      $border-radi * $size-xl;
+$xxl-border-radius:     $border-radi * $size-xxl;

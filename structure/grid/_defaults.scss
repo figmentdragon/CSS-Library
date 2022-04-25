@@ -1,0 +1,50 @@
+@import "variables";
+
+/* Grid containers */
+/* Define the maximum width of `.container` for different screen sizes. */
+$container-max-widths: (
+	sm: 574px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+$content-max-widths: (
+	sm: $container-max-width-sm - calc($grid-gutter * 2),
+	md: $container-max-widths-md - calc($grid-gutter * 2),
+	lg: $container-max-widths-lg - calc($grid-gutter * 2),
+	xl: $container-max-widths-xl - calc($grid-gutter * 2),
+	xxl: $container-max-widths-xxl - calc($grid-gutter * 2);
+);
+
+/* Grid breakpoints */
+/* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
+$grid-breakpoints: (
+	sm: $breakpoint-sm - $grid-gutter,
+	md: $breakpoint-md - $grid-gutter,
+	lg: $breakpoint-lg - $grid-gutter,
+	xl: $breakpoint-xl - $grid-gutter,
+	xxl: $breakpoint-xxl - grid-gutter
+);
+
+$breakpoints: (
+    'xxl': '(min-width: ' + ($breakpoint-xl + 1) + ') and (max-width: ' + $breakpoint-xxl + ')',
+    'xl': '(min-width: ' + ($breakpoint-lg + 1) + ') and (max-width: ' + $breakpoint-xl + ')',
+    'lg': '(min-width: ' + ($breakpoint-md + 1) + ') and (max-width: ' + $breakpoint-lg + ')',
+    'md': '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
+    'sm': '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
+    'xs': '(max-width: ' + $breakpoint-xs + ')'
+);
+
+$size                       : nth($grid-breakpoints, 1);
+$name                       : nth($grid-breakpoints, 1);
+$declaration                : nth($breakpoints, 2);
+
+$container-xxl-content-max-width: $breakpoint-xxl - $container-offset;
+$container-xl-content-max-width: $breakpoint-xl - $container-offset;
+$container-lg-content-max-width: $breakpoint-lg - $container-offset;
+$container-md-content-max-width: $breakpoint-md - $container-offset;
+$container-sm-content-max-width: $breakpoint-sm - $container-offset;

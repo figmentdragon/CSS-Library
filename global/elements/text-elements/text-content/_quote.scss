@@ -1,0 +1,109 @@
+// Q - The <q> HTML element indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the blockquote element.
+
+// Blockquotes
+$quote-font-family: $accent-font;
+
+$blockquote-margin-y:         $horizontal-spacer !default;
+$blockquote-font-size:        $base-font-size * 1.25 !default;
+$blockquote-border-color:     shade($quote, $border-percentage);
+
+$blockquote-footer-color:     $gray-600 !default;
+$blockquote-footer-font-size: $font-size-sm !default;
+
+blockquote,
+.blockquote {
+  font-family: $accent-font;
+  position: relative;
+	font-style: italic;
+  padding-left: $offset-y;
+  margin-bottom: $blockquote-margin-y;
+  font-size: $blockquote-font-size;
+  border-left: 10px solid mix(black, $quote, $border-percentage);
+  padding: 0 0 0 40px;
+  overflow: hidden;
+  small {
+    display: block;
+    line-height: 1.7em;
+    font-size: $sm-font-size;
+  }
+  p:first-child {
+  	margin-top: 0;
+  }
+
+  p:last-child{
+    padding-bottom: 0;
+  }
+  footer,
+  cite {
+    display: block;
+    font-size: $base-font-size;
+    color: mix(black, $text, $caption-percentage);
+    font-weight: $bold-font-weight;
+    :before {
+      content: "\2014 \0020";
+      color: #333333;
+    }
+    :after {
+      content: ' ';
+      color: #333333;
+    }
+    a,
+    a:visited {
+      color: mix(black, $quote, $visited-percentage);
+    }
+  }
+}
+
+.blockquote-footer {
+  font-family: $accent-font;
+  display: block;
+  font-size: $blockquote-footer-font-size;
+  line-height: $base-line-height;
+  color: mix(white, $quote, $muted-percentage);
+
+  &::before {
+    content: "\2014 \00A0"; // em dash, nbsp
+  }
+}
+
+blockquote,
+q {
+	font-family: $accent-font;
+  background: mix(white, $quote, $background-percentage);
+  border-left: 10px solid mix(black, $quote, $border-percentage);
+	display: block;
+  padding-left: $size-xl;
+  quotes: none;
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+// Opposite alignment of blockquote
+.blockquote-reverse {
+  font-family: $accent-font;
+  padding-right: $offset-y;
+  padding-left: 0;
+  text-align: right;
+  border-right: .25 solid $quote-border;
+  border-left: 0;
+}
+
+.blockquote-reverse .blockquote-footer {
+  &::before {
+    content: "";
+  }
+  &::after {
+    content: "\00A0 \2014"; // nbsp, em dash
+  }
+}
+
+q {
+    quotes: none;
+    :before,
+    :after {
+      content: '';
+      content: none;      
+    }
+}

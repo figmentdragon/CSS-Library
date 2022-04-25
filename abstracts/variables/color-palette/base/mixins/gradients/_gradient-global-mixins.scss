@@ -1,0 +1,24 @@
+@mixin gradient-html {
+    background-image: $gradient-html;
+    background-size:cover;
+  }
+
+@mixin gradient-footer {
+    background-image: $gradient-footer;
+    background-size:cover;
+  }
+
+@mixin gradient-site-title {
+    background-image: $gradient-site-title;
+    background-size:cover;
+  }
+
+@mixin gradient-primary{
+  background-image: $gradient-primary;
+  background-size:cover;
+}
+
+@mixin gradient-accent {
+  background-image: $gradient-accent;
+  background-size: cover;
+}
