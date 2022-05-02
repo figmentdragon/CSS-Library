@@ -6,7 +6,19 @@
 .container-md,
 .container-sm {
    @include grid-clearfix;
-   @include make-container($gutter: $container-offset-x);
+   @include make-container($grid-gutter-width: $container-offset);
+   @include make-container-max-widths($max-widths: $container-max-widths);
+   //@include make-cssgrid($columns: $grid-columns, $breakpoints: $grid-breakpoints);
+  *zoom: 1;
+  :before,
+  :after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  :after {
+    @include grid-clearfix;
+  }
 }
 
 @media (min-width: 576px) {

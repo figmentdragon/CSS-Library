@@ -4,7 +4,7 @@
 
 $input-bg: mix( in srgb, white, $input, $background-percentage);
 $input-bg-focus: mix( in srgb, black, $input-bg, $focus-percentage);
-$input-text: mix( in srgb, black, $input, $text-percentage);
+$input-text: mix( in srgb, black, $input, $body-color-percentage);
 $input-text-focus: mix( in srgb, black, $input-text, $focus-percentage);
 $input-border: mix( in srgb, black, $input, $border-percentage);
 $input-border-focus: mix( in srgb, black, $input-border, $focus-percentage);

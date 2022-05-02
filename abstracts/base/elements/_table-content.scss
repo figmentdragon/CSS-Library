@@ -1,0 +1,62 @@
+// Table content
+// The elements here are used to create and handle tabular data.
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+// scss-docs-start table-variables
+$table-cell-offset-y:        .5rem;
+$table-cell-offset-x:        .5rem;
+$table-cell-offset-y-sm:     .25rem;
+$table-cell-offset-x-sm:     .25rem;
+
+$table-cell-vertical-align:   top;
+
+$table-color:                 mix(gray, $table, $body-color-percentage);
+$table-bg:                    mix(white, $table, $background-percentage);
+$table-accent-bg:             mix(gray, $table-bg, $background-percentage);
+
+$table-th-font-weight:        $bold-font-weight;
+
+$table-striped-color:         $table;
+$table-striped-bg-factor:     5%;
+$table-striped-bg:            mix(gray, $table-striped-color, $table-striped-bg-factor);
+
+$table-active-color:          mix(gray, $table, $active-percentage);
+$table-active-bg-factor:      10%;
+$table-active-bg:             mix(white, $table-active-color, $table-active-bg-factor);
+
+$table-hover-color:           mix(gray, $table, $hover-percentage);
+$table-hover-bg-factor:       7.5%;
+$table-hover-bg:              mix(white, $table-hover-color, $table-hover-bg-factor);
+
+$table-border-factor:         .1;
+$table-border-width:          $md-border-width;
+$table-border-color:          mix(gray, $table, $border-percentage);
+
+$table-striped-order:         odd;
+
+$table-group-separator-color: $border;
+
+$table-caption-color:         mix($muted, $table, $muted-percentage);
+
+$table-bg-scale:              -80%;
+// scss-docs-end table-variables
+
+// scss-docs-start table-loop
+$table-variants: (
+  "primary":    shift-color($primary, $table-bg-scale),
+  "secondary":  shift-color($secondary, $table-bg-scale),
+  "accent":    shift-color($accent, $table-bg-scale),
+  "tertiary":  shift-color($tertiary, $table-bg-scale),
+  "success":    shift-color($success, $table-bg-scale),
+  "info-color":       shift-color($info, $table-bg-scale),
+  "warning":    shift-color($warning, $table-bg-scale),
+  "alert-color":     shift-color($alert, $table-bg-scale),
+  "light":      $light,
+  "dark":       $dark,
+);
+// scss-docs-end table-loop
+
+@import "table-content/caption";
+@import "table-content/table";
+@import "table-content/th+td";
+@import "table-content/thead";

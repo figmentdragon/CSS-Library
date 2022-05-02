@@ -6,8 +6,8 @@
 	list-style: none;
 
 	> li {
-		margin-top: $padding-y;
-		margin-bottom: $padding-y;
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
 	}
 
 }
@@ -17,8 +17,8 @@
 	padding-left: 0;
 
 	> li {
-		margin-top: $padding-y;
-		margin-bottom: $padding-y;
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
 	}
 
 }
@@ -26,7 +26,7 @@
 .comment-list .depth-2,
 .comment-list .depth-3 {
 	@include media(mobile) {
-		padding-left: 4 * $padding-x;
+		padding-left: 4 * $offset-x;
 	}
 }
 

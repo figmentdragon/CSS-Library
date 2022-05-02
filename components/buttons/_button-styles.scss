@@ -59,8 +59,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
       outline: none;
       @include elevation(8);
     } // end hover
-    &:focus-visible {
-      border-width: $border-width-focus;
+
     }
   } // end active
 

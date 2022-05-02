@@ -1,0 +1,54 @@
+.btn {
+
+
+
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+
+    width: auto;
+
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    &:hover {
+
+
+    }
+
+    &.is-disabled,
+    &:disabled {
+        pointer-events: none;
+        opacity: .65;
+    }
+}
+
+.btn--inverse {
+    background-color: $body-bg;
+    color: $primary;
+    border: 1px solid $primary;
+
+    &:hover {
+        background-color: $primary;
+        color: $body-bg;
+        border-color: transparent;
+    }
+}
+
+.btn--block {
+    display: block;
+    width: 100%;
+
+    + .btn--block {
+        margin-top: divide($spacer, 4);
+    }
+}
+
+.btn--link {
+    background-color: transparent;
+    color: $primary;
+}

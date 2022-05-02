@@ -1,0 +1,27 @@
+// Margins
+$spacer: 1rem !default;
+$xs-spacer: $spacer * $size-xs;
+$sm-spacer: $spacer * $size-sm;
+$md-spacer: $spacer * $size-md;
+$lg-spacer: $spacer * $size-lg;
+$xl-spacer: $spacer * $size-xl;
+$xxl-spacer: $spacer * $size-xxl;
+
+$spacers: (
+  0: $spacer,
+  1: $spacer * $size-xs,
+  2: $spacer * $size-sm,
+  3: $spacer * $size-md,
+  4: $spacer * $size-lg,
+  5: $spacer * $size-xl,
+  6: $spacer * $size-xxl
+) !default;
+
+$negative-spacers:     negativify-map($spacers);
+
+$vertical-spacer:      $spacer;
+$vertical-spacer-md:   calc($vertical-spacer * $size-md);
+$vertical-spacer-lg:   calc($vertical-spacer * $size-lg);
+$horizontal-spacer:    $spacer;
+$horizontal-spacer-md: calc($horizontal-spacer * $size-md);
+$horizontal-spacer-lg: calc($horizontal-spacer * $size-lg);

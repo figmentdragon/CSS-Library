@@ -603,11 +603,11 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
+        1: var(--#{$prefix}sm-border-radius),
         2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-2xl),
+        3: var(--#{$prefix}lg-border-radius),
+        4: var(--#{$prefix}xl-border-radius),
+        5: var(--#{$prefix}x2l-border-radius),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )

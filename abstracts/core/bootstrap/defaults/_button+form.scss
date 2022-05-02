@@ -1,0 +1,38 @@
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+@import "buttons+forms/input-btn-variable";
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+@import "buttons+forms/button-variable";
+
+
+// Forms
+@import "buttons+forms/form-text-variable";
+
+@import "buttons+forms/form-label-variable";
+
+@import "buttons+forms/form-input-variable";
+
+@import "buttons+forms/form-check-variable";
+
+@import "buttons+forms/form-switch-variable";
+
+@import "buttons+forms/input-group-variable";
+
+@import "buttons+forms/form-select-variable";
+
+@import "buttons+forms/form-range-variable";
+
+@import "buttons+forms/form-file-variable";
+
+@import "buttons+forms/form-floating-variable";
+
+// Form validation
+
+@import "buttons+forms/form-feedback-variable";
+
+@import "buttons+forms/form-validation-variable";

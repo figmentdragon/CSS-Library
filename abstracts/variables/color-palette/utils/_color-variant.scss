@@ -1,0 +1,23 @@
+@each $name, $color in $colors {
+	.has-#{$name}-color,
+	.has-#{$name}-color:visited {
+		color: $color;
+	}
+	.has-#{$name}-background-color {
+		background-color: $color;
+		border-color: $color;
+	}
+}
+
+@each $name, $color in $theme-colors {
+	.has-#{$name}-color {
+		color: mix(black, $color, $body-color-percentage);
+	}
+	.has-#{$name}-color:visited {
+		color: mix(gray, $color, $visited-percentage);
+	}
+	.has-#{$name}-background-color {
+		background-color: mix(white, $color, $background-percentage);
+		border-color: mix(black, $color, $border-percentage);
+	}
+}

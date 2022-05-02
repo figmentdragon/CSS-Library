@@ -5,24 +5,20 @@ h3#comments {
   font-size: 16px;
 }
 
-#comments,
-#respond { /* Container for the comments section */
-	clear: both;
-  margin-top: 40px;
-  padding-top: 30px;
-  border-top: 1px solid #ababab;
-}
-
 #comments {
+  margin-top: 50px;
+  border-top: 2px solid #F6F6F6;
+  margin-top: 40px;
+  padding-top: 40px;
   .comment-list,
   .children {
     list-style: none;
   }
   .comments-inner {
     margin-top: 30px;
-    + #respond {
-      margin-top: 50px;
-    }
+  }
+  .comments-inner + #respond {
+    margin-top: 50px;
   }
   .comment-list {
     padding-left: 0;
@@ -43,21 +39,17 @@ h3#comments {
   .comment-context {
     margin-left: 60px;
     padding-left: 20px;
-    .title {
-      font-size: $base-font-size;
-      display: inline-block;
-    }
   }
-  .comment-content {
-    p {
-      :last-child {
-        margin-bottom: 0;
-      }
-    }
+  .comment-context .title {
+    font-size: $base-font-size;
+    display: inline-block;
+  }
+  .comment-content p:last-child {
+    margin-bottom: 0;
   }
   .comment-date {
     color: #ababab;
-    font-size: 14px;
+    font-size: $base-font-size;
     font-style: italic;
 
     :before {
@@ -74,27 +66,7 @@ h3#comments {
   }
 }
 
-#respond {
-  margin-bottom: 80px;
-  > h3 {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  form label {
-    color: #888888;
-  }
-}
-
-
-.bypostauthor { /* Gives post author comments thier own style */
-
-}
-.comments-title,
-#reply-title {
-  margin-bottom: 0px;
-}
-
-.comment-reply-title {
+.comment-reply-title{
   margin-top: 0;
   margin-bottom: 5px;
   line-height: 24px;
@@ -120,24 +92,7 @@ h3#comments {
     border-bottom: 1px solid #e9e9e9;
 }
 
-.comment .avatar {
-  /* Comment author's gravatar image */
-}
-
-.comment-content { /* Actual comment text */
-  p {
-    font-size: 15px;
-    line-height: 26px;
-    margin-bottom: 10px;
-  }
-  blockquote p {
-    font-size: inherit;
-    line-height: inherit;
-    margin-bottom: 0;
-  }
-  img {
-    margin-top: 3px;
-  }
+.comment .avatar { /* Comment author's gravatar image */
 }
 
 .comment .reply { /* The "Reply" link under each comment */
@@ -157,20 +112,34 @@ ol .children {
     margin-left: 90px !important;
 }
 
-@media (max-width: 767px) {
-    .comment-form .comment-form-author,
-    .comment-form .comment-form-email,
-    .comment-form .comment-form-url {
-        display: block;
-        float: none;
-        width: 100%;
-    }
-    .comment-form .comment-form-author,
-    .comment-form .comment-form-email {
-        margin-bottom: 30px;
-    }
+.comments-title,
+#reply-title {
+  font-size: 28px;
+  text-transform: uppercase;
+}
 
-    ol .children {
-        margin-left: 35px !important;
-    }
+.commentlist,
+.children {}
+
+.children { /* Nested comments */
+	list-style: none;
+	margin: 0 0 0 6%;
+}
+.children article.comment,
+.children li.pingback { /* Nexted comments and pingbacks */
+	padding-top: 1.0em;
+}
+
+.comment .reply { /* The "Reply" link under each comment */
+	text-align: right;
+}
+
+.no-comments {
+    margin: 0;
+    padding-top: 1.75em;
+}
+
+.comment-navigation + .no-comments {
+    border-top: 0;
+    padding-top: 0;
 }

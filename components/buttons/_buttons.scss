@@ -1,37 +1,57 @@
 .button {
-  border: none;
+  border: 1px solid transparent;
   border-radius: $border-radius * 4px;
-  background: material-color($dk, "200");
+  background-color: $primary;
   font-size: $font-size * 14px;
   font-weight: 500;
-  padding: #{$padding * 10px} #{$padding * 16px};
-  color: material-color($dk, "800");
-  text-transform: uppercase;
+  padding: ($offset * 4) $offset;
+  color: $body-bg;
+
   cursor: pointer;
   outline: none;
-  display: inline-flex;
+  display: inline-block;
   user-select: none;
   align-items: center;
   justify-content: center;
-  @include elevation(2);
-  transition: all 0.2s ease;
-  &:hover , &:focus {
-    background: material-color($dk, "300");
+  @include elevation(5);
+  transition: $button-transition;
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $body-bg;
+    color: $primary;
+    border-color: $primary;
     @include elevation(8);
   }
 
   &:active {
     @include elevation(4);
-    &:hover , &:focus {
+    &:hover,
+    &:focus {
       background: material-color($dk, "300");
       @include elevation(8);
     }
     &:focus-visible {
       background: material-color($dk, "400");
     }
+    &.is-disabled,
+    &:disabled {
+      pointer-events: none;
+      opacity: .65;
   }
 
-  &.primary {
+  @each $name, $color in $theme-color {
+    &-$name {
+      background: mix($button-bg, $color, $background-percentage);
+      color: mix($body-color, $color, $text-percentage);
+      border: mix($border-color, $color, $border-percentage);
+    }
+  }
+  &-#{$name} {
     background: material-color($p, "500");
     color: #fff;
 

@@ -4,8 +4,10 @@
 
 .comments-title,
 .comment-reply-title {
-	font-size: $heading--font-size-h2;
-	letter-spacing: $heading--letter-spacing-h2;
+  font-size: 26px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 0 20px;
 }
 
 .comment-reply-title {
@@ -16,7 +18,7 @@
 
 		a {
 			font-family: $font-secondary;
-			font-size: var(--sm);
+			font-size: $sm-font-size;
 			font-style: normal;
 			font-weight: normal;
 			letter-spacing: normal;

@@ -1,0 +1,129 @@
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths($max-widths: $container-max-widths)
+{
+    @each $breakpoint, $container-max-width in $max-widths
+    {
+        @include media-breakpoint-up($breakpoint)
+        {
+            max-width: $container-max-width;
+        }
+    }
+}
+
+@mixin make-container($container-offset-x)
+{
+    width: make-container-max-widths($max-widths: $container-max-widths);
+    margin: $horizontal-spacer auto;
+    padding-right: ($container-offset-x * .5);
+    padding-left: ($container-offset-x * .5);
+
+    @include grid-max-width;
+}
+
+/* Container widths */
+/**/
+/* Set the container width, and override it for fixed navbars in media queries. */
+@if $enable-container-classes
+{
+    // Single container class with breakpoint max-widths
+    .container,
+    // Responsive containers that are 100% wide until a breakpoint
+    .container-fluid,
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm
+    {
+        @include grid-clearfix;
+        @include make-container($container-offset-x);
+    }
+    // Responsive containers that are 100% wide until a breakpoint
+    @each $breakpoint, $container-max-width in $container-max-widths
+    {
+        @include media-breakpoint-up($breakpoint, $grid-breakpoints)
+        {
+            // Extend each breakpoint which is smaller or equal to the current breakpoint
+            $extend-breakpoint: true;
+            %responsive-container-#{$breakpoint}
+            {
+                max-width: $container-max-width;
+            }
+
+            @each $name, $width in $grid-breakpoints
+            {
+                @if ($extend-breakpoint)
+                {
+                    .container#{breakpoint-infix($name, $grid-breakpoints)}
+                    {
+                        @extend %responsive-container-#{$breakpoint};
+                    }
+
+                    // Once the current breakpoint is reached, stop extending
+                    @if ($breakpoint == $name)
+                    {
+                        $extend-breakpoint: false;
+                    }
+                }
+            }
+        }
+        .container-#{$breakpoint}
+        {
+            @extend .container-fluid;
+        }
+    }
+}
+
+
+
+
+@media (min-width: 576px)
+{
+    .container-sm,
+    .container
+    {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px)
+{
+    .container-md,
+    .container-sm,
+    .container
+    {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px)
+{
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container
+    {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container
+    {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px)
+{
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container
+    {
+        max-width: 1320px;
+    }
+}

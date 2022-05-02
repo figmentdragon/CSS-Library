@@ -1,49 +1,11 @@
-$blue:       hsl(216, 85%, 39%) !default;
-$indigo:     hsl(272, 77%, 74%) !default;
-$purple:     hsl(286, 91%, 38%) !default;
-$pink:       hsl(322, 91%, 38%) !default;
-$red:        hsl(337, 91%, 38%) !default;
-$orange:     hsl(3, 88%, 39%) !default;
-$yellow:     hsl(43, 89%, 38%) !default;
-$green:      hsl(68, 90%, 38%) !default;
-$teal:       hsl(93, 92%, 38%) !default;
-$cyan:       hsl(144, 83%, 40%) !default;
-$gray:       hsl(240, 6%, 50%) !default;
-
-$vw-blue-hex:   #0F52BA !default;
-$vw-indigo-hex: #C18AF0 !default;
-$vw-purple-hex: #9109BA !default;
-$vw-pink-hex:   #BA0978 !default;
-$vw-red-hex:    #BA094C !default;
-$vw-orange-hex: #BA160C !default;
-$vw-yellow-hex: #B8860B !default;
-$vw-green-hex:  #9FB70A !default;
-$vw-teal-hex:   #58BC08 !default;
-$vw-cyan-hex:   #11BB55 !default;
-$vw-gray-hex:   #787888 !default;
-
-$gray-hex: #e4edf4 !default;
-$blue-hex: #c0c0c0 !default;
-$indigo-hex: #9a9a9a !default;
-$purple-hex: #7b7b7b !default;
-$pink-hex: #626262 !default;
-$red-hex: #4e4e4e !default;
-$orange-hex: #3e3e3e !default;
-$yellow-hex: #323232 !default;
-$green-hex: #282828 !default;
-$teal-hex: #1a1a1a !default;
-$cyan-hex: #000100 !default;
-
-$colors: (
-'blue'     : $blue,
-'indigo'   : $indigo,
-'purple'   : $purple,
-'pink'     : $pink,
-'red'      : $red,
-'orange'   : $orange,
-'yellow'   : $yellow,
-'green'    : $green,
-'teal'     : $teal,
-'cyan'     : $cyan,
-'gray'     : $gray
-) !default;
+$blue:       hsl(216, 85%, 39%);
+$indigo:     hsl(272, 77%, 74%);
+$purple:     hsl(286, 91%, 38%);
+$pink:       hsl(322, 91%, 38%);
+$red:        hsl(337, 91%, 38%);
+$orange:     hsl(3, 88%, 39%);
+$yellow:     hsl(43, 89%, 38%);
+$green:      hsl(68, 90%, 38%);
+$teal:       hsl(93, 92%, 38%);
+$cyan:       hsl(144, 83%, 40%);
+$gray:       hsl(240, 6%, 50%);

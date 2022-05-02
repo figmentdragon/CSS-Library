@@ -1,0 +1,317 @@
+//------------------------------------------------------------------------------
+// 1.2.0 Layout defaults, mixins, and functions for Grid
+//------------------------------------------------------------------------------
+
+  // 1.2.1 Functions
+  @import "functions/assert-ascending";
+  @import "functions/assert-at-zero";
+  @import "functions/breakpoint";
+
+  // 1.2.2 Variables
+  $base-unit        : 1.05 !default;
+  @import "variables/size";
+
+  $spacer           : 1 !default;
+  $block-spacer     : 1.5rem !default;
+  @import "variables/margin";
+
+  $padding          : 16px !default;
+  @import "variables/padding";
+  @import "variables/position-values";
+
+  $mobile           : 480px;
+  $mobile_portrait  : 568px; // 35.5em; // 568px;
+  $mobile_horizontal: 667px; // 41.688em; // 667px;
+  $tablet           : 768px; // 48.000em; // 768px;
+  $tablet_width     : 783px; // 48.937em; // 783px;
+  $tablet_horizontal: 992px; // 62em; //992px;
+  $desktop          : 1024px; // 64.000em; //1024px;
+  $large_screen     : 1200px; // 75.000em; //1200px;
+  $wide_width       : 1366px; // 85.375em; //1366px;
+  $diagonal_screen  : 1660px; // 103.750em; //1660px;
+  $ultra_wide_screen: 1920px; // 120em; //1920px
+    @import "variables/grid-breakpoint";
+
+  $grid-columns     : 16 !default;
+  $grid-gutter-width: 16px !default;
+  $grid-row-columns : 16 !default;
+    @import "variables/grid-columns";
+
+  $breakpoints      : $grid-breakpoints;
+  $size             : nth($grid-breakpoints, 1);
+  $name             : nth($grid-breakpoints, 1);
+  $declaration      : nth($breakpoints, 2);
+  $columns-margin   : 3.8% !default;
+    @import "variables/columns";
+    @import "variables/container-padding";
+    @import "variables/responsive-variables";
+    @import "variables/aspect-ratio";
+
+  // 1.2.3b Mixins Grid
+    @import "mixins/grid/grid";
+    @import "mixins/grid/container";
+    @import "mixins/grid/grid-system";
+    @import "mixins/grid/row-columns";
+    @import "mixins/grid/grid-framework";
+    @import "mixins/grid/css-grid";
+    @import "mixins/grid/grid-loop";
+
+  // 1.2.3c Mixins Structure
+    @import "mixins/cols";
+    @import "mixins/flex";
+    @import "mixins/grid-clearfix";
+    @import "mixins/border-box";
+    @import "mixins/media";
+
+  // 1.2.4 Structure
+    @import "container";
+
+    [class*='grid'],
+    [class*='col-'],
+    [class*='mobile-'],
+    .grid:after {
+      @include box-sizing($type:border-box);
+      content: "";
+    	display: table;
+    	clear: both;
+    }
+    [class*='col-'] {
+    	float: left;
+      min-height: 1px;
+    	padding-right: 20px; /* column-space */
+    }
+    [class*='col-'] [class*='col-']:last-child {
+    	padding-right: 0;
+    }
+    .grid {
+      overflow: hidden;
+      margin: 0 auto;
+      width: 100%;
+      @include make-grid;
+      @include make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) 
+    }
+
+    .grid-pad {
+    	padding-top: 20px;
+    	padding-left: 20px; /* grid-space to left */
+    	padding-right: 0; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */
+    }
+    .push-right {
+    	float: right;
+    }
+
+    @import "row";
+    @import "col";
+
+  /*
+  Mobile Grid Styles
+  These are the widths for the mobile grid.
+  There are four types, but you can add or customize
+  them however you see fit.
+  */
+  @media (max-width: 767px) {
+
+    .m-all {
+      @include grid-col;
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .m-1of2 {
+      @include grid-col;
+      width: 50%;
+    }
+
+    .m-1of3 {
+      @include grid-col;
+      width: 33.33%;
+    }
+
+    .m-2of3 {
+      @include grid-col;
+      width: 66.66%;
+    }
+
+    .m-1of4 {
+      @include grid-col;
+      width: 25%;
+    }
+
+    .m-3of4 {
+      @include grid-col;
+      width: 75%;
+    }
+
+  } // end mobile styles
+
+  /* Portrait tablet to landscape */
+  @media (min-width: 768px) and (max-width: 1029px) {
+
+    .t-all {
+      @include grid-col;
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .t-1of2 {
+      @include grid-col;
+      width: 50%;
+    }
+
+    .t-1of3 {
+      @include grid-col;
+      width: 33.33%;
+    }
+
+    .t-2of3 {
+      @include grid-col;
+      width: 66.66%;
+    }
+
+    .t-1of4 {
+      @include grid-col;
+      width: 25%;
+    }
+
+    .t-3of4 {
+      @include grid-col;
+      width: 75%;
+    }
+
+    .t-1of5 {
+      @include grid-col;
+      width: 20%;
+    }
+
+    .t-2of5 {
+      @include grid-col;
+      width: 40%;
+    }
+
+    .t-3of5 {
+      @include grid-col;
+      width: 60%;
+    }
+
+    .t-4of5 {
+      @include grid-col;
+      width: 80%;
+    }
+
+  } // end tablet
+
+  /* Landscape to small desktop */
+  @media (min-width: 1030px) {
+
+    .d-all  {
+      @include grid-col;
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .d-1of2 {
+      @include grid-col;
+      width: 50%;
+    }
+
+    .d-1of3 {
+      @include grid-col;
+      width: 33.33%;
+    }
+
+    .d-2of3 {
+      @include grid-col;
+      width: 66.66%;
+    }
+
+    .d-1of4 {
+      @include grid-col;
+      width: 25%;
+    }
+
+    .d-3of4 {
+      @include grid-col;
+      width: 75%;
+    }
+
+    .d-1of5 {
+      @include grid-col;
+      width: 20%;
+    }
+
+    .d-2of5 {
+      @include grid-col;
+      width: 40%;
+    }
+
+    .d-3of5 {
+      @include grid-col;
+      width: 60%;
+    }
+
+    .d-4of5 {
+      @include grid-col;
+      width: 80%;
+    }
+
+    .d-1of6 {
+      @include grid-col;
+      width: 16.6666666667%;
+    }
+
+    .d-1of7 {
+      @include grid-col;
+      width: 14.2857142857%;
+    }
+
+    .d-2of7 {
+      @include grid-col;
+      width: 28.5714286%;
+    }
+
+    .d-3of7 {
+      @include grid-col;
+      width: 42.8571429%;
+    }
+
+    .d-4of7 {
+      @include grid-col;
+      width: 57.1428572%;
+    }
+
+    .d-5of7 {
+      @include grid-col;
+      width: 71.4285715%;
+    }
+
+    .d-6of7 {
+      @include grid-col;
+      width: 85.7142857%;
+    }
+
+    .d-1of8 {
+      @include grid-col;
+      width: 12.5%;
+    }
+
+    .d-1of9 {
+      @include grid-col;
+      width: 11.1111111111%;
+    }
+
+    .d-1of10 {
+      @include grid-col;
+      width: 10%;
+    }
+
+    .d-1of11 {
+      @include grid-col;
+      width: 9.09090909091%;
+    }
+
+    .d-1of12 {
+      @include grid-col;
+      width: 8.33%;
+    }
+
+  } // end desktop styles

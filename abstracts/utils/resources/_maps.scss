@@ -1,6 +1,13 @@
 // Re-assigned maps
 //
 // Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
+$border-widths: (
+  1: $border-width,
+  2: calc($border-width + 1px),
+  3: calc($border-width + 2px),
+  4: calc($border-width + 3px),
+  5: calc($border-width + 4px)
+);
 
 // scss-docs-start theme-colors-rgb
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
@@ -21,7 +28,7 @@ $utilities-text: map-merge(
   (
     "black": to-rgb($black),
     "white": to-rgb($white),
-    "body": to-rgb($text)
+    "body": to-rgb($body-color)
   )
 ) !default;
 $utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;

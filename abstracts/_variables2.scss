@@ -1,0 +1,63 @@
+
+
+$primary:            #444;
+$body-bg: #fff;
+
+$primary:           #444; // Example
+$success:         #5CB85C;
+$info:            $primary;
+$warning:         #F0AD4E;
+$danger:          #D9534F;
+
+
+
+
+
+/**
+ * Breakpoints
+ */
+
+$breakpoint-lg: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 480px;
+
+$breakpoints: (
+    'lg' '(min-width: ' + ($breakpoint-md + 1) + ')',
+    'md' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
+    'sm' '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
+    'xs' '(max-width: ' + $breakpoint-xs + ')'
+);
+
+
+/**
+ * Grid
+ */
+
+
+
+
+
+
+$border-radius: 3px;
+
+
+
+// 1.5.2 Components
+
+
+  @import "variables/animation";
+  @import "variables/modal";
+  @import "variables/tooltip";
+  @import "variables/transition";
+  @import "variables/zindex";
+
+/// Animation
+  $animation-speed: 250ms;
+  $animation: ease-in-out;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

@@ -1,0 +1,98 @@
+//------------------------------------------------------------------------------
+// 1.3.0 VARIABLES
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs. defaults, mixins, and functions
+//------------------------------------------------------------------------------
+
+@import 'variables/color';
+@import 'variables/colors/contrast';
+
+@import 'variables/escaped-character';
+
+@import 'variables/option';
+
+@import 'variables/prefix';
+
+@import 'variables/colors/gradient';
+
+@import 'variables/layouts/structural/size';
+@import 'variables/layouts/structural/margin';
+@import 'variables/layouts/structural/padding';
+@import 'variables/layouts/structural/position-value';
+@import 'variables/layouts/structural/screen';
+
+@import 'variables/typography/body';
+
+@import 'variables/typography/link';
+
+@import 'variables/typography/paragraph';
+
+@import 'variables/layouts/grid-breakpoint';
+@import 'variables/layouts/grid-container';
+@import 'variables/layouts/grid-column';
+@import 'variables/layouts/column';
+@import 'variables/layouts/container-padding';
+
+@import 'variables/components/border';
+@import 'variables/components/box-shadow';
+@import 'variables/components/component-active';
+@import 'variables/components/caret';
+@import 'variables/components/transition';
+@import 'variables/components/list-group';
+@import 'variables/components/aspect-ratio';
+
+
+@import 'variables/typography/font-variable';
+@import 'variables/typography/heading-variable';
+@import 'variables/typography/display-heading';
+@import 'variables/typography/type-variable';
+@import 'variables/typography/button+form';
+
+@import 'variables/zindex';
+
+@import 'variables/menu/nav';
+@import 'variables/menu/dropdown';
+@import 'variables/menu/pagination';
+
+@import 'variables/placeholder';
+
+@import 'variables/components/card';
+
+@import 'variables/menu/accordion';
+
+@import 'variables/tooltip';
+
+@import 'variables/popover';
+
+@import 'variables/toast';
+
+@import 'variables/components/badge';
+
+@import 'variables/modal';
+@import 'variables/components/alert';
+
+@import 'variables/typography/link';
+
+@import 'variables/thumbnail';
+
+@import 'variables/tables/figure';
+
+@import 'variables/menu/breadcrumb';
+
+@import 'variables/thumbnail';
+
+@import 'variables/carousel';
+
+@import 'variables/spinner';
+
+@import 'variables/close';
+
+@import 'variables/menu/offcanvas';
+
+@import 'variables/typography/code-variable';
+
+@import 'variables/printing';
+
+@import 'variables/components/animation';
+
+@import 'variables/utility';

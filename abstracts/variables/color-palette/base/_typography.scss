@@ -1,14 +1,6 @@
-$lead: mix( white, $heading, $lead-percentage);
-$title: mix( black, $heading, $title-percentage);
-$page: mix( black, $heading, $page-percentage);
-$site: mix( black, $heading, $site-percentage);
 
-// Copy
-$quote:  mix( black, $text, $quote-percentage);
-$quote-bg: mix( white, $quote, $background-percentage);
-$quote-border: mix( black, $quote, $border-percentage);
-$code:   mix( black, $text, $code-percentage);
-$code-bg: mix( black, $red, $background-percentage);
-$abbr-border: mix( black, $text, $abbr-percentage);
 
-$muted-text: mix(white, $text, $muted-percentage);
+
+$abbr-border: mix(black, $body-color, $abbr-percentage);
+
+$muted-text: mix(white, $body-color, $muted-percentage);

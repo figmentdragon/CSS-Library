@@ -1,0 +1,51 @@
+//------------------------------------------------------------------------------
+// 1.2.0 GRID Layout defaults, mixins, and functions
+//------------------------------------------------------------------------------
+/*!
+ *! Bootstrap Grid 5.1.3 forms the core of Framework Grid.
+ *! Bootstrap Grid is Copyright 2011-2022 The Bootstrap Authors
+ *! Bootstrap is Copyright 2011-2022 Twitter, Inc.
+ *! Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ !*/
+
+ // Layouts
+ // Control the default styling of most Bootstrap elements by modifying these
+ // variables. Mostly focused on spacing.
+ // You can add more entries to the $spacers map, should you need more variation.
+  $include-column-box-sizing: true !default;
+  $enable-flex: true !default;
+  $base-unit:         1.05 !default;
+  $spacer:            2rem !default;
+  $block-spacer:      1.5rem !default;
+  $offset-y:          2.75 !default; // 1vw = 6px;
+  $offset-x:          2 !default; // 1vh = 8px;
+  $offset:            16px !default;
+  $grid-columns:      12 !default;
+  $grid-gutter-width: 1.5rem !default;
+  $grid-gutter-width: 16px !default;
+  $grid-row-columns:  6 !default;
+  $columns-margin           : 3.8% !default;
+
+// 1.2.1 Functions
+  @import "functions";
+
+// 1.2.2 Variables
+  @import "variable";
+
+// 1.2.3 Map
+  @import "map";
+
+// 1.2.4 Mixins
+  @import "abstracts/mixins/components/list";
+  @import "abstracts/mixins/helpers/breakpoint";
+  @import "abstracts/mixins/layouts/container";
+  @import "abstracts/mixins/layouts/grid";
+  @import "abstracts/mixins/utilities";
+
+@import "./../vendors/bootstrap/rfs";
+
+@import "utils/grid/containers";
+@import "utils/grid/grid";
+
+@import "helpers/grid/containers";
+@import "helpers/grid/grid";

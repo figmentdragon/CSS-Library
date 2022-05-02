@@ -1,5 +1,6 @@
 /* Text meant only for screen readers. */
-.screen-reader-text {
+.screen-reader-text,
+.sr-only {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
@@ -35,4 +36,34 @@
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus {
 	outline: 0;
+}
+
+/**
+ * Elements visibility
+ */
+
+.visible-on-mobile {
+    display: none !important;
+
+    @include resp-max($breakpoint-sm) {
+        display: block !important;
+    }
+}
+
+.visible-on-tablet {
+    display: none !important;
+
+    @include resp-max($breakpoint-md) {
+        display: block !important;
+    }
+
+    @include resp-max($breakpoint-sm) {
+        display: none !important;
+    }
+}
+
+.visible-on-desktop {
+    @include resp-max($breakpoint-md) {
+        display: none !important;
+    }
 }

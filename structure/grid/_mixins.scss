@@ -1,12 +1,43 @@
-@mixin box-sizing($type) {
-  box-sizing: $type;
+/**
+ * Grid loop mixin
+ */
+
+@mixin grid-loop($name){
+    @for $i from 1 through $grid-columns {
+        @if $i != 1% {
+            .col--#{$name}-#{$i} {
+                width: divide($i, $grid-columns);
+                .row--flex & {
+                    flex-basis: divide($i, $grid-columns);
+                    max-width: calc(divide($i, $grid-columns) * 100);
+                    width: auto;
+                    float: none;
+                }
+            }
+        }
+        .col--#{$name}-offset-#{$i} {
+            margin-left: divide($name, $grid-columns);
+        }
+    }
 }
 
-@import "mixins/breakpoint";
-@import "mixins/cols";
-@import "mixins/container";
-@import "mixins/css-grid";
-@import "mixins/flex";
-@import "mixins/grid-clearfix";
-@import "mixins/grid";
-@import "mixins/rows";
+
+@mixin grid-col {
+  float: left;
+  padding-right: 0.75em;
+}
+
+/**
+ * Clearfix
+ */
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

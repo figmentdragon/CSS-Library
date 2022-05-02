@@ -17,7 +17,7 @@ $content-max-widths: (
 	md: $container-max-widths-md - calc($grid-gutter * 2),
 	lg: $container-max-widths-lg - calc($grid-gutter * 2),
 	xl: $container-max-widths-xl - calc($grid-gutter * 2),
-	xxl: $container-max-widths-xxl - calc($grid-gutter * 2);
+	xxl: $container-max-widths-xxl - calc($grid-gutter * 2)
 );
 
 /* Grid breakpoints */

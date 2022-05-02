@@ -1,59 +1,54 @@
-.alert
-{
-    margin-bottom: $spacer;
-    padding: $spacer;
+// scss-docs-start alert-variables
+$alert-padding-y:               $spacer !default;
+$alert-padding-x:               $spacer !default;
+$alert-margin-bottom:           1rem !default;
+$alert-border-radius:           $border-radius !default;
+$alert-link-font-weight:        $bold-font-weight !default;
+$alert-border-width:            $border-width !default;
+$alert-bg-scale:                -80% !default;
+$alert-border-scale:            -70% !default;
+$alert-color-scale:             40% !default;
+$alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
+// scss-docs-end alert-variables
 
+
+%alert {
+  margin: calc($spacer * $base-spacing-unit) $spacer;
+  padding: $offset-x-sm $offset-y;
+  border: 1px solid;
+}
+
+.alert {
+    padding: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit;
     border: 1px solid transparent;
 
     > p,
-    > ul
-    {
+    > ul {
         margin-bottom: 0;
     }
 
-    > p + p
-    {
-        margin-top: $spacer;
+    > p + p {
+        margin-top: $base-spacing-unit;
     }
 
-    &.alert-success
-    {
-        color: $success-color;
-        border-color: $success-color;
-        background: #e6efc2;
+    &.alert--success {
+        color: $success-colour;
+        border-color: $success-colour;
     }
 
-    &.alert-info-color
-    {
-        color: $info-color;
-        border-color: $info-color;
-        background: $info-color-background;
+    &.alert--info {
+        color: $info-colour;
+        border-color: $info-colour;
     }
 
-    &.alert-warning
-    {
-        color: $warning-color;
-        border-color: $warning-color;
-        background: $warning-background;
+    &.alert--warning {
+        color: $warning-colour;
+        border-color: $warning-colour;
     }
 
-    &.alert-alert-color
-    {
-        color: $alert-color;
-        border-color: $alert-color;
-        background: $alert-background;
-    }
-
-    &.alert-help
-    {
-        color: inherit;
-        border-color: #e8dc59;
-        background: #ebe16f;
-    }
-
-    &.alert-error
-    {
-        border-color: #f8cdce;
-        background: #fbe3e4;
+    &.alert--danger {
+        color: $danger-colour;
+        border-color: $danger-colour;
     }
 }

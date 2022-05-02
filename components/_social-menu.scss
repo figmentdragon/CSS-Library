@@ -1,0 +1,136 @@
+.creativity-social-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.creativity-social-menu li {
+    display: inline;
+    padding: 0 5px;
+}
+
+.creativity-social-menu li a {
+    font-size: 0;
+    color: transparent;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.creativity-social-menu li a:hover {
+    color: #000000;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.creativity-social-menu li a:before {
+  content: "";
+  font-family: FontAwesome, sans-serif;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out 0s;
+  vertical-align: middle;
+  color: #68686d;
+}
+.header-mobile .creativity-social-menu li a:before{
+    border: none;
+}
+
+.creativity-social-menu li a[href*="facebook.com"]:before {
+    content: "\f09a";
+}
+
+.creativity-social-menu li a[href*="twitter.com"]:before {
+    content: "\f099";
+}
+
+.creativity-social-menu li a[href*="linkedin.com"]:before {
+    content: "\f0e1";
+}
+
+.creativity-social-menu li a[href*="plus.google.com"]:before {
+    content: "\f0d5";
+}
+
+.creativity-social-menu li a[href*="youtube.com"]:before {
+    content: "\f167";
+}
+
+.creativity-social-menu li a[href*="dribbble.com"]:before {
+    content: "\f17d";
+}
+
+.creativity-social-menu li a[href*="pinterest.com"]:before {
+    content: "\f0d2";
+}
+
+.creativity-social-menu li a[href*="bitbucket.org"]:before {
+    content: "\f171";
+}
+
+.creativity-social-menu li a[href*="github.com"]:before {
+    content: "\f113";
+}
+
+.creativity-social-menu li a[href*="codepen.io"]:before {
+    content: "\f1cb";
+}
+
+.creativity-social-menu li a[href*="flickr.com"]:before {
+    content: "\f16e";
+}
+
+.creativity-social-menu li a[href$="/feed/"]:before {
+    content: "\f09e";
+}
+
+.creativity-social-menu li a[href*="foursquare.com"]:before {
+    content: "\f180";
+}
+
+.creativity-social-menu li a[href*="instagram.com"]:before {
+    content: "\f16d";
+}
+
+.creativity-social-menu li a[href*="tumblr.com"]:before {
+    content: "\f173";
+}
+
+.creativity-social-menu li a[href*="reddit.com"]:before {
+    content: "\f1a1";
+}
+
+.creativity-social-menu li a[href*="vimeo.com"]:before {
+    content: "\f194";
+}
+
+.creativity-social-menu li a[href*="digg.com"]:before {
+    content: "\f1a6";
+}
+
+.creativity-social-menu li a[href*="twitch.tv"]:before {
+    content: "\f1e8";
+}
+
+.creativity-social-menu li a[href*="stumbleupon.com"]:before {
+    content: "\f1a4";
+}
+
+.creativity-social-menu li a[href*="delicious.com"]:before {
+    content: "\f1a5";
+}
+
+.creativity-social-menu li a[href*="mailto:"]:before {
+    content: "\f0e0";
+}
+
+.creativity-social-menu li a[href*="skype.com"]:before {
+    content: "\f17e";
+}
+
+.creativity-social-menu li a[href*="dribble.com"]:before {
+    content: "\f17d";
+}
+
+.socials .fa-search {
+  color: #000000;
+}

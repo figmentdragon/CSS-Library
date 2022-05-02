@@ -1,0 +1,68 @@
+// Responsiveness
+
+@mixin from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+@mixin until($device) {
+  @media screen and (max-width: $device - 1px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: $tablet), print {
+    @content;
+  }
+}
+@mixin tablet-only {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+@mixin touch {
+  @media screen and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin desktop-only {
+    @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) {
+      @content;
+  }
+}
+@mixin until-large_screen {
+    @media screen and (max-width: $large_screen - 1px) {
+      @content;
+  }
+}
+@mixin until-wide_width {
+    @media screen and (min-width: $wide_width) {
+      @content;
+
+  }
+}
+@mixin wide_width-only {
+    @media screen and (min-width: $wide_width) and (max-width: $diagnol_screen - 1px) {
+      @content;
+    }
+}
+@mixin until-ultra_wide_screen {
+    @media screen and (max-width: $diagnol_screen - 1px) {
+      @content;
+    }
+}
+@mixin ultra_wide_screen {
+    @media screen and (min-width: $diagnol_screen) {
+      @content;
+    }
+  }

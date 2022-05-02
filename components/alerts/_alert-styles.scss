@@ -13,8 +13,8 @@ you can just remove this stylesheet.
 
 // alerts and notices
 %alert {
-  margin: 10px;
-  padding: 5px 18px;
+  margin: $spacer;
+  padding: $offset-x-sm $offset-y;
   border: 1px solid;
 }
 

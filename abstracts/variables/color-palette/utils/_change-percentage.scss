@@ -6,10 +6,9 @@ $target-within-percentage:      calc($target-percentage + .75%);
 $scope-percentage:              23%;
 
 // Copy
-$text-percentage:               5%;
-  $input-percentage:            calc($text-percentage + .75%);
-  $comment-percentage:          calc($text-percentage + .75%);
-  $hr-percentage:               calc($text-percentage + 1.50%);
+$body-color-percentage:               5%;
+  $comment-percentage:          calc($body-color-percentage + .75%);
+  $hr-percentage:               calc($body-color-percentage + 1.50%);
 $emphasis-percentage:           15%;
   $quote-percentage:            calc($emphasis-percentage + .75%);
   $abbr-percentage:             calc($emphasis-percentage + .75%);
@@ -42,17 +41,17 @@ $inset-percentage:              calc($muted-percentage - .75%);
 // Utilities
 $background-percentage:         8%;
 $info-percentage:               18%;
-$danger-percentage:             $muted-percentage;
+  $attention-percentage:        calc($info-percentage + .75%);
 $success-percentage:            $active-percentage;
+  $valid-percentage:            $active-percentage;
 $table-percentage:              28%;
-$alert-percentage:              38%;
-$warning-percentage:            48%;
+$danger-percentage:             38%;
+  $invalid-percentage:          $danger-percentage;
 
 $input-percentage:              9%;
 $table-percentage:              calc($background-percentage + .75%);
 $card-percentage:               19%;
 $border-percentage:             29%;
-  $hr-percentage:               $border-percentage;
 $button-percentage:             39%;
 $shadow-percentage:             49%;
 

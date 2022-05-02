@@ -4,8 +4,8 @@
 .comments-area {
 
 	> * {
-		margin-top: $padding-y;
-		margin-bottom: $padding-y;
+		margin-top: $offset-y;
+		margin-bottom: $offset-y;
 
 		&:first-child {
 			margin-top: 0;

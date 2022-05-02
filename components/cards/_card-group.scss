@@ -39,7 +39,7 @@
           }
         }
         &                             :last-child {
-          @include border-start-radius($border-radius-lg);
+          @include border-start-radius($lg-border-radius);
 
           .card-img-top {
             border-top-left-radius:     0;

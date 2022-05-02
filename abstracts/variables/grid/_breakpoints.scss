@@ -38,5 +38,3 @@ $breakpoints: (
 
 $size: nth($grid-breakpoints, 1);
 $name: nth($grid-breakpoints, 1);
-
-$infix: breakpoint-infix($breakpoint, $grid-breakpoints);

@@ -1,0 +1,161 @@
+// H1, H2, H3, H4, H5 H6 - The <h1> to <h6> HTML elements represent six levels of section headings. <h1> is the highest section level and <h6> is the lowest.
+
+$h1-font-size:                $base-font-size * 2.5;
+$h2-font-size:                $base-font-size * 2;
+$h3-font-size:                $base-font-size * 1.75;
+$h4-font-size:                $base-font-size * 1.5;
+$h5-font-size:                $base-font-size * 1.25;
+$h6-font-size:                $base-font-size;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      $spacer * .5;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        $bolder-font-weight;
+$headings-line-height:        1.2;
+
+$heading: mix(white, $body-color, $heading-percentage);
+$lead-color: mix($heading, $body-color, $lead-percentage);
+$title-color: mix($heading, $body-color, $title-percentage);
+$page-color: mix($heading, $body-color, $page-percentage);
+$site-color: mix($heading, $body-color, $site-percentage);
+
+$lead-font-size:              $base-font-size * 1.25;
+$lead-font-weight:            300;
+
+$entry-content-font-size: $lg-font-size;
+
+//
+// Headings
+//
+
+// Typography
+//
+// 1. Remove top margins from headings
+//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+//    margin for easier control within type scales as it avoids margin collapsing.
+
+%heading {
+  margin-top: 0; // 1
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: var(--#{$prefix}heading-color);
+  &:first-child {
+    margin-top: 0;
+  }
+  > a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    &:hover,
+    .hover,
+    &:focus,
+    .focus {
+      text-decoration: none;
+    }
+    &:visited,
+    .visited {
+      text-decoration: none;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @include clearfix;
+  @extend %heading;
+}
+
+h1, .h1 { @include font-size($h1-font-size); }
+h2, .h2 { @include font-size($h2-font-size); }
+h3, .h3 { @include font-size($h3-font-size); }
+h4, .h4 { @include font-size($h4-font-size); }
+h5, .h5 { @include font-size($h5-font-size); }
+h6, .h6 { @include font-size($h6-font-size); }
+
+.subheader {
+  color: tint($heading, $lead-percentage);
+}
+
+.lead {
+  @include font-size($lead-font-size);
+  font-weight: $lead-font-weight;
+  color: tint-color($body-color, $lead-percentage);
+}
+
+
+
+h1 {
+  font-family: $site-font;
+  text-transform: capitalize;
+	font-variant: small-caps;
+  @include font-size($h1-font-size);
+  line-height: 1rem;
+  margin-right: calc(($vertical-spacer * 1.5));
+  margin-left: calc(($vertical-spacer * .5));
+}
+
+
+
+h2 {
+  font-family: $page-title-font;
+  @include font-size($h2-font-size);
+	color: $page-color;
+  margin-right: $vertical-spacer;
+  margin-left: calc($vertical-spacer * .5);
+}
+
+h3 {
+	font-family: $post-title-font;
+  @include font-size($h3-font-size);
+	color: $title-color;
+  font-weight: 700;
+}
+
+h4 {
+	font-family: $tertiary-font;
+  @include font-size($h4-font-size);
+  text-transform: lowercase;
+  text-align: right;
+  color: shade($accent, $heading-percentage);
+  margin-right: calc(($vertical-spacer * 1.05));
+  margin-left: calc(($vertical-spacer * .2));
+}
+
+h5 {
+	font-family: $tertiary-font;
+  font-weight: $base-font-weight;
+  @include font-size($h5-font-size);
+	color: $heading;
+  margin-right: $vertical-spacer;
+  margin-left: $vertical-spacer;
+  @include links;
+}
+
+h6 {
+	font-family: $lead-font;
+	font-weight: $lead-font-weight;
+	@include font-size($lead-font-size);
+	color: $lead-color;
+  margin-right: $vertical-spacer;
+  margin-left: $vertical-spacer;
+}
+
+h5,
+h6 {
+	text-transform: capitalize;
+}

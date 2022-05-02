@@ -1,0 +1,65 @@
+.main-menu {
+  font-family: 'Roboto', serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.main-menu ul,
+.main-menu li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-menu .menu-list > li > a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: block;
+}
+.main-menu .active a {
+  color: #000000;
+}
+.main-menu li {
+  position: relative;
+}
+
+.main-menu .sub-menu li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.main-menu .sub-menu li:first-child {
+  padding-top: 10px;
+}
+.main-menu .sub-menu li:last-child {
+  padding-bottom: 10px;
+}
+.main-menu .sub-menu a {
+    font-size: 14px;
+}
+
+.menu-left .header {
+  text-align: left;
+}
+.menu-left .main-menu .sub-menu {
+  padding-left: 0;
+  padding-right: 20px;
+  right: 100%;
+  left: auto;
+  text-align: right;
+}
+
+.main-menu .sub-menu .dropdown-plus{
+  top: 7px;
+}
+
+.main-menu li>ul{
+    display: none;
+}
+.main-menu li:focus-within > ul,
+.main-menu li:focus > ul,
+.main-menu li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+.main-menu li:focus-within > ul{
+    display: block;
+}

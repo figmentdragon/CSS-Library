@@ -1,0 +1,23 @@
+// scss-docs-start input-btn-variables
+$input-btn-offset-y:         calc($offset-y * .375)rem;
+$input-btn-offset-x:         calc($offset-y * .75)rem;
+$input-button-font-family     : $tertiary-font;
+$input-btn-font-size:         $font-size-base;
+$input-btn-line-height:       $line-height-base;
+
+$input-btn-focus-width:         .25rem;
+$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
+$input-btn-focus-blur:          0;
+$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
+
+$input-btn-offset-y-sm:      calc($offset-y * .25)rem;
+$input-btn-offset-x-sm:      calc($offset-x * .5)rem;
+$input-btn-font-size-sm:      $font-size-sm;
+
+$input-btn-offset-y-lg:      calc($offset-y * .5)rem;
+$input-btn-offset-x-lg:      calc($offset-x * 1)rem;
+$input-btn-font-size-lg:      $font-size-lg;
+
+$input-btn-border-width:      $border-width;
+// scss-docs-end input-btn-variables

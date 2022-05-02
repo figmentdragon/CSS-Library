@@ -1,0 +1,74 @@
+@use "utils/change-percentage";
+
+//Primary
+$body-color         : mix($primary, black, $body-color-percentage) !default;
+$code         : mix(black, $pink, $body-color-percentage) !default;
+$hr           : mix(black, $body-color, $hr-percentage) !default;
+$mute         : mix(gray, $light, $muted-percentage);
+$shadow       : mix($tertiary, black, $shadow-percentage);
+
+$placeholder  : mix(white, $warning, $active-percentage);
+
+$background   : mix(white, $secondary, $background-percentage);
+$hr-bg        : mix($background, $hr, $background-percentage);
+$ins-bg       : #fff9c0;
+$body-bg      : mix( $background, $body-color, $background-percentage);
+$pre-bg       : mix( $background, $code, $background-percentage);
+
+
+$border       : mix(black, $accent, $border-percentage);
+
+
+$heading      : mix( black, $body-color, $heading-percentage) !default;
+
+$table        : $green;
+$card         : $accent;
+
+
+
+
+$local-link   : mix( white, $secondary, $local-link-percentage);
+$target       : mix( white, $secondary, $target-percentage);
+$target-within: mix( white, $secondary, $target-within-percentage);
+$scope        : mix( white, $secondary, $scope-percentage);
+
+$links        : $yellow !default;
+$inactive     : $light !default;
+$muted        : $light !default;
+$focus        : $warning !default;
+$hover        : $warning !default;
+$visited      : $dark !default;
+$input        : $info !default;
+$form         : $cyan !default;
+$table        : $purple !default;
+
+
+
+$links        : mix($secondary, black, $link-percentage);
+$nav          : mix($links, black, $nav-percentage);
+$link-visited :mix( black, $links, $visited-percentage);
+$link-hover   : mix( black, $links, $hover-percentage);
+
+
+$abbr-border  : #666;
+
+$focus-visible:mix( white, $focus, $focus-visible-percentage);
+$focus-within : mix( white, $focus, $focus-within-percentage);
+
+$valid        : $success !default;
+$attention    : $alert !default;
+$invalid      : $danger !default;
+
+
+
+$shadow       : mix(black, $tertiary, $shadow-percentage);
+
+
+$button       : $blue !default;
+$button-text  : mix($body-color, $button, $body-color-percentage);
+$button-link  : mix($links, $button, $link-percentage);
+$button-link-hover: mix($hover, $button, $hover-percentage);
+$button-link-inactive: mix($mute, $button, $inactive-percentage);
+$button-border: mix($border, $button, $border-percentage);
+
+$button-bg    : mix($background, $button, $background-percentage);

@@ -1,0 +1,16 @@
+select {
+  font-size: $base-font-size;
+  border: solid $input-border-width $input-border;
+  border-radius: 1px;
+  color: $input-text;
+  height: 40px;
+  line-height: $base-line-height;
+  padding: 0 0 0 divide($offset, 2);
+  text-transform: none;
+  :focus {
+    outline-style: dotted;
+    outline-color: $input-border-focus;;
+    outline-width: $input-border-width;
+    text-decoration: none;
+  }
+}

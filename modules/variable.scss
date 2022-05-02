@@ -1,0 +1,105 @@
+// -----------------------------------------------------------------------------
+// X.X.X VARIABLES This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/**
+  X.X.X Colors
+  Define common offset and border radius sizes and more.
+----------------------------*/
+  @import "abstracts/variables/colors/grayscale";
+  @import "abstracts/variables/colors/color-variable";
+  @import "abstracts/variables/colors/theme-color-variable";
+
+/**
+  X.X.X Options
+  Define common offset and border radius sizes and more.
+----------------------------*/
+  @import "abstracts/variables/escaped-character";
+  @import "abstracts/variables/option";
+  @import "abstracts/variables/prefix";
+  @import "abstracts/variables/colors/gradient";
+
+/**
+  X.X.X Layout & Structure
+  Define common offset and border radius sizes and more.
+ ----------------------------*/
+  $wrapper-width: 1280px !default;
+  @import "abstracts/variables/layouts/structural/size";
+  @import "abstracts/variables/layouts/structural/margin";
+  @import "abstracts/variables/layouts/structural/position-value";
+  @import "abstracts/variables/typography/body";
+  @import "abstracts/variables/typography/link";
+  @import "abstracts/variables/typography/paragraph";
+  @import "abstracts/variables/layouts/structural/structure";
+  @import "abstracts/variables/layouts/grid-breakpoint";
+  @import "abstracts/variables/layouts/grid-containers";
+  @import "abstracts/variables/layouts/grid-columns";
+  @import "abstracts/variables/layouts/column";
+
+/**
+  X.X.X Components
+  Define common offset and border radius sizes and more.
+ ----------------------------*/
+  @import "abstracts/variables/components/border";
+  @import "abstracts/variables/components/box-shadow";
+  @import "abstracts/variables/components/component-active";
+  @import "abstracts/variables/components/caret";
+  @import "abstracts/variables/components/transition";
+  @import "abstracts/variables/components/animation";
+  @import "abstracts/variables/components/aspect-ratio";
+
+/**
+  X.X.X Typography
+ Font, line-height, and color for body text, headings, and more.
+----------------------------*/
+  @import "abstracts/variables/typography/font-variable";
+  @import "abstracts/variables/typography/heading-variable";
+  @import "abstracts/variables/typography/display-headings";
+  @import "abstracts/variables/typography/type-variable";
+
+  @import "abstracts/variables/tables/table-variable";
+
+  @import "abstracts/variables/typography/button+form";
+
+  @import "abstracts/variables/zindex";
+
+  @import "abstracts/variables/menu/nav";
+  @import "abstracts/variables/menu/dropdown";
+  @import "abstracts/variables/menu/pagination";
+
+  @import "abstracts/variables/placeholder";
+
+  @import "abstracts/variables/components/card";
+
+  @import "abstracts/variables/menu/accordion";
+
+  @import "abstracts/variables/tooltip";
+  @import "abstracts/variables/popover";
+  @import "abstracts/variables/toasts";
+
+  @import "abstracts/variables/components/badge";
+
+  @import "abstracts/variables/modal";
+
+  @import "abstracts/variables/components/alert";
+
+  @import "abstracts/variables/menu/progress-bar";
+
+  @import "abstracts/variables/components/list-group";
+
+  @import "abstracts/variables/thumbnail";
+
+  @import "abstracts/variables/tables/figure";
+
+  @import "abstracts/variables/menu/breadcrumb";
+
+  @import "abstracts/variables/carousel";
+  @import "abstracts/variables/spinner";
+  @import "abstracts/variables/close";
+
+  @import "abstracts/variables/menu/offcanvas";
+
+  @import "abstracts/variables/typography/code-variable";
+
+  @import "abstracts/variables/printing";
+  @import "abstracts/variables/utility";

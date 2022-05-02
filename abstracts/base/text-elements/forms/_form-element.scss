@@ -1,0 +1,38 @@
+/* Gives a basic visual design to form elements */
+button,
+html input[type="button"],
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted $btn-border;
+  ::-moz-focus-inner,
+  ::-moz-focus-inner,
+  ::-moz-focus-inner  {
+    border: 0;
+    padding: 0;
+  }
+}
+
+[type="checkbox"],
+[type="radio"] {
+	@include box-sizing($type: border-box);
+  padding: 0;
+}
+
+[type="search"] {
+	@include box-sizing($type: border-box);
+	outline-offset: -2px;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font-family: inherit;
+}
+::-moz-selection {
+  color: $input-text;
+  background-color: $btn-bg;
+}
+::selection {
+  color: $input-text;
+  background-color: $btn-bg;
+}

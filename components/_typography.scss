@@ -1,0 +1,9 @@
+$heading        : mix(black, $text, $heading-percentage);
+
+
+$alt-text-color : mix(white, $primary, $text-percentage);
+
+
+
+$code         : mix(black, $pink, $text-percentage);
+$hr           : mix(black, $text, $hr-percentage);

@@ -22,28 +22,8 @@
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
-  display: grid;
-  grid-gap: $grid-gutter;
-  grid-template-columns: repeat($grid-columns, 1fr);
-  grid-template-rows: repeat($grid-row-columns, 1fr);
-  grid-auto-rows: divide(100%, $grid-row-columns);
-  grid-auto-columns: divide(100%, $grid-columns);
-  @include resp-max($breakpoint-sm) {
-    grid-gap: divide($spacer, 2);
-  }
-
-  @each $breakpoint in $breakpoints {
-    $name: nth($breakpoint, 1);
-    $declaration: nth($breakpoint, 2);
-
-    @media only screen and ($name) {
-      @for $i from 1 through 6 {
-        &.grid--#{$name}-#{$i}x {
-          grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
-        }
-      }
-    }
-  }
+  @include grid-max-width;
+  @include make-grid;
 }
 
 .grid-pad {

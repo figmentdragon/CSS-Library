@@ -1,0 +1,31 @@
+// scss-docs-start theme-color-variables
+$primary:       $cyan !default;
+$secondary:     $gray-600 !default;
+$accent:        $purple !default;
+$tertiary:      $teal !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $gray-800 !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "accent":     $accent,
+  "tertiary":   $tertiary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+  ),
+  $theme-colors
+);
+// scss-docs-end theme-colors-map

@@ -1,0 +1,40 @@
+.block-mobile {
+  display: none;
+  margin-bottom: 60px;
+}
+.block-mobile .menu-mobile {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+}
+.block-mobile .menu-mobile button{
+  padding: 0;
+  border: 0;
+  background: transparent;
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+.block-mobile .menu-mobile .item {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+}
+.block-mobile .menu-mobile .item-1 {
+  top: 0;
+}
+.block-mobile .menu-mobile .item-2 {
+  top: calc(50% - 1px);
+}
+.block-mobile .menu-mobile .item-3 {
+  bottom: 0;
+}
+.block-mobile .logo {
+  padding-bottom: 0;
+  padding-top: 10px;
+  text-align: left;
+  display: inline-block;
+}
+.hide-menu {}

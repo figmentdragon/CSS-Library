@@ -1,153 +1,71 @@
-/**
- * If, for example, you would like to style your search results page in a specific way you can use the “search-results” class to add your styling. WordPress only adds this class to the body tag when the search results page is active so it doesn’t affect any other pages.
- */
+//WORDPRESS BODY CLASSES - style a page via class
+//If, for example, you would like to style your search results page in a specific way you can use the “search-results” class to add your styling. WordPress only adds this class to the body tag when the search results page is active so it doesn’t affect any other pages.
+
 
 .admin-bar {
      /* # Only in admin bar */
  }
-.archive {
-     /* For # Month, Year, Category, Author, Post Type archive */
- }
-.attachment {
-    /* # On attachment page */
-}
-.attachmentid-/*$id*/ {}
-.attachmentid-/* $post_id */
-.attachment-/* str_replace( $mime_prefix, '', $mime_type ) */
-.attachment-/*mime-type*/ {}
-.author {
-    /* # author page */
-}
-.author-/* $author->ID */
-.author-/* sanitize_html_class/* $author->user_nicename, $author->ID ) */
-.author-/*$user_nicename*/ {}
-.author-paged-/*$page-number*/ {}
-.author-paged-/* $page */
 
-.blog {
-    /* # Add if blog view homepage, otherwise false. */
-}
-.category {
-    /* # category page */
-}
-.category-/*$slug*/ {}
-.category-/* $cat_class */
-.category-/* $cat->term_id */
-.category-paged-/*$page-number*/ {}
-.category-paged-/* $page */
-.custom-background {
-    /* # If theme support 'custom-background' or get_background_image/*) */
-}
-.date {
-     /* # For date archive */
-}
-.date-paged-/* $page */
-.date-paged-/*$page-number*/ {}
-.error404 {
-    /* # On 404 page */
-}
-.home {
-    /* # Depends on the site’s “Front page displays” Reading Settings ‘show_on_front’ and ‘page_on_front’. \n If you set a static page for the front page of your site, this function will return true when viewing that page. */
-}
-.logged-in {}
-.logged-in {
-    /* # Logged in user */
-}
-.no-customize-support {
-    /* # Only in admin bar */
-}
+.archive {}                       /* For # Month, Year, Category, Author, Post Type archive */
 
-.page {
-    /* # existing single page */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+
+.author {}                        /* # author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+
+.blog {}                          /* blog template page */
+
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+  .category-%slug-{}
+  .category-%cat_class-{}
+
+.custom-background {}                  /* # If theme support 'custom-background' or get_background_image ) */
+
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+
+.error404 {}                      /* 404 page */
+
+.home { /* home page */
+  outline: 2px solid red;
   position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  outline: 3px solid red;
-}
-.page-id-/* $page_id */
-
-
-.page-child {
-    /* # Child page only */
-}
-.page-child parent-pageid-/*$id*/ {}
-.page-paged-/* $page */
-.page-paged-/*$page-number*/ {}
-.page-parent {}
-
-.page-parent {
-    /* # Parent page only */
-}
-.page-template-/* sanitize_html_class( str_replace( array( '.', '/' ), '-', basename( $part, '.php' ) ) ) */
-.page-template-/* sanitize_html_class( str_replace( '.', '-', $template_slug ) ) */
-.page-template {
-    /* # Page templates only */
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  outline: 3px solid red;
-}
-.page-template-default {
-    /* # Default page templates only */
-}
-.page-template page-template-/*$template-file-name) {}
-.paged-/* $page */
-.paged {
-    /* # On paged result and not for the first page */
-}
-.paged-/*$page-number*/ {}
-.parent-pageid-/* $post->post_parent */
-.post-type-archive {
-    /* # post type archive page */
-}
-.post-type-archive-/* sanitize_html_class( $post_type ) */
-
-
-.post-type-paged-/* $page */
-.postid-{/*$post_id*/}
-.search {
-   /* # For search */
-}
-.rtl {
-    /* # Checks if current locale is RTL (Right To Left script). */
+  margin: 1vh .75vw 1vh .75vw;
+  padding: 2vh .75vw 2vh 2vw;
 }
 
-.search-no-results {}
-.search-no-results {
-    /* # If NOT found any posts in search result */
-}
-.search-paged-/* $page */
-.search-paged-/*$page-number*/ {}
-.search-results {
-    /* # If found posts in search result */
-}
-.search-results {}
-.single {
-    /* # Add for any post type, except {attachments} and {pages} */
-}
+.logged-in {}                     /* if user is logged in */
 
-.single-/* sanitize_html_class($post->post_type, $post_id) */
-.single-format-/* sanitize_html_class( $post_format ) */
-.single-format-standard {
-    /* # standard post format */
-}
-.single-paged-/*$page-number*/ {}
-.single-paged-/* $page */
-.single-postid-/*$id*/ {}
-.tag {
-    /* # Tags page */
-}
-.tag-/* $tag_class */ {}
-.tag-/* $tag->term_id */
-.tag-paged-/* $page */
-.tag-paged-/*$page-number*/ {}
-.tax-/* sanitize_html_class( $term->taxonomy ) */
-.term-/* $term_class */
-.term-/* $term->term_id */
-.wp-custom-logo {
-    /* # If the site has a custom logo. */
-}
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+  .single-format-%post_format-{}
+  .single-format-standard {}
+
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+
+.tax {}
+.term {}

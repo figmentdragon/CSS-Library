@@ -1,0 +1,6 @@
+$input        : mix(black, $info, $input-percentage) !default;
+$placeholder  : mix(white, $warning, $active-percentage);
+$valid     : mix(white, $success, $valid-percentage) !default;
+$attention : mix(black, $alert, $attention-percentage) !default;
+$invalid   : mix(black, $danger, $invalid-percentage) !default;
+$table     : mix(black, $green, $table-percentage) !default;
