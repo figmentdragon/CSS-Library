@@ -1,18 +1,264 @@
 /* =Responsive Structures
 ----------------------------------------------- */
 
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .footer-inner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .block-mobile {
+    margin-bottom: 50px;
+  }
+  .block-mobile .logo {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+  .project-item {
+    margin-bottom: 20px;
+  }
+  #comments .comment-avatar {
+    float: none;
+  }
+  #comments .comment-context {
+    margin-top: 20px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #comments .reply {
+    text-align: right;
+  }
+  .navigation-wrap {
+    margin-top: 30px;
+  }
+  .footer-inner {
+    margin-top: 50px;
+  }
+  body, article .post-meta{
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  article .title{
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  .site-title{
+    font-size: 6px !important;
+    line-height: 30px;
+  }
+  .menu-main-nav-container a, .side-title, .menu-main-container a{
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body, article .post-meta{
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  article .title{
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  .site-title{
+    font-size: 10px !important;
+    line-height: 50px;
+  }
+  .menu-main-nav-container a, .side-title, .menu-main-container a{
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+/* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 768px) {
-	#content,
-	#primary,
-	#secondary,
-	#tertiary { /* Remove floats on all structural elements for smaller screens */
-		float: none;
-		margin: 0;
-		padding: 0;
-	}
-	#primary,
-	#secondary,
-	#tertiary { /* Make all structural elements full-width */
-		width: 100%;
-	}
+	.side-title{
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .post .post-content {
+    padding: 20px;
+  }
+  #comments .children {
+    padding-left: 0;
+  }
+  body {
+    padding-top: 30px;
+  }
+  .project-item {
+    margin-bottom: 30px;
+  }
+  #content,
+  #primary,
+  #secondary,
+  #tertiary { /* Remove floats on all structural elements for smaller screens */
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+  #primary,
+  #secondary,
+  #tertiary { /* Make all structural elements full-width */
+    width: 100%;
+  }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .side-title{
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  .side-title{
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .preload {
+    display: none;
+  }
+  .block-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header,
+  .menu-left .header {
+    left: 0;
+    width: 250px;
+    z-index: 9999;
+    background-color: #000000;
+    text-align: center;
+    -webkit-transform: translateX(-101%);
+    -moz-transform: translateX(-101%);
+    transform: translateX(-101%);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+  }
+  .header .logo a,
+  .menu-left .header .logo a {
+    color: #ffffff;
+  }
+  .header.active,
+  .menu-left .header.active {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .main-navigation,
+  .menu-left .main-navigation {
+    max-height: 45%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .main-navigation a:hover,
+  .menu-left .main-navigation a:hover {
+    color: #ffffff !important;
+  }
+  .main-navigation .active a,
+  .menu-left .main-navigation .active a {
+    color: #ffffff;
+  }
+  .main-navigation .sub-menu,
+  .menu-left .main-navigation .sub-menu {
+    display: none;
+    position: relative;
+    width: 100%;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    padding-left: 0;
+    text-align: center;
+  }
+  .main-navigation .sub-menu li,
+  .menu-left .main-navigation .sub-menu li,
+  .main-navigation .sub-menu li:first-child,
+  .menu-left .main-navigation .sub-menu li:first-child,
+  .main-navigation .sub-menu li:last-child,
+  .menu-left .main-navigation .sub-menu li:last-child {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .main-navigation .sub-menu li{
+    background: transparent;
+  }
+
+  .block-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer-inner {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .socials a {
+    margin-right: 10px;
+  }
+  .copyright,
+  .main-navigation .menu-list > li > a,
+  .logo .site-description,
+  .social-menu li a:before,
+  .search-form label:before {
+    color: #ffffff;
+  }
+  .hide-menu.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .dropdown-plus{
+    right: 40px;
+  }
+  .header .center{
+    justify-content: center!important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+
+
+/* Those wide screens above 1280px */
+@media only screen and (min-width: 1281px) {
+  body{
+    font-size: 2.5em;
+    line-height: 1.5em;
+  }
+  article .title{
+    font-size: 1.8em;
+    line-height: 1.5em;
+  }
+  article .post-meta{
+    font-size: 0.7em;
+    line-height: 1em;
+  }
+  .menu-main-nav-container a, .side-title, .menu-main-container a{
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  #sidebar{
+    font-size: 0.7em;
+    line-height: 1.5em;
+  }
+  #sidebar h3{
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
 }

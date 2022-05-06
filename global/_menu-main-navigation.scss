@@ -9,75 +9,92 @@
 	float: left;
 	font-size: 18px
 	width: 100%;
-	:after { /* Clears the floats after the menu */
+	&:after { /* Clears the floats after the menu */
 		clear: both;
 		content: "";
 		display: block;
 	}
-}
-
-.main-navigation ul { /* The menu is an unordered list */
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-.main-navigation li { /* Makes the menu "list" items horizontal */
-	float: left;
-	position: relative;
-	font-size: 14px;
-	transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	text-transform: uppercase;
-}
-.main-navigation a { /* The individual list item links */
-	display: block;
-	text-decoration: none;
-	color: #fff;
-	line-height: 60px;
-	padding: 0 20px;
-}
-.main-navigation > ul > li {
+	ul { /* The menu is an unordered list */
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		ul { /* Submenu drop-down "box" */
+			box-shadow: 0 3px 3px rgba($shadow,0.2);
+			display: none;
+			float: left;
+			position: absolute;
+					top: 1.5em;
+					left: 0;
+					bottom: 100%;
+					right: 0;
+			z-index: 99999;
+			background: $nav-bg;
+			width: 200px;
+			&:hover {
+				> a {}
+			}
+			ul { /* 3rd+ level drop-down "box" */
+				left: 100%;
+				top: 0;
+				right: 100%;
+				bottom: 0;
+				a {
+					&:hover { /* Hover styles for menu items */
+						background: mix(black, $nav-bg, $hover-percentage);
+					}
+				}
+			}
+			li { /* List items inside the drop-down box */
+			}
+			a { /* Menu links inside the drop-down "box" */
+			  width: 200px;
+			}
+		}
+		li {
+			&:hover {
+				> ul {
+					display: block;
+				}
+			}
+		}
+	}
+	li { /* Makes the menu "list" items horizontal */
+		float: left;
+		position: relative;
+		font-size: 14px;
+		transition: all 0.5s ease;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		text-transform: uppercase;
+		&:hover {
+			> ul {
+				display: block;
+			}
+			> a { /* Hover styles for menu items */
+				background: mix(black, $nav-bg, $hover-percentage);
+			}
+		}
+		&.current_page_item {
+			> a {  /* Hover styles for menu items */
+				background: mix(black, $nav-bg, $hover-percentage);
+			}
+		}
+		&.current-menu-item {
+			> a {  /* Hover styles for menu items */
+				background: mix(black, $nav-bg, $hover-percentage);
+			}
+		}
+	}
+	a { /* The individual list item links */
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		line-height: 60px;
+		padding: 0 20px;
+	}
+	> ul > li {
     float: left;
-}
-.main-navigation ul ul { /* Submenu drop-down "box" */
-	box-shadow: 0 3px 3px rgba($shadow,0.2);
-	display: none;
-	float: left;
-	position: absolute;
-			top: 1.5em;
-			left: 0;
-			bottom: 100%;
-			right: 0;
-	z-index: 99999;
-	background: $nav-bg;
-	width: 200px;
-}
-.main-navigation ul ul ul { /* 3rd+ level drop-down "box" */
-	left: 100%;
-	top: 0;
-	right: 100%;
-	bottom: 0;
-}
-.main-navigation ul ul li { /* List items inside the drop-down box */
-}
-.main-navigation ul ul a { /* Menu links inside the drop-down "box" */
-  width: 200px;
-}
-.main-navigation li:hover > ul {
-	display: block;
-}
-.main-navigation li:hover > a,
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a,
-.main-navigation ul ul a:hover { /* Hover styles for menu items */
-	background: mix(black, $nav-bg, $hover-percentage);
-}
-.main-navigation ul ul:hover > a {
-
-}
-.main-navigation ul li:hover > ul {
-	display: block;
+	}
 }
 
 /* Small menu toggle area for screens < 600 pixels wide. The small menu requires some simple JavaScript in order to take affect. See http://themeshaper.com/2012/10/31/the-wordpress-theme-header-template/ for instructions on setting up this script. */

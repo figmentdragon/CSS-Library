@@ -1,6 +1,0 @@
-$button-text  : mix($text, $button, $text-percentage);
-$button-link  : mix($link-color, $button, $link-percentage);
-$button-link-hover: mix($hover, $button, $hover-percentage);
-$button-link-inactive: mix($muted, $button, $inactive-percentage);
-$button-border: mix($border, $button, $border-percentage);
-$button-bg    : mix($background, $button, $background-percentage);

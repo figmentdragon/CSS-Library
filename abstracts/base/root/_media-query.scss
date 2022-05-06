@@ -1,6 +1,6 @@
-//
-// Root Media Query Variables
-//
+/**
+ * Root Media Query Variables
+ */
 
 $default-width: 38.125rem;
 $max-content-width: 1240px;
@@ -14,34 +14,34 @@ $responsive-alignfull-width: 100vw;
  */
 :root
 {
-    $horizontal-offset: 1.05vh;
-    $responsive-spacing-horizontal: calc((2 * $horizontal-offset) * .6);
-    $responsive-aligndefault-width: subtract(100vw, $responsive-spacing-horizontal);
-    $responsive-alignwide-width: subtract(100vw, $responsive-spacing-horizontal);
+    $horizontal-spacer: 1.05vh;
+    $responsive-horizontal-spacer: calc((2 * $horizontal-spacer) * .6);
+    $responsive-aligndefault-width: subtract(100vw, $responsive-horizontal-spacer);
+    $responsive-alignwide-width: subtract(100vw, $responsive-horizontal-spacer);
     $responsive-alignfull-width: 100%;
-    $responsive-alignright-margin: $horizontal-offset;
-    $responsive-alignleft-margin: $horizontal-offset;
+    $responsive-alignright-margin: $horizontal-spacer;
+    $responsive-alignleft-margin: $horizontal-spacer;
 }
 
-@include mobile
+@include media(mobile)
 {
     :root
     {
-        $horizontal-offset: 1vh;
-        $responsive-aligndefault-width: subtract(calc((100vw - 4 * $horizontal-offset)), $default-width);
-        $responsive-alignwide-width: calc(100vw - 4 * $horizontal-offset);
+        $horizontal-spacer: 1vh;
+        $responsive-aligndefault-width: subtract(calc((100vw - 4 * $horizontal-spacer)), $default-width);
+        $responsive-alignwide-width: calc(100vw - 4 * $horizontal-spacer);
         $responsive-alignright-margin: calc(.5 * (100vw - 33vw));
         $responsive-alignleft-margin: calc(.5 * (100vw - 33vw));
     }
 }
 
-@include desktop
+@include media(desktop)
 {
     :root
     {
-        $horizontal-offset: 1vh;
-        $responsive-aligndefault-width: subtract(calc(100vw - 8 * $horizontal-offset), $default-width);
-        $responsive-alignwide-width: subtract(calc(100vw - 8 * $horizontal-offset), $max-content-width);
+        $horizontal-spacer: 1vh;
+        $responsive-aligndefault-width: subtract(calc(100vw - 8 * $horizontal-spacer), $default-width);
+        $responsive-alignwide-width: subtract(calc(100vw - 8 * $horizontal-spacer), $max-content-width);
     }
 }
 
@@ -70,7 +70,7 @@ $responsive-alignfull-width: 100vw;
     margin-left: auto;
 }
 
-@include mobile
+@include media(mobile)
 {
     %responsive-alignfull-width
     {
@@ -97,7 +97,7 @@ $responsive-alignfull-width: 100vw;
     margin-left: auto;
 }
 
-@include desktop
+@include media(desktop)
 {
     %responsive-alignfull-width-nested
     {
@@ -108,7 +108,6 @@ $responsive-alignfull-width: 100vw;
     }
 }
 
-
 %responsive-alignleft-mobile
 {
     /*rtl:ignore*/
@@ -117,7 +116,7 @@ $responsive-alignfull-width: 100vw;
     margin-left: 0;
 }
 
-@include mobile
+@include media(mobile)
 {
     %responsive-alignleft
     {
@@ -136,7 +135,7 @@ $responsive-alignfull-width: 100vw;
     margin-left: 33vw;
 }
 
-@include mobile
+@include media(mobile)
 {
     %responsive-alignright
     {

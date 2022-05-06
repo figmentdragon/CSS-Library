@@ -13,22 +13,29 @@ $container-max-widths: (
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 $content-max-widths: (
-	sm: $container-max-width-sm - calc($grid-gutter * 2),
-	md: $container-max-widths-md - calc($grid-gutter * 2),
-	lg: $container-max-widths-lg - calc($grid-gutter * 2),
-	xl: $container-max-widths-xl - calc($grid-gutter * 2),
-	xxl: $container-max-widths-xxl - calc($grid-gutter * 2)
+	sm: 542px,
+	md: 736px,
+	lg: 960px,
+	xl: 1168px,
+	xxl: 1368px
 );
 
 /* Grid breakpoints */
 /* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
 $grid-breakpoints: (
-	sm: $breakpoint-sm - $grid-gutter,
-	md: $breakpoint-md - $grid-gutter,
-	lg: $breakpoint-lg - $grid-gutter,
-	xl: $breakpoint-xl - $grid-gutter,
-	xxl: $breakpoint-xxl - grid-gutter
+	sm: 542px,
+	md: 736px,
+	lg: 960px,
+	xl: 1168px,
+	xxl: 1368px
 );
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 574px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
 
 $breakpoints: (
     'xxl': '(min-width: ' + ($breakpoint-xl + 1) + ') and (max-width: ' + $breakpoint-xxl + ')',
