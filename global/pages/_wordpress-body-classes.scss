@@ -1,0 +1,136 @@
+/** WORDPRESS BODY CLASSES - style a page via class
+*/
+//If, for example, you would like to style your search results page in a specific way you can use the “search-results” class to add your styling. WordPress only adds this class to the body tag when the search results page is active so it doesn’t affect any other pages.
+ // # Function body_class() add some STATIC classes depends on the page, post, archive, blog, search, 404 etc.
+ // # List of all default static classes which are added to
+
+.rtl {
+   /* for sites that are read right to left (i.e. hebrew) */
+}
+.home {
+  /* #STATIC home page */
+  /* # Depends on the site’s “Front page displays” Reading Settings ‘show_on_front’ and ‘page_on_front’. \n If you set a static page for the front page of your site, this function will return true when viewing that page. */
+
+}
+.blog {
+  /* blog template page */
+  /* # Add if blog view homepage, otherwise false. */
+}
+.archive {
+  /* For # Month, Year, Category, Author, Post Type archive */
+}
+
+.date {
+  /* #STATIC For date archive */
+}
+.date-paged-%page {
+	/* replace the number to the corresponding page number */
+}
+
+.search {
+  /* search page */
+  /* #STATIC For search */
+}
+.search-results {
+	/* # If found posts in search result */
+}
+.search-no-results {
+	/* # If NOT found any posts in search result */
+}
+.search-paged-%i {
+	/* individual paged search (i.e. body.search-paged-3) */
+}
+
+.error404 {
+	 /* # On 404 page */
+}
+
+.single {
+  /* single post page */
+  /* # Add for any post type, except {attachments} and {pages} */
+}
+.postid-%post_id {
+  /* $post_id */
+  /* individual post page by id (i.e. body.postid-73) */
+}
+.single-paged-%page {
+	/* individual paged single (i.e. body.single-paged-3) */
+}
+
+.attachment {
+  /* #STATIC attatchment page */
+}
+.attachmentid-%post_id {
+  /* individual attatchment page (i.e. body.attachmentid-763) */
+}
+.attachment-%mime_type {
+  /* style mime type pages */
+  /* str_replace( $mime_prefix, '', $mime_type ) */
+}
+
+.author {
+  /* #STATIC author page */
+}
+.author-%nicename {
+  /* #DYNAMIC user nicename (i.e. body.author-samueladams) */
+  /* sanitize_html_class( $author->user_nicename, $author->ID ) */
+}
+.author-paged-%page {
+  /* paged author archives (i.e. body.author-paged-4) for page 4 */
+}
+
+.category {
+    /* # category page */
+}
+.category-%page {
+	/* individual category page (i.e. body.category-6) */
+}
+.category-paged-%page {
+	/* replace the number to the corresponding page number */
+}
+
+.tag {
+    /* # Tags page */
+}
+.tag-slug {
+	/* individual tag page (i.e. body.tag-news) */
+}
+.tag-paged-%tag {
+	/* replace the number to the corresponding page number */
+}
+
+.page-template {
+  /* # Page templates only */
+  /* custom page template page */
+}
+.page-template-%basename-php {
+	/* sanitize_html_class( str_replace( array( '.', '/' ), '-', basename( $part, '.php' ) ) ) */
+	/* individual page template (i.e. body.page-template-contact-php */
+}
+.page-paged-%page {
+	/* replace the number to the corresponding page number */
+}
+.page-parent {
+  /* # Parent page only */
+  /* parent page template */
+}
+.page-child {
+  /* # Child page only */
+  /* child page template */
+}
+.parent-pageid-%page {
+	/* replace the number to the corresponding page number */
+}
+
+.logged-in {
+	/* # Logged in user */
+	/* if user is logged in */
+}
+
+.paged {
+	/* # On paged result and not for the first page */
+	/* paged items like search results or archives */
+}
+.paged-%page {
+	/* individual paged (i.e. body.paged-3) */
+}

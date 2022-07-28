@@ -1,36 +1,59 @@
+/**
+ * partials/header
+ * ---
+ */
 header {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: $z-index-header;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   z-index: $z-index-header;
 
-  padding-top: $offset-x;
-  padding-bottom: $offset-x;
-  width: 2vw;
-  @include header-gradient($header-gradient);
+   padding-top: $offset-x;
+   padding-bottom: $offset-x;
+   width: 2vw;
+   @include header-gradient($header-gradient);
 }
 
-hgroup {
-  position: relative;
-  top: 0;
+// Header container
+.header {
+  width: 220px;
   bottom: 0;
-  left: 0;
-  z-index: $z-index-hgroup;
+  top: 0;
+  text-align: right;
+  z-index: 9;
+}
 
+// Logo
+.logo {}
+
+.logo-img {}
+
+
+.affix{
+  position: fixed;
+}
+.header-text {
+  margin-bottom: 50px;
+}
+.header-text blockquote {
+  font-size: 16px;
+  padding-left: 50px;
+}
+.header-text blockquote:before {
+  font-size: 30px;
+}
+
+.table {
+  display: table;
   width: 100%;
-  max-width: 3vw;
   height: 100%;
 }
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
 
-
-
-@media (max-width: 1199px) {
-  #header {
-    left: -300px;
-  }
-
-  #main {
-    margin-left: 0;
-  }
+.site-description{
+  writing-mode: vertica-lr;
 }

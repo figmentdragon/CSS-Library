@@ -1,0 +1,8 @@
+// Container styles
+.container {
+  @include clearfix;
+  display: block;
+  margin: 0 auto;
+  padding: 0 $grid-gutter;
+  max-width: $grid-max-width;
+}

@@ -19,7 +19,7 @@ body {
 
 	font-size: 100%;
 	line-height: 1.5;
-	color: $text-color;
+	color: $body-color;
 	background-color: $gray;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
@@ -537,11 +537,11 @@ PAGE NAVI STYLES
 
     .current{
     	cursor: default;
-    	color: $text-color;
+    	color: $body-color;
 
     	&:hover, &:focus {
     		background-color: $white;
-    		color: $text-color;
+    		color: $body-color;
     	}
     }
 
@@ -774,7 +774,7 @@ COMMENT FORM STYLES
 		margin: 0;
 
 		a {
-			color: $text-color;
+			color: $body-color;
 		}
 	}
 

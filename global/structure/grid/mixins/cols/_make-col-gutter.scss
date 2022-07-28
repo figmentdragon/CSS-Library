@@ -1,0 +1,7 @@
+@mixin make-col($gutter: 16px) {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  padding-left:  divide($gutter, 2);
+  padding-right: divide($gutter, 2);
+}

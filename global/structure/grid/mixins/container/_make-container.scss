@@ -1,0 +1,7 @@
+@mixin make-container($gutter: $container-offset-x) {
+  width: 100%;
+  max-width: $grid-max-width;
+  padding-right: ($gutter-x * .5); // stylelint-disable-line function-disallowed-list
+  padding-left: ($gutter-x * .5); // stylelint-disable-line function-disallowed-list
+  margin: 0 $spacer;
+}

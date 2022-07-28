@@ -1,0 +1,14 @@
+/* Visually hidden */
+
+
+.visually-hidden {
+  @include visually-hidden();
+
+  &:not(:focus):not(:focus-within) {
+    @include visually-hidden();
+  }
+}
+
+.hidden-sm {
+  display: none;
+}

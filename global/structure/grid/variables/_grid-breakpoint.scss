@@ -1,60 +1,57 @@
-/* Grid Variables */
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
+/* Grid breakpoints */
+/* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
+$breakpoint-xs: 0;
+$breakpoint-sm: 574px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
 
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
-  xs: $grid-breakpoint-xs,
-  sm: $grid-breakpoint-sm,
-  md: $grid-breakpoint-md,
-  lg: $grid-breakpoint-lg,
-  xl: $grid-braekpoint-xl,
-  xxl: $grid-breakpoint-xxl
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  x2l: 1400px
+) !default;
+
+$breakpoints: (
+  xs: 0,
+	sm: 574px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
 );
+
+$grid-breakpoints: (
+  'xxl': $breakpoint-xxl,
+  'xl': $breakpoint-xl,
+  'lg': $breakpoint-lg,
+  'md': $breakpoint-md,
+  'sm': $breakpoint-sm,
+  'xs': $breakpoint-xs
+  );
+
 // scss-docs-end grid-breakpoints
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints, '$grid-breakpoints');
+
+$grid-max-width: $grid-breakpoint-#{$size};
+$breakpoints :    $grid-breakpoints !default;
+$size                       : nth($grid-breakpoints, 1);
+$name                       : nth($grid-breakpoints, 1);
+$declaration                : nth($breakpoints, 2);
 
 
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-width-xxl: $grid-breakpoint-xxl - ($grid-gutter-width * 2);
-$container-max-width-xl: $grid-braekpoint-xl - ($grid-gutter-width * 2);
-$container-max-width-lg: $grid-breakpoint-lg - ($grid-gutter-width * 2);
-$container-max-width-md: $grid-breakpoint-md - ($grid-gutter-width * 2);
-$container-max-width-sm: $grid-breakpoint-sm - ($grid-gutter-width * 2);
-
-// scss-docs-start container-max-widths
-$container-max-widths: (
-  sm: $container-max-width-sm,
-  md: $container-max-width-md,
-  lg: $container-max-width-lg,
-  xl: $container-max-width-xl,
-  xxl: $container-max-width-xxl
-);
-// scss-docs-end container-max-widths
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");
-
-
-/* Grid breakpoints */
-/* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
-$grid-breakpoint-sm: 576px - 1px;
-$grid-breakpoint-md: 768px - 1px;
-$grid-breakpoint-lg: 992px - 1px;
-$grid-breakpoint-xl: 1200px - 1px;
-$grid-breakpoint-xxl: 1400px - 1px;
-
-$breakpoints : (
-  xs: 0,
-  sm: 576px - 1px,
-  md: 768px - 1px,
-  lg: 992px - 1px,
-  xl: 1200px - 1px,
-  xxl: 1400px - 1px
+$breakpoints: (
+    'xxl': '(min-width: ' + ($breakpoint-xl + 1) + ') and (max-width: ' + $breakpoint-xxl + ')',
+    'xl': '(min-width: ' + ($breakpoint-lg + 1) + ') and (max-width: ' + $breakpoint-xl + ')',
+    'lg': '(min-width: ' + ($breakpoint-md + 1) + ') and (max-width: ' + $breakpoint-lg + ')',
+    'md': '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
+    'sm': '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
+    'xs': '(max-width: ' + $breakpoint-xs + ')'
 );

@@ -3,9 +3,6 @@
 
 /* Style elements inside of the .site-header container */
 
-.site-header hgroup { /* Container for site title and description */
-
-}
 .site-title,
 .site-title a {
 
@@ -14,17 +11,6 @@
 
 }
 
-
-.header-text {
-  margin-bottom: 50px;
-}
-.header-text blockquote {
-  font-size: 16px;
-  padding-left: 50px;
-}
-.header-text blockquote:before {
-  font-size: 30px;
-}
 .menu-left .header {
   text-align: left;
 }

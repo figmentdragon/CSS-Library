@@ -1,9 +1,0 @@
-.col {
-  box-sizing   : border-box;
-  float        : left;
-  padding-left : $grid-gutter;
-
-  .row--gutterless & {
-    padding-left : 0;
-  }
-}

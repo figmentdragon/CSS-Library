@@ -1,9 +1,0 @@
-// Contextual backgrounds
-
-@mixin bg-variant($color) {
-  color: #fff !important;
-  background-color: $color !important;
-  @include hover-focus {
-    background-color: shade-color($color, 10%);
-    }
-  }

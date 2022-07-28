@@ -1,0 +1,14 @@
+.navigation-default .main-navigation {
+  clear: both;
+  border: none;
+  ul ul a {
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    opacity: 0.75;
+    padding: 3px 20px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

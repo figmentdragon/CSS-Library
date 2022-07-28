@@ -17,25 +17,21 @@ $breakpoint-xxl: 1400px;
 
 // Responsive breakpoints mixin
 @mixin media($res) {
-
 	@if mobile-only == $res {
 		@media only screen and (max-width: $breakpoint-sm - 1) {
 			@content;
 		}
 	}
-
 	@if mobile == $res {
 		@media only screen and (min-width: $breakpoint-sm) {
 			@content;
 		}
 	}
-
 	@if tablet-only == $res {
 		@media only screen and (max-width: $breakpoint-md - 1) {
 			@content;
 		}
 	}
-
 	@if tablet == $res {
 		@media only screen and (min-width: $breakpoint-md) {
 			@content;
@@ -47,19 +43,16 @@ $breakpoint-xxl: 1400px;
 			@content;
 		}
 	}
-
 	@if laptop == $res {
 		@media only screen and (min-width: $breakpoint-lg) {
 			@content;
 		}
 	}
-
 	@if desktop-only == $res {
 		@media only screen and (max-width: $breakpoint-xl - 1) {
 			@content;
 		}
 	}
-
 	@if desktop == $res {
 		@media only screen and (min-width: $breakpoint-xl) {
 			@content;
@@ -71,7 +64,6 @@ $breakpoint-xxl: 1400px;
 			@content;
 		}
 	}
-
 	@if wide == $res {
 		@media only screen and (min-width: $breakpoint-xxl) {
 			@content;

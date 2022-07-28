@@ -1,0 +1,10 @@
+@import "variables";
+
+$content-max-width: calc(.container-#{name} - ($grid-gutter-width * 2));
+$content-max-widths: (
+	sm: 542px,
+	md: 736px,
+	lg: 960px,
+	xl: 1168px,
+	xxl: 1368px
+);

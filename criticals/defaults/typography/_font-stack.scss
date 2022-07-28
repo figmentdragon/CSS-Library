@@ -1,0 +1,43 @@
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+// stylelint-enable value-keyword-case
+$font-family-base: $font-family-sans-serif !default;
+$font-family-code: $font-family-monospace !default;
+
+$primary-font: "Hand Typewriter", $font-family-base;
+$secondary-font: "Enjoy Creativity", $font-family-base;
+$accent-font: "GlassAntiqua-Regular", $font-family-base;
+$main-font: "Avdira", $font-family-base;
+$tertiary-font: "Raleway", $font-family-base;
+$site-font: "Euphorigenic", $font-family-base;
+$lead-font: "Raylig", $font-family-base;
+
+$page-title-font: $primary-font;
+$post-title-font: $secondary-font;
+$sub-title-font: $lead-font;
+$heading-text-font: tertiary-font;
+$quote-text-font: $accent-font;
+$body-text-font: $main-font;
+
+$body-text-align: null !default;
+$paragraph-margin-bottom: $offset;
+
+$quotation: oblique;
+$citation: italic;
+$link: underline;
+
+@media (max-width: 500px) {
+  body {
+    font-size: 80%;
+  }
+  img {
+    float: none !important;
+
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

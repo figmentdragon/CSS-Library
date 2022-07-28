@@ -3,8 +3,8 @@
  */
 
 
-
- $default-width: 38.125rem;
+$default-width: 783px;
+$default-width: 38.125rem;
  $max-content-width: 1240px;
 
  $mobile-breakpoint: 1080px;
@@ -17,7 +17,7 @@
  $breakpoint-large: $laptop-breakpoint;
  $breakpoint-xl: $desktop-breakpoint;
 
- $media-breakpoints: (
+$media-breakpoints: (
     small: $mobile-breakpoint,
     medium: $tablet-breakpoint,
     large: $laptop-breakpoint,

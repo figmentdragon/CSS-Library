@@ -1,0 +1,12 @@
+@mixin grid-max-width {
+  @each $breakpoint in $breakpoints {
+    $size:        nth($grid-breakpoints, 1);
+    $name:        nth($grid-breakpoints, 1);
+    $declaration: nth($breakpoints, 2);
+    @media only screen {
+      $max-content-width: screen ($name - ($grid-gutter-width * 2));
+      $grid-max-width:    $name - ($grid-gutter-width * .5);
+      $container-max-width: $name - calc($grid-gutter-width * 2);
+    }
+  }
+}

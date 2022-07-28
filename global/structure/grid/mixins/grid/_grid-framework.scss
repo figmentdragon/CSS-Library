@@ -4,60 +4,38 @@
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
   @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-      .col#{$infix} {
-        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+    @for $i from 1 through $columns {
+      .col-$breakpoint-$i {
+        @extend %grid-column;      }
+    }
+    @include media-breakpoint-up($breakpoint) {
+      // Work around cross-media @extend (https://github.com/sass/sass/issues/1050)
+      %grid-column-float-$breakpoint {
+        float: left;
       }
-
-      .row-cols#{$infix}-auto > * {
-        @include make-col-auto();
-      }
-
-      @if $grid-row-columns > 0 {
-        @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
-            @include row-cols($i);
+      @for $i from 1 through $columns {
+        .col-$breakpoint-$i {
+          @if not $enable-flex {
+            @extend %grid-column-float-$breakpoint;
           }
+          @include make-col-span($i, $columns);
         }
       }
-
-      .col#{$infix}-auto {
-        @include make-col-auto();
-      }
-
-      @if $columns > 0 {
-        @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
-            @include make-col($i, $columns);
+      @each $modifier in (pull, push, offset) {
+        @for $i from 0 through $columns {
+          .col-$breakpoint-$modifier-$i {
+            @include make-col-modifier($modifier, $i, $columns)
           }
-        }
-
-        // `$columns - 1` because offsetting by the width of an entire row isn't possible
-        @for $i from 0 through ($columns - 1) {
-          @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
-              @include make-col-offset($i, $columns);
-            }
-          }
-        }
-      }
-
-      // Gutters
-      //
-      // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
-      @each $key, $value in $gutters {
-        .g#{$infix}-#{$key},
-        .gx#{$infix}-#{$key} {
-          --#{$prefix}gutter-x: #{$value};
-        }
-
-        .g#{$infix}-#{$key},
-        .gy#{$infix}-#{$key} {
-          --#{$prefix}gutter-y: #{$value};
         }
       }
     }

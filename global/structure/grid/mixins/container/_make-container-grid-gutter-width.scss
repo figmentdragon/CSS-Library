@@ -1,0 +1,9 @@
+// Container mixins
+@mixin make-container($grid-gutter-width: $container-offset) {
+  width: 100%;
+  @include grid-max-width;
+  padding-right: calc($grid-gutter-width * .5);
+  padding-left: calc($grid-gutter-width * .5);
+  margin-right: $spacer;
+  margin-left: $spacer;
+}

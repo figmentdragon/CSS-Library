@@ -1,9 +1,9 @@
 <?php
 /**
- * TheCreativityArchitect's functions and definitions
+ * TheThemeName's functions and definitions
  *
- * @package TheCreativityArchitect
- * @since TheCreativityArchitect 1.0
+ * @package TheThemeName
+ * @since TheThemeName 1.0
  */
 
  defined( 'ABSPATH' ) || die( "Can't access directly" );
@@ -254,19 +254,19 @@ function html_classes() {
 }
 
 function skip_link() {
-  echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__( 'Skip to the content', 'TheCreativityArchitect' ) . '</a>';
+  echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__( 'Skip to the content', 'TheThemeName' ) . '</a>';
 }
 
 function read_more_link() {
   if ( !is_admin() ) {
-    return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">' . sprintf( __( '...%s', 'TheCreativityArchitect' ), '<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>' ) . '</a>';
+    return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">' . sprintf( __( '...%s', 'TheThemeName' ), '<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>' ) . '</a>';
   }
 }
 
 function excerpt_read_more_link( $more ) {
   if ( !is_admin() ) {
     global $post;
-    return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf( __( '...%s', 'TheCreativityArchitect' ), '<span class="screen-reader-text">  ' . esc_html ( get_the_title() ) . '</span>' ) . '</a>';
+    return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf( __( '...%s', 'TheThemeName' ), '<span class="screen-reader-text">  ' . esc_html ( get_the_title() ) . '</span>' ) . '</a>';
   }
 }
 
@@ -280,7 +280,7 @@ function image_insert_override( $sizes ) {
 function widgets_init() {
  register_sidebar(
    array(
-     'name'          => esc_html__( 'Sidebar', 'TheCreativityArchitect' ),
+     'name'          => esc_html__( 'Sidebar', 'TheThemeName' ),
      'id'            => 'sidebar-1',
      'description'   => '',
      'before_widget' => '<div id="%1$s" class="widget">',
@@ -293,7 +293,7 @@ function widgets_init() {
   register_sidebar(
     array(
       'name'          => esc_html__( 'Top Widget',
-      'TheCreativityArchitect' ),
+      'TheThemeName' ),
       'id'            => 'sidebar-2',
       'description'   => '',
       'before_widget' => '<div id="%1$s"

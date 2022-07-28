@@ -1,0 +1,48 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  line-height: normal;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+%heading {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+  letter-spacing: $headings-letter-spacing;
+  line-height: $headings-line-height;
+  text-rendering: optimizeLegibility;
+  &:first-child {
+    margin-top: 0;
+  }
+  > a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      text-decoration: none;
+    }
+    &:visited,
+    &.visited {
+      text-decoration: none;
+    }
+  }
+  &:disabled,
+  &.disabled {
+  }
+}
+
+$subheader-font: 'Nixie One', cursive;
+
+
+
+
+$page-title-font: 'Poiret One', cursive;
+
+
+
+$post-title-font: 'Pompiere', cursive;

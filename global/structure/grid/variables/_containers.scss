@@ -1,34 +1,36 @@
-@use "sass:string";
-
 $breakpoints: $grid-breakpoints;
 $size:        nth($grid-breakpoints, 1);
 $name:        nth($grid-breakpoints, 1);
 $declaration: nth($breakpoints, 2);
 
-$max-content-width: screen ($name - ($grid-gutter * 2));
-$grid-max-width:    $name - ($grid-gutter * .5);
+
+$default-width: 610px;
+$grid-max-width: .grid-#{$name};
 /* Grid containers */
-$container-max-width: $name - calc($grid-gutter * 2);
+/* Define the maximum width of `.container` for different screen sizes. */
+$container-max-widths: (
+	sm: 574px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+$container-max-width: calc($name - 1px);
 
 $container-max-widths: (
-  sm: calc($grid-breakpoint-sm - ($grid-gutter * 2)),
-  md: calc($grid-breakpoint-md - ($grid-gutter * 2)),
-  lg: calc($grid-breakpoint-lg - ($grid-gutter * 2)),
-  xl: calc($grid-breakpoint-xl - ($grid-gutter * 2)),
-  xxl: calc($grid-breakpoint-xxl - ($grid-gutter * 2))
+  sm: calc($grid-breakpoint-md - 1px),
+  md: calc($grid-breakpoint-lg - 1px),
+  lg: calc($grid-breakpoint-xl - 1px),
+  xl: calc($grid-breakpoint-xxl - 1px),
+  xxl: $grid-breakpoint-xxl
 );
-
-$breakpoint-xxxl: 1692px;
-$breakpoint-xxl: 1400px;
-$breakpoint-xl: calc($grid-breakpoint-xxl - 1px);
-$breakpoint-lg: calc($grid-breakpoint-xl - 1px);
-$breakpoint-md: calc($grid-breakpoint-lg - 1px);
-$breakpoint-sm: calc($grid-breakpoint-md - 1px);
-$breakpoint-xs: 0;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
 
 /* Define the maximum width of `.container` for different screen sizes. */
 $container-widths: (
-    'xxl': '(min-width: $grid-breakpoint-xl)' and '(max-width: $grid-breakpoint-xxl - calc($grid-gutter * 2))',
+    'xxl': '(min-width: $grid-breakpoint-xl)' and '(max-width: $grid-breakpoint-xxl)',
     'xl' : '(min-width: $grid-breakpoint-lg)' and '(max-width: $grid-breakpoint-xl - calc($grid-gutter * 2))',
     'lg' : '(min-width: $grid-breakpoint-md)' and '(max-width: $grid-breakpoint-lg - calc($grid-gutter * 2))',
     'md' : '(min-width: $grid-breakpoint-sm)' and '(max-width: $grid-breakpoint-md - calc($grid-gutter * 2))',
@@ -41,3 +43,8 @@ $container-offset-x: $grid-gutter * .5;
 $container-offset-y: $grid-gutter * .5;
 
 $container-offset: $grid-gutter;
+$container-xxl-content-max-width: $breakpoint-xxl - $container-offset;
+$container-xl-content-max-width: $breakpoint-xl - $container-offset;
+$container-lg-content-max-width: $breakpoint-lg - $container-offset;
+$container-md-content-max-width: $breakpoint-md - $container-offset;
+$container-sm-content-max-width: $breakpoint-sm - $container-offset;

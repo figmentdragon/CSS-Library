@@ -6,9 +6,12 @@
       %responsive-container-#{$grid-breakpoint} {
         max-width: $container-max-width;
       }
-      @each $name, $width in $grid-breakpoint {
-        @if ($extend-grid-breakpoint) {
-          .container$grid-breakpoint-$infix($name, $grid-breakpoint){
+      @each $name, $width in $grid-breakpoint
+      {
+        @if ($extend-grid-breakpoint)
+        {
+          .container$grid-breakpoint-$infix($name, $grid-breakpoint)
+          {
             @extend %responsive-container-#{$grid-breakpoint};
           }
           // Once the current grid-breakpoint is reached, stop extending

@@ -1,84 +1,95 @@
 /* Dropdown Toggle */
 
 .menu-toggle {
-    background-color: transparent;
-    display: block;
-    font-weight: 400;
-    line-height: 1;
-    margin: 0 auto;
-    text-shadow: none;
-    background-image: none;
+  font-weight: 400;
+  line-height: 1;
+
+  display: block;
+
+  margin: 0 auto;
+
+  background-color: transparent;
+  background-image: none;
+  text-shadow: none;
 }
 .menu-toggle:hover,
 .menu-toggle:focus,
 .menu-toggle.selected {
-    background-image: none;
-    background-color: transparent;
+  background-color: transparent;
+  background-image: none;
 }
 
 .selected.menu-toggle .icon-bars,
 .selected.menu-toggle .icon-share,
 .menu-toggle .icon-close,
 .selected.menu-toggle .icon-search {
-    display: none;
+  display: none;
 }
 .selected.menu-toggle .icon-close {
-    display: inline-block;
+  display: inline-block;
 }
 .main-navigation ul.toggled-on {
-  box-shadow: none;
   border-top: none;
+  box-shadow: none;
 }
 .main-navigation ul .toggled-on {
-    display: block;
+  display: block;
 }
 #menu-toggle {
-    border: none;
-    border-radius: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+
+  border: none;
+  border-radius: 0;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-menu-toggle.search-toggle.open + .menu-inside-wrapper {
-    opacity: 1;
-    visibility: visible;
+.menu-toggle.search-toggle.open + .menu-inside-wrapper {
+  visibility: visible;
+
+  opacity: 1;
 }
 .close-toggle {
-  margin-left: auto;
+  font-weight: 400;
+
   margin-bottom: 7px;
-  font-weight: 400;;
+  margin-left: auto;
 }
 
 .dropdown-toggle {
-  background-image: none;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  display: block;
   font-size: 18px;
   font-size: 1.125rem;
-  right: 0;
   line-height: 1.172;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+
   margin: 0 auto;
   padding: 14px 19px;
-  position: absolute;
+
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   text-shadow: none;
-  top: 0;
 }
 .dropdown-toggle:focus {
-    outline: thin dotted;
+  outline: thin dotted;
 }
 .dropdown-toggle.toggled-on .icon {
-    -ms-transform: rotate(-180deg); /* IE 9 */
-    -webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
-    transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(-180deg); /* IE 9 */
+  transform: rotate(-180deg);
 }
 
 .navigation-default .dropdown-toggle,

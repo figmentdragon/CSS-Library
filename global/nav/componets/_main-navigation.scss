@@ -2,77 +2,151 @@
 ----------------------------------------------- */
 
 /* Style your navigation menu, which is inside .site-header. A basic drop-down menu structure is provided. */
+.main-navigation a,
+#primary-menu-wrapper .search-container {
+  padding: 7px 30px;
+}
 
 .main-navigation {
   /* wraps the entire navigation menu */
-  margin-top: 0;
-  margin-right: 0;
-  display: block;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: space-between;
-  align-items: start;
-  align-self: auto;
-  z-index: $z-index-main-navigation;
 }
 
-.main-navigation:after { /* Clears the floats after the menu */
-	clear: both;
-	content: "";
-	display: block;
+.main-navigation:after {
+  display: block;
+  /* Clears the floats after the menu */
+  clear: both;
+
+  content: "";
 }
-.main-navigation ul { /* The menu is an unordered list */
+.main-navigation ul {
+  /* The menu is an unordered list */
   display: none;
-  list-style: none;
+
   margin: 0;
   padding-left: 0;
+
+  list-style: none;
+  a > .icon {
+    display: none;
+  }
+  .toggled-on {
+    display: block;
+  }
 }
-.main-navigation li { /* Makes the menu "list" items horizontal */
-	float: left;
-	margin: 0.5em 0;
-	position: relative;
-}
-.main-navigation a { /* The individual list item links */
-  display: block;
-  text-decoration: none;
-}
-.main-navigation ul ul { /* Submenu drop-down "box" */
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	display: none;
+.main-navigation li {
+  font-size: 14px;
+
+  position: relative;
+  /* Makes the menu "list" items horizontal */
+
   float: left;
+
+  margin: 0.5em 0;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+  &:hover > ul {
+    display: block;
+  }
+  &:hover > a,
+  li.current-menu-item > a {
+    background: #df2c45;
+  }
+}
+.main-navigation a {
+  line-height: 2;
+  /* The individual list item links */
+
+  display: block;
+
+  padding: 0 20px;
+
+  text-decoration: none;
+  letter-spacing: 0;
+
+  color: #fff;
+}
+.main-navigation ul ul {
   position: absolute;
-  top: 100%;
-  left: -999em;
   z-index: 99999;
-}
-.main-navigation ul ul ul { /* 3rd+ level drop-down "box" */
-	left: 100%;
-	top: 0;
-}
-.main-navigation ul ul li { /* List items inside the drop-down box */
-}
-.main-navigation ul ul a { /* Menu links inside the drop-down "box" */
-	padding: 0 1.5em;
+  top: 100%;
+  right: 0;
+  bottom: 100%;
+  left: -999em;
+
+  display: none;
+  float: left;
+
   width: 200px;
+  margin-left: 0.875em;
+  padding: 14px;
+
+  background: #212c35;
+  /* Submenu drop-down "box" */
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  .current_page_item > a,
+  .current-menu-item > a {
+    font-weight: 500;
+  }
+}
+.main-navigation ul ul ul {
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  /* 3rd+ level drop-down "box" */
+  left: 100%;
+}
+.main-navigation ul ul li {
+  /* List items inside the drop-down box */
+  right: 100%;
+  bottom: 0;
+  &:hover > ul,
+  &.focus > ul {
+    left: 100%;
+  }
+}
+
+.main-navigation > ul > li {
+  float: left;
+}
+.main-navigation ul ul a {
+  width: 200px;
+  /* Menu links inside the drop-down "box" */
+  padding: 0 1.5em;
+  > .icon {
+    display: none;
+  }
 }
 .main-navigation li:hover > a,
 .main-navigation li.current_page_item a,
 .main-navigation li.current-menu-item a,
-.main-navigation ul ul a:hover { /* Hover styles for menu items */
-
+.main-navigation ul ul a:hover {
+  /* Hover styles for menu items */
 }
-.main-navigation ul ul :hover > a {
 
-}
-.main-navigation ul li:hover > ul {
-	display: block;
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  right: 0;
   left: auto;
+
+  display: block;
+}
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a {
+  padding-right: 49px;
+}
+
+.main-navigation .menu-item-has-children > a > .icon,
+.main-navigation .page_item_has_children > a > .icon {
+  display: none;
 }
 
 /* Small menu toggle area for screens < 600 pixels wide. The small menu requires some simple JavaScript in order to take affect. See http://themeshaper.com/2012/10/31/the-wordpress-theme-header-template/ for instructions on setting up this script. */
 .menu-toggle {
-   	cursor: pointer;
+  cursor: pointer;
 }
 .main-small-navigation .menu {
-	display: none;
+  display: none;
 }

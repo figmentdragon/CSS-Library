@@ -1,5 +1,6 @@
-/* =Media
------------------------------------------------ */
+//------------------------------------------------------------------------------
+// 2.8.0 Media
+//------------------------------------------------------------------------------
 
 /* Styling for images and videos */
 .site-header img,
@@ -31,6 +32,7 @@ img.size-full {
 	padding: 0;
 }
 .wp-caption { /* The container for image captions */
+	border: 1px solid #ccc;
 	max-width: 100%;
 }
 .wp-caption.aligncenter,
@@ -53,7 +55,10 @@ img.size-full {
 #content .gallery { /* Container for image galleries */
 	margin-bottom: 1.5em;
 }
+.wp-caption-text,
 .gallery-caption {
+	font-size: 12px;
+	font-size: 1.2rem;
 	font-style: italic;
 }
 #content .gallery a img {
@@ -69,6 +74,5 @@ img.size-full {
 embed,
 iframe,
 object {
-  max-width: 100%;
-  vertical-align: middle;
+	max-width: 100%;
 }

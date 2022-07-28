@@ -1,0 +1,29 @@
+.left,
+.align-text-left,
+.text-aligned-left .entry-container {
+    text-align: center;
+    @include media(mobile_horizontal) {
+        text-align: left;
+    }
+}
+.right,
+.align-text-right,
+.text-aligned-right .entry-container {
+  text-align: right;
+  @include media(mobile_horizontal) {
+    text-align: right;
+  }
+}
+
+.center,
+.align-text-center,
+.text-aligned-center .entry-container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify,
+.align-text-justify, {
+  text-align: justify;
+}

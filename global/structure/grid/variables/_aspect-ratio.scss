@@ -5,28 +5,29 @@ $aspect-ratios               : (
   '16x9'                     : calc(9 / 16 * 100%),
   '21x9'                     : calc(9 / 21 * 100%)
   );
+  // Credit: Nicolas Gallagher and SUIT CSS.
 
-@each $key, $ratio in $aspect-ratios {
-  .ratio-#{$key} {
-    --#{$prefix}aspect-ratio: #{$ratio};
-  }
-}
-
-.ratio {
-  position: relative;
-  width: 100%;
-
-  &::before {
-    display: block;
-    padding-top: var(--#{$prefix}aspect-ratio);
-    content: "";
-  }
-
-  > * {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .ratio {
+    position: relative;
     width: 100%;
-    height: 100%;
+
+    &::before {
+      display: block;
+      padding-top: var(--#{$prefix}aspect-ratio);
+      content: "";
+    }
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
-}
+
+  @each $key, $ratio in $aspect-ratios {
+    .ratio-#{$key} {
+      --#{$prefix}aspect-ratio: #{$ratio};
+    }
+  }

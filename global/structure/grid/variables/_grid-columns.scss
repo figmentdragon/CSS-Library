@@ -3,24 +3,30 @@
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                16 !default;
+$grid-gutter-width:           1.6rem !default;
 $grid-gutter-width:           16px !default;
 $grid-row-columns:            16 !default;
 
-// Container padding
-$container-padding-x: $grid-gutter-width;
-
-$default-width: 783px;
+$gutter: $grid-gutter-width !default;
 
 $gutter: $grid-gutter-width;
-
 $gutters: (
   0: 0,
-  1: $gutter * .25,
-  2: $gutter * .5,
-  3: $gutter,
-  4: $gutter * 1.5,
-  5: $gutter * 3,
+  1: $gutter * .15,
+  2: $gutter * .75,
+  3: $gutter * 1.50,
+  4: $gutter * 2.25,
+  5: $gutter * 3.00,
 );
 
 $gutter-x: $grid-gutter-width * 2.5;
 $gutter-y: $grid-gutter-width;
+
+$default-width: 610px;
+$max-content-width: 1400px - ($grid-gutter * 2);
+$grid-max-width: 1336px + ($grid-gutter * 2);
+
+/* Container offset */
+$container-offset: (2 * $grid-gutter);
+$container-offset-x: $container-offset * .5;
+$container-offset-y: $container-offset;
